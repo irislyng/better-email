@@ -7,6 +7,25 @@ body {
     height: 100%;
 }
 
+.folder-panel-icons {
+    height: 50px;
+    text-align: right;
+}
+
+.folder-panel-icon {
+    font-size: 32px;
+    padding: 15px 5px;
+    color: #ffffff;
+}
+
+.folder-panel-icon:hover {
+    color: #ff4081;
+}
+
+.folder-panel-icon-compose {
+    float: left;
+}
+
 .messages-panel {
     height: 100%;
     background-color: #ffffff;
