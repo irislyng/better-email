@@ -10,10 +10,11 @@
     <link rel="stylesheet" type="text/css" href="css/devices.css">
 
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   </head>
   <body>
     <div class="container flex">
-      <div class="col-3 folder-panel">
+      <div id="folder-panel" class="col-2">
         <div class="folder-panel-icons">
           <i class="fa fa-lg fa-pencil-square-o folder-panel-icon folder-panel-icon-compose"></i>
           <i class="fa fa-lg fa-plus-square-o folder-panel-icon folder-panel-icon-move"></i>
@@ -21,11 +22,49 @@
           <i class="fa fa-lg fa-envelope-o folder-panel-icon folder-panel-icon-read"></i>
           <i class="fa fa-lg fa-trash-o folder-panel-icon folder-panel-icon-delete"></i>
         </div>
+        <div id="folder-panel-folders" class="folder-panel-list">
+          <div class="folder-panel-list-title">Folders</div>
+          <div class="folder-panel-list-items">
+            <div class="folder-panel-list-item">
+              Inbox
+              <span class="folder-panel-list-item-count">100</span>
+            </div>
+            <div class="folder-panel-list-item">
+              Drafts
+              <span class="folder-panel-list-item-count">2</span>
+            </div>
+            <div class="folder-panel-list-item">
+              Flagged
+              <span class="folder-panel-list-item-count">6</span>
+            </div>
+            <div class="folder-panel-list-item">
+              Deleted
+              <span class="folder-panel-list-item-count">10</span>
+            </div>
+            <div class="folder-panel-list-item">
+              Flagged
+              <span class="folder-panel-list-item-count">6</span>
+            </div>
+            <div class="folder-panel-list-item">
+              Spam
+              <span class="folder-panel-list-item-count">30</span>
+            </div>
+            <div class="folder-panel-list-item">
+              Sent
+            </div>
+          </div>
+        </div>
+        <div id="folder-panel-filters" class="folder-panel-list">
+          <div class="folder-panel-list-title">Filters</div>
+          <div class="folder-panel-button">
+            <button>Create Filter</button>
+          </div>
+        </div>
       </div>
-      <div class="col-4 messages-panel">
+      <div id="messages-panel" class="col-4">
 
       </div>
-      <div class="col-5 content-panel">
+      <div id="content-panel" class="col-5 content-panel">
 
       </div>
   </body>

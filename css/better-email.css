@@ -1,11 +1,31 @@
 body {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
     color: #212121;
 }
 
-.folder-panel {
+button {
+    width: 150px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 16px;
+    background-color: #ff4081;
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+/* FOLDER PANEL */
+
+#folder-panel {
+    padding: 10px;
     background-color: #673AB7;
     height: 100%;
 }
+
+/* FOLDER PANEL ICONS */
 
 .folder-panel-icons {
     height: 50px;
@@ -26,12 +46,44 @@ body {
     float: left;
 }
 
-.messages-panel {
+/* FOLDER PANEL LISTS */
+.folder-panel-list {
+    color: #ffffff;
+}
+
+.folder-panel-list-title {
+    padding: 20px 0px 10px 0px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.folder-panel-list-items {
+    margin-left: 25px;
+    padding-right: 10px;
+}
+
+.folder-panel-list-item {
+    padding: 2px 0px;
+}
+
+.folder-panel-list-item-count {
+    float: right;
+}
+
+.folder-panel-button {
+    text-align: center;
+}
+
+/* MESSAGES PANEL */
+
+#messages-panel {
     height: 100%;
     background-color: #ffffff;
 }
 
-.content-panel {
+/* CONTENT PANEL */
+
+#content-panel {
     height: 100%;
     background-color: #ffffff;
 }
