@@ -1,0 +1,107 @@
+.centerdevices .browserwrapper .mask {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background: white;
+}
+.centerdevices .browserwrapper .mask-img {
+	width: 100%;
+	display: block;
+}
+.centerdevices .browserwrapper .browser {
+	border-radius: 6px;
+	background: linear-gradient(to bottom, rgba(233,232,233,1) 0%,rgba(212,212,213,1) 100%);
+	background-size: 60px;
+	box-shadow: 0 10px 20px rgba(40,39,66,.06);
+	overflow: hidden;
+	width: 1020px;
+	height: 610px;
+	z-index: 2;
+	padding: 30px 0 0 0;
+	margin: auto;
+}
+.centerdevices .browserwrapper .browser:before {
+	content: "\25CF \25CF \25CF";
+	letter-spacing: -1px;
+	border-radius: 10px;
+	color: rgba(0,0,0,.05);
+	background: -webkit-linear-gradient(left, rgba(255,99,91,1) 0%,rgba(255,99,91,1) 35%,rgba(255,99,91,1) 35%,rgba(255,195,48,1) 35%,rgba(255,195,48,1) 66%,rgba(41,207,66,1) 66%,rgba(41,207,66,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 26px;
+	line-height: 30px;
+	height: 30px;
+	padding-left: 8px;
+	position: absolute;
+	top: 0;
+}
+
+@media screen and (max-width: 1120px) {
+	.centerdevices .browserwrapper .header-images {
+		position: relative;
+		white-space: nowrap;
+		vertical-align: top;
+		overflow: scroll;
+		width: calc(100% + 40px);
+		margin: 0 0 0 -20px;
+		padding-bottom: 60px;
+		-webkit-overflow-scrolling: touch;
+	}	
+	.centerdevices .browserwrapper .browser {
+		width: 100%;
+		height: calc(100vw * .65);
+	}
+}.centerdevices .browserwrapper .mask {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background: white;
+}
+.centerdevices .browserwrapper .mask-img {
+	width: 100%;
+	display: block;
+}
+.centerdevices .browserwrapper .browser {
+	border-radius: 6px;
+	background: linear-gradient(to bottom, rgba(233,232,233,1) 0%,rgba(212,212,213,1) 100%);
+	background-size: 60px;
+	box-shadow: 0 10px 20px rgba(40,39,66,.06);
+	overflow: hidden;
+	width: 1020px;
+	height: 610px;
+	z-index: 2;
+	padding: 30px 0 0 0;
+	margin: auto;
+}
+.centerdevices .browserwrapper .browser:before {
+	content: "\25CF \25CF \25CF";
+	letter-spacing: -1px;
+	border-radius: 10px;
+	color: rgba(0,0,0,.05);
+	background: -webkit-linear-gradient(left, rgba(255,99,91,1) 0%,rgba(255,99,91,1) 35%,rgba(255,99,91,1) 35%,rgba(255,195,48,1) 35%,rgba(255,195,48,1) 66%,rgba(41,207,66,1) 66%,rgba(41,207,66,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 26px;
+	line-height: 30px;
+	height: 30px;
+	padding-left: 8px;
+	position: absolute;
+	top: 0;
+}
+
+@media screen and (max-width: 1120px) {
+	.centerdevices .browserwrapper .header-images {
+		position: relative;
+		white-space: nowrap;
+		vertical-align: top;
+		overflow: scroll;
+		width: calc(100% + 40px);
+		margin: 0 0 0 -20px;
+		padding-bottom: 60px;
+		-webkit-overflow-scrolling: touch;
+	}	
+	.centerdevices .browserwrapper .browser {
+		width: 100%;
+		height: calc(100vw * .65);
+	}
+}
