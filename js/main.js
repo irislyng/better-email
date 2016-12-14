@@ -7,6 +7,16 @@ function loadEmailList() {
 		let name = document.createElement("span");
 		let subject = document.createElement("span");
 		let content = document.createElement("span");
+		
+		let strong = document.createElement("strong");
+		let checkbox = document.createElement("span");
+		let input = document.createElement("input");
+		checkbox.className = "input-group-addon";
+		input.setAttribute("type", "checkbox")
+		input.setAttribute("aria-label", "...")
+		checkbox.appendChild(input);
+		strong.appendChild(checkbox);
+
 
 		date.innerHTML = emails[i].datetime;
 		name.innerHTML = emails[i].first_name_from + " " + emails[i].last_name_from;
@@ -20,10 +30,12 @@ function loadEmailList() {
 		subject.className = "message-preview-subject";
 		content.className = "message-preview-content";
 
+		email.appendChild(strong);
 		email.appendChild(date);
 		email.appendChild(name);
 		email.appendChild(subject);
 		email.appendChild(content);
+
 
 		parent.appendChild(email);
 	}
