@@ -292,7 +292,7 @@ div.content-message-sender {
     color: #673AB7;
 }
 
-div.content-message-sender-email {
+span.content-message-sender-email {
     font-size: 16px;
     line-height: 16px;
     color: #bdbdbd;
