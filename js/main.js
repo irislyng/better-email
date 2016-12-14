@@ -1,13 +1,13 @@
 var currentFolder = "I";
 
-function setCurrentFolder(folder) {
-	currentFolder = folder;
-	loadEmailList();
-}
-
 function init() {
 	loadEmailList();
 	loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id) // TODO: change email displayed
+}
+
+function setCurrentFolder(folder) {
+	currentFolder = folder;
+	loadEmailList();
 }
 
 function loadEmailList() {
