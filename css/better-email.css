@@ -44,6 +44,15 @@ button:focus {
     outline: none;
 }
 
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    resize: none;
+    outline: none;
+}
+
 /* MODALS */
 
 div.modal-container {
@@ -176,6 +185,14 @@ div.search-bar {
     display: inline-block;
 }
 
+span.search-bar-icon {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 16px;
+    z-index: 2;
+    color: #757575;
+}
+
 input.search-bar-input {
     width: 100%;
     height: inherit;
@@ -186,14 +203,6 @@ input.search-bar-input {
     font-size: 22px;
     color: #757575;
     border: none;
-}
-
-span.search-bar-icon {
-    position: absolute;
-    margin-left: 10px;
-    margin-top: 16px;
-    z-index: 2;
-    color: #757575;
 }
 
 div.messages-panel-sort {
@@ -317,4 +326,61 @@ div.content-message-content {
 
 div.content-message-content p {
     margin-bottom: 24px;
+}
+
+/* COMPOSE MESSAGE */
+
+div.compose-message-header {
+    height: 50px;
+    margin: 12px;
+    border-bottom: 1px solid #bdbdbd;
+}
+
+div.compose-title {
+    font-size: 28px;
+    color: #512DA8;
+}
+
+span.compose-close {
+    color: #ff4081;
+}
+
+div.content-panel-compose {
+    height: 100%;
+    overflow: auto;
+}
+
+div.compose-section {
+    display: flex;
+    margin: 5px 12px;
+    padding: 10px;
+    border-bottom: 1px dashed #bdbdbd;
+}
+
+label.compose-label {
+    font-size: 16px;
+    color: #757575;
+}
+
+input.compose-input {
+    flex: 2;
+    width: 100%;
+    height: inherit;
+    padding-left: 12px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #757575;
+    border: none;
+}
+
+textarea.compose-textarea {
+    width: 100%;
+    height: 45%;
+    box-sizing: border-box;
+    ont-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #212121;
+    border: none;
 }
