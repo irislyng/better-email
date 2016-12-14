@@ -128,35 +128,33 @@
         </div>
       </div>
       <div id="content-panel-compose" class="content-panel col-6 hidden">
-          <div class="compose-message-header">
-            <div class="compose-title left">Compose Email</div>
-            <span class="compose-close right" onclick="hideCompose()"><i class="fa fa-lg fa-times"></i></span>
+        <div class="compose-message-header">
+          <div class="compose-title left">Compose Email</div>
+          <span class="compose-close right" onclick="hideCompose()"><i class="fa fa-lg fa-times"></i></span>
+        </div>
+          <div class="compose-section">
+            <label class="compose-label">To: </label>
+            <input id="compose-to" class="compose-input" type="text">
           </div>
-          <form id="compose-email">
-            <div class="compose-section">
-              <label class="compose-label">To: </label>
-              <input id="compose-to" class="compose-input" type="text">
-            </div>
-            <div class="compose-section">
-              <label class="compose-label">CC: </label>
-              <input id="compose-cc" class="compose-input" type="text">
-            </div>
-            <div class="compose-section">
-              <label class="compose-label">BCC: </label>
-              <input id="compose-bcc" class="compose-input" type="text">
-            </div>
-            <div class="compose-section">
-              <label class="compose-label">Subject: </label>
-              <input id="compose-subject" class="compose-input" type="text">
-            </div>
-            <div class="compose-section">
-              <textarea id="compose-content" class="compose-textarea" placeholder="Compose Email"></textarea>
-            </div>
-            <div class="compose-buttons right">
-            <button class="button-compose-save-draft">Save Draft</button>
-            <button class="button-compose-send" onClick="store(true)">Send</button>
-            </div>
-          </form>
+          <div class="compose-section">
+            <label class="compose-label">CC: </label>
+            <input id="compose-cc" class="compose-input" type="text">
+          </div>
+          <div class="compose-section">
+            <label class="compose-label">BCC: </label>
+            <input id="compose-bcc" class="compose-input" type="text">
+          </div>
+          <div class="compose-section">
+            <label class="compose-label">Subject: </label>
+            <input id="compose-subject" class="compose-input" type="text">
+          </div>
+          <div class="compose-section">
+            <textarea id="compose-content" class="compose-textarea" placeholder="Compose Email"></textarea>
+          </div>
+          <div class="compose-buttons right">
+          <button class="button-compose-save-draft" onclick="store(false)">Save Draft</button>
+          <button class="button-compose-send" onclick="store(true)">Send</button>
+          </div>
         </div>
     </div>
     <script type="text/javascript" src="emails.json"></script>

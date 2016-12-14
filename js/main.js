@@ -1,5 +1,10 @@
 function loadEmailList() {
 	let parent = document.getElementById("email-list");
+	console.log(parent);
+	while(parent.firstChild){
+	    parent.removeChild(parent.firstChild);
+	}
+	console.log(parent);
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	for (var i = 0; i < emails.length; i++) {
 		let email = document.createElement("div");
@@ -7,7 +12,7 @@ function loadEmailList() {
 		let name = document.createElement("span");
 		let subject = document.createElement("span");
 		let content = document.createElement("span");
-		
+
 		let strong = document.createElement("strong");
 		let checkbox = document.createElement("span");
 		let input = document.createElement("input");
@@ -86,6 +91,8 @@ function composeEmail() {
 
 	emails.push(email);
 	localstorage.setItem("email_data", JSON.stringify(emails));
+
+	hideCompose();
 }
 
 loadEmailList();

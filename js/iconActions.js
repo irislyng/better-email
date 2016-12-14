@@ -12,5 +12,9 @@ function hideCompose() {
     var compose = document.getElementById('content-panel-compose');
     compose.classList.add("hidden");
 
-    document.getElementById('compose-email').reset();
+    document.getElementById('compose-to').value = "";
+    document.getElementById('compose-cc').value = "";
+    document.getElementById('compose-bcc').value = "";
+    document.getElementById('compose-subject').value = "";
+    document.getElementById('compose-content').value = "";
 }
