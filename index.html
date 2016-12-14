@@ -11,6 +11,10 @@
 
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+	
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div id="modal-create-filter" class="modal-container hidden">
@@ -46,7 +50,7 @@
     <div class="container flex">
       <div id="folder-panel" class="col-2">
         <div class="folder-panel-icons">
-          <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left"></i>
+          <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left" role="dialog" data-toggle="modal" data-target="#content-panel-compose"></i>
           <i class="fa fa-lg fa-plus folder-panel-icon"></i>
           <i class="fa fa-lg fa-envelope-open-o folder-panel-icon"></i>
           <i class="fa fa-lg fa-envelope-o folder-panel-icon"></i>
@@ -100,7 +104,26 @@
           Sort By <i class="fa fa-lg fa-angle-down"></i>
         </div>
         <div class="messages-panel-list">
+          <div class="message-preview"><strong>
+			<span class="input-group-addon"><input type="checkbox" aria-label="..."></span>
+            <span class="message-preview-date">Dec 12 12:09 AM</span>
+            <span class="message-preview-name">Test Name</span>
+            <span class="message-preview-subject">Subject</span>
+            <span class="message-preview-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </span></strong>
+          </div>
+          <div class="message-preview"><strong>
+			<span class="input-group-addon"><input type="checkbox" aria-label="..."></span>	
+            <span class="message-preview-date">Dec 12 12:09 AM</span>
+            <span class="message-preview-name">Test Name</span>
+            <span class="message-preview-subject">Subject</span>
+            <span class="message-preview-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </span></strong>
+          </div>
           <div class="message-preview">
+			<span class="input-group-addon"><input type="checkbox" aria-label="..."></span>
             <span class="message-preview-date">Dec 12 12:09 AM</span>
             <span class="message-preview-name">Test Name</span>
             <span class="message-preview-subject">Subject</span>
@@ -109,6 +132,7 @@
             </span>
           </div>
           <div class="message-preview">
+			<span class="input-group-addon"><input type="checkbox" aria-label="..."></span>
             <span class="message-preview-date">Dec 12 12:09 AM</span>
             <span class="message-preview-name">Test Name</span>
             <span class="message-preview-subject">Subject</span>
@@ -117,6 +141,7 @@
             </span>
           </div>
           <div class="message-preview">
+			<span class="input-group-addon"><input type="checkbox" aria-label="..."></span>
             <span class="message-preview-date">Dec 12 12:09 AM</span>
             <span class="message-preview-name">Test Name</span>
             <span class="message-preview-subject">Subject</span>
@@ -125,22 +150,7 @@
             </span>
           </div>
           <div class="message-preview">
-            <span class="message-preview-date">Dec 12 12:09 AM</span>
-            <span class="message-preview-name">Test Name</span>
-            <span class="message-preview-subject">Subject</span>
-            <span class="message-preview-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-          </div>
-          <div class="message-preview">
-            <span class="message-preview-date">Dec 12 12:09 AM</span>
-            <span class="message-preview-name">Test Name</span>
-            <span class="message-preview-subject">Subject</span>
-            <span class="message-preview-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-          </div>
-          <div class="message-preview">
+			<span class="input-group-addon"><input type="checkbox" aria-label="..."></span>
             <span class="message-preview-date">Dec 12 12:09 AM</span>
             <span class="message-preview-name">Test Name</span>
             <span class="message-preview-subject">Subject</span>
@@ -191,10 +201,11 @@
             </div>
           </div>
         </div>
-        <div id="content-panel-compose" class="hidden">
-          <div class="compose-message-header">
+        <div id="content-panel-compose"  class="modal fade" tabindex="-1" style="display: none;">
+		<div class="modal-dialog">
+          <div class="compose-message-header" class="hidden">
             <div class="compose-title left">Compose Email</div>
-            <span class="compose-close right"><i class="fa fa-lg fa-times"></i></span>
+            <span class="compose-close right"><button data-dismiss="modal"><i class="fa fa-lg fa-times"></i></button></span>
           </div>
           <form>
             <div class="compose-section">
@@ -222,6 +233,7 @@
             </div>
           </form>
         </div>
+		</div>
       </div>
     </div>
     
