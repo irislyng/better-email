@@ -12,8 +12,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 2,
   "first_name" : "Bob",
@@ -28,8 +28,8 @@ var email_data = [{
   "folder" : [
     "I"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 3,
   "first_name" : "Bob",
@@ -44,8 +44,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 4,
   "first_name" : "Bob",
@@ -60,8 +60,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 5,
   "first_name" : "Bob",
@@ -76,8 +76,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 6,
   "first_name" : "Bob",
@@ -92,8 +92,8 @@ var email_data = [{
   "folder" : [
     "IF"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 7,
   "first_name" : "Bob",
@@ -108,8 +108,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 8,
   "first_name" : "Bob",
@@ -124,8 +124,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 9,
   "first_name" : "Bob",
@@ -140,8 +140,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 10,
   "first_name" : "Bob",
@@ -156,8 +156,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 11,
   "first_name" : "Bob",
@@ -172,8 +172,8 @@ var email_data = [{
   "folder" : [
     "IF"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 12,
   "first_name" : "Bob",
@@ -188,8 +188,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 13,
   "first_name" : "Bob",
@@ -204,8 +204,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 14,
   "first_name" : "Bob",
@@ -220,8 +220,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 15,
   "first_name" : "Bob",
@@ -236,8 +236,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 16,
   "first_name" : "Bob",
@@ -252,8 +252,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 17,
   "first_name" : "Bob",
@@ -268,8 +268,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 18,
   "first_name" : "Bob",
@@ -284,8 +284,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 19,
   "first_name" : "Bob",
@@ -300,8 +300,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 20,
   "first_name" : "Bob",
@@ -316,8 +316,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 21,
   "first_name" : "Bob",
@@ -332,8 +332,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 22,
   "first_name" : "Bob",
@@ -348,8 +348,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 23,
   "first_name" : "Bob",
@@ -364,8 +364,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 24,
   "first_name" : "Bob",
@@ -380,8 +380,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 25,
   "first_name" : "Bob",
@@ -396,8 +396,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 26,
   "first_name" : "Bob",
@@ -412,8 +412,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 27,
   "first_name" : "Bob",
@@ -428,8 +428,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 28,
   "first_name" : "Bob",
@@ -444,8 +444,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 29,
   "first_name" : "Bob",
@@ -460,8 +460,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 30,
   "first_name" : "Bob",
@@ -476,8 +476,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 31,
   "first_name" : "Bob",
@@ -492,8 +492,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 32,
   "first_name" : "Bob",
@@ -508,8 +508,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 33,
   "first_name" : "Bob",
@@ -524,8 +524,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 34,
   "first_name" : "Bob",
@@ -540,8 +540,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 35,
   "first_name" : "Bob",
@@ -556,8 +556,8 @@ var email_data = [{
   "folder" : [
     "I"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 36,
   "first_name" : "Bob",
@@ -572,8 +572,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 37,
   "first_name" : "Bob",
@@ -588,8 +588,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 38,
   "first_name" : "Bob",
@@ -604,8 +604,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 39,
   "first_name" : "Bob",
@@ -620,8 +620,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 40,
   "first_name" : "Bob",
@@ -636,8 +636,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 41,
   "first_name" : "Bob",
@@ -652,8 +652,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 42,
   "first_name" : "Bob",
@@ -668,8 +668,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 43,
   "first_name" : "Bob",
@@ -684,8 +684,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 44,
   "first_name" : "Bob",
@@ -700,8 +700,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 45,
   "first_name" : "Bob",
@@ -716,8 +716,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 46,
   "first_name" : "Bob",
@@ -732,8 +732,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 47,
   "first_name" : "Bob",
@@ -748,8 +748,8 @@ var email_data = [{
   "folder" : [
     "IF"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 48,
   "first_name" : "Bob",
@@ -764,8 +764,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 49,
   "first_name" : "Bob",
@@ -780,8 +780,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 50,
   "first_name" : "Bob",
@@ -796,8 +796,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 51,
   "first_name" : "Bob",
@@ -812,8 +812,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 52,
   "first_name" : "Bob",
@@ -828,8 +828,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 53,
   "first_name" : "Bob",
@@ -844,8 +844,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 54,
   "first_name" : "Bob",
@@ -860,8 +860,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 55,
   "first_name" : "Bob",
@@ -876,8 +876,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 56,
   "first_name" : "Bob",
@@ -892,8 +892,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 57,
   "first_name" : "Bob",
@@ -908,8 +908,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 58,
   "first_name" : "Bob",
@@ -924,8 +924,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 59,
   "first_name" : "Bob",
@@ -940,8 +940,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 60,
   "first_name" : "Bob",
@@ -956,8 +956,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 61,
   "first_name" : "Bob",
@@ -972,8 +972,8 @@ var email_data = [{
   "folder" : [
     "I"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 62,
   "first_name" : "Bob",
@@ -988,8 +988,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 63,
   "first_name" : "Bob",
@@ -1004,8 +1004,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 64,
   "first_name" : "Bob",
@@ -1020,8 +1020,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 65,
   "first_name" : "Bob",
@@ -1036,8 +1036,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 66,
   "first_name" : "Bob",
@@ -1052,8 +1052,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 67,
   "first_name" : "Bob",
@@ -1068,8 +1068,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 68,
   "first_name" : "Bob",
@@ -1084,8 +1084,8 @@ var email_data = [{
   "folder" : [
     "I"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 69,
   "first_name" : "Bob",
@@ -1100,8 +1100,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 70,
   "first_name" : "Bob",
@@ -1116,8 +1116,8 @@ var email_data = [{
   "folder" : [
     "IF"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 71,
   "first_name" : "Bob",
@@ -1132,8 +1132,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 72,
   "first_name" : "Bob",
@@ -1148,8 +1148,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 73,
   "first_name" : "Bob",
@@ -1164,8 +1164,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 74,
   "first_name" : "Bob",
@@ -1180,8 +1180,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 75,
   "first_name" : "Bob",
@@ -1196,8 +1196,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 76,
   "first_name" : "Bob",
@@ -1212,8 +1212,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 77,
   "first_name" : "Bob",
@@ -1228,8 +1228,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 78,
   "first_name" : "Bob",
@@ -1244,8 +1244,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 79,
   "first_name" : "Bob",
@@ -1260,8 +1260,8 @@ var email_data = [{
   "folder" : [
     "IF"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 80,
   "first_name" : "Bob",
@@ -1276,8 +1276,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 81,
   "first_name" : "Bob",
@@ -1292,8 +1292,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 82,
   "first_name" : "Bob",
@@ -1308,8 +1308,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 83,
   "first_name" : "Bob",
@@ -1324,8 +1324,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 84,
   "first_name" : "Bob",
@@ -1340,8 +1340,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 85,
   "first_name" : "Bob",
@@ -1356,8 +1356,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 86,
   "first_name" : "Bob",
@@ -1372,8 +1372,8 @@ var email_data = [{
   "folder" : [
     "I"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 87,
   "first_name" : "Bob",
@@ -1388,8 +1388,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 88,
   "first_name" : "Bob",
@@ -1404,8 +1404,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 89,
   "first_name" : "Bob",
@@ -1420,8 +1420,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 90,
   "first_name" : "Bob",
@@ -1436,8 +1436,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 91,
   "first_name" : "Bob",
@@ -1452,8 +1452,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true
 }, {
   "id" : 92,
   "first_name" : "Bob",
@@ -1468,8 +1468,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 93,
   "first_name" : "Bob",
@@ -1484,8 +1484,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 94,
   "first_name" : "Bob",
@@ -1500,8 +1500,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 95,
   "first_name" : "Bob",
@@ -1516,8 +1516,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 96,
   "first_name" : "Bob",
@@ -1532,8 +1532,8 @@ var email_data = [{
   "folder" : [
     "IF"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 97,
   "first_name" : "Bob",
@@ -1548,8 +1548,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 98,
   "first_name" : "Bob",
@@ -1564,8 +1564,8 @@ var email_data = [{
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 99,
   "first_name" : "Bob",
@@ -1580,8 +1580,8 @@ var email_data = [{
   "folder" : [
     "IF"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 100,
   "first_name" : "Bob",
@@ -1596,8 +1596,8 @@ var email_data = [{
   "folder" : [
     "IF"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false
 }, {
   "id" : 101,
   "first_name" : "Jack",
@@ -1612,8 +1612,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 102,
   "first_name" : "Joseph",
@@ -1628,8 +1628,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 103,
   "first_name" : "Deborah",
@@ -1644,8 +1644,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 104,
   "first_name" : "Terry",
@@ -1660,8 +1660,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 105,
   "first_name" : "Harold",
@@ -1676,8 +1676,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 106,
   "first_name" : "Thomas",
@@ -1692,8 +1692,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 107,
   "first_name" : "Charles",
@@ -1708,8 +1708,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 108,
   "first_name" : "Randy",
@@ -1724,8 +1724,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 109,
   "first_name" : "Lillian",
@@ -1740,8 +1740,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 110,
   "first_name" : "Andrew",
@@ -1756,8 +1756,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 111,
   "first_name" : "Lori",
@@ -1772,8 +1772,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 112,
   "first_name" : "Justin",
@@ -1788,8 +1788,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 113,
   "first_name" : "Douglas",
@@ -1804,8 +1804,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 114,
   "first_name" : "Robin",
@@ -1820,8 +1820,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 115,
   "first_name" : "Wayne",
@@ -1836,8 +1836,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 116,
   "first_name" : "Ruby",
@@ -1852,8 +1852,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 117,
   "first_name" : "Heather",
@@ -1868,8 +1868,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 118,
   "first_name" : "Johnny",
@@ -1884,8 +1884,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 119,
   "first_name" : "Bonnie",
@@ -1900,8 +1900,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 120,
   "first_name" : "Joyce",
@@ -1916,8 +1916,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 121,
   "first_name" : "Marilyn",
@@ -1932,8 +1932,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 122,
   "first_name" : "Virginia",
@@ -1948,8 +1948,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 123,
   "first_name" : "Rebecca",
@@ -1964,8 +1964,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 124,
   "first_name" : "Shirley",
@@ -1980,8 +1980,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 125,
   "first_name" : "Lawrence",
@@ -1996,8 +1996,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 126,
   "first_name" : "Patricia",
@@ -2012,8 +2012,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 127,
   "first_name" : "Patrick",
@@ -2028,8 +2028,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 128,
   "first_name" : "Terry",
@@ -2044,8 +2044,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 129,
   "first_name" : "Judith",
@@ -2060,8 +2060,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 130,
   "first_name" : "Susan",
@@ -2076,8 +2076,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 131,
   "first_name" : "Ryan",
@@ -2092,8 +2092,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 132,
   "first_name" : "Walter",
@@ -2108,8 +2108,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 133,
   "first_name" : "Christine",
@@ -2124,8 +2124,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 134,
   "first_name" : "Victor",
@@ -2140,8 +2140,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 135,
   "first_name" : "Bobby",
@@ -2156,8 +2156,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 136,
   "first_name" : "Patricia",
@@ -2172,8 +2172,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 137,
   "first_name" : "Terry",
@@ -2188,8 +2188,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 138,
   "first_name" : "Jack",
@@ -2204,8 +2204,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 139,
   "first_name" : "Heather",
@@ -2220,8 +2220,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 140,
   "first_name" : "Marie",
@@ -2236,8 +2236,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 141,
   "first_name" : "Lillian",
@@ -2252,8 +2252,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 142,
   "first_name" : "Deborah",
@@ -2268,8 +2268,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 143,
   "first_name" : "Laura",
@@ -2284,8 +2284,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 144,
   "first_name" : "Deborah",
@@ -2300,8 +2300,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 145,
   "first_name" : "Virginia",
@@ -2316,8 +2316,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true
 }, {
   "id" : 146,
   "first_name" : "William",
@@ -2332,8 +2332,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 147,
   "first_name" : "Sandra",
@@ -2348,8 +2348,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 148,
   "first_name" : "Gerald",
@@ -2364,8 +2364,8 @@ var email_data = [{
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 149,
   "first_name" : "George",
@@ -2380,8 +2380,8 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }, {
   "id" : 150,
   "first_name" : "Matthew",
@@ -2396,6 +2396,6 @@ var email_data = [{
   "folder" : [
     "Draft"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false
 }]

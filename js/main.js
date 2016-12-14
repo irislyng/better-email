@@ -1,3 +1,8 @@
+function init() {
+	loadEmailList();
+	loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id);
+}
+
 function loadEmailList() {
 	let parent = document.getElementById("email-list");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
@@ -25,19 +30,27 @@ function loadEmailList() {
 		email.appendChild(subject);
 		email.appendChild(content);
 
+		if (!emails[i].read) {
+			email.style.fontWeight = "bold";
+		}
+
 		parent.appendChild(email);
 	}
 }
 
 function loadEmail(id) {
-	let emails = JSON.parse(localStorage.getItem("email_data"));
-	let email;
-	for (var i = 0; i < emails.length; i++) {
-		if (emails[i].id == id) {
-			email = emails[i];
-			break;
-		}
-	}
+	// let emails = JSON.parse(localStorage.getItem("email_data"));
+	// let email;
+	// for (var i = 0; i < emails.length; i++) {
+	// 	if (emails[i].id == id) {
+	// 		email = emails[i];
+	// 		break;
+	// 	}
+	// }
+
+	var email = getCurrentEmail(id);
+	console.log(email);
+	if (!email.read) markAsRead(id);
 
 	let subject = document.querySelector("#content-panel .content-message-subject");
 	let name = document.querySelector("#content-panel .content-message-sender");
@@ -52,6 +65,13 @@ function loadEmail(id) {
 	date.innerHTML = email.datetime;
 	temail.innerHTML = "To: " + email.to;
 	content.innerHTML = email.content;
+}
+
+function markAsRead(id) {
+	var email = getCurrentEmail(id);
+	console.log(email);
+	email.read = true;
+	updateCurrentEmail(id, email);
 }
 
 function composeEmail() {
@@ -76,5 +96,24 @@ function composeEmail() {
 	localstorage.setItem("email_data", JSON.stringify(emails));
 }
 
-loadEmailList();
-loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id)
+function getCurrentEmail(id) {
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	let email;
+	for (var i = 0; i < emails.length; i++) {
+		if (emails[i].id == id) {
+			email = emails[i];
+			break;
+		}
+	}
+
+	return email;
+}
+
+function updateCurrentEmail(id, email) {
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	var index = id - 1;
+	emails[index] = email;
+	localStorage.setItem("email_data", JSON.stringify(emails));
+
+	loadEmailList();
+}
