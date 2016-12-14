@@ -1,3 +1,10 @@
+function loadEmail() {
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	for (var i = 0; i < emails.length; i++) {
+		
+	}
+}
+
 function composeEmail() {
 	let datetime = new Date();
 	datetime = datetime.toLocaleString();
@@ -5,7 +12,7 @@ function composeEmail() {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	let id = emails[emails.length - 1].id;
 	id = id + 1;
-	
+
 	let email = {
 		id: id,
 		to: document.getElementById("to").value,
