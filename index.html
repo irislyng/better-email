@@ -13,6 +13,36 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
   </head>
   <body>
+    <div class="modal-container hidden">
+      <div class="modal modal-create-filter">
+        <form name="CreateFilter">
+          <div class="modal-header">
+            <span class="modal-title left">Create New Filter</span>
+            <span class="modal-close right"><i class="fa fa-lg fa-times"></i></span>
+          </div>
+          <div class="modal-create-filter-option">
+            <span class="modal-create-filter-label">Filter Name:</span>
+            <input class="modal-create-filter-input" type="text" name="FilterName">
+          </div>
+          <span class="modal-title">Filter By</span>
+          <div class="modal-create-filter-option">
+            <input class="modal-create-filter-label" type="checkbox" name="SelectFilterBySubject" value="">Subject containing keywords:</input>
+            <input class="modal-create-filter-input" type="text" name="FilterBySubject">
+          </div>
+          <div class="modal-create-filter-option">
+            <input class="modal-create-filter-label" type="checkbox" name="SelectFilterByMessage" value="">Message containing keywords:</input>
+            <input class="modal-create-filter-input" type="text" name="FilterByMessage">
+          </div>
+          <div class="modal-create-filter-option">
+            <input class="modal-create-filter-label" type="checkbox" name="SelectFilterBySender" value="">Sender's email containing keywords:</input>
+            <input class="modal-create-filter-input" type="text" name="FilterBySender">
+          </div>
+          <div class="modal-button right">
+            <button class="button-submit-filter" type="submit">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
     <div class="container flex">
       <div id="folder-panel" class="col-2">
         <div class="folder-panel-icons">

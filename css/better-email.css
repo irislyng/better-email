@@ -7,6 +7,10 @@ body {
     color: #212121;
 }
 
+.hidden {
+    display: none;
+}
+
 .left {
     float: left;
 }
@@ -40,9 +44,74 @@ button:focus {
     outline: none;
 }
 
+/* MODALS */
+
+div.modal-container {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(75,75,75,0.3);
+}
+
+div.modal {
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    margin-left: -250px;
+    margin-top: -140px;
+    width: 500px;
+    height: 280px;
+    padding: 12px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #673AB7;
+}
+
+div.modal-header {
+    display: block;
+}
+
+span.modal-title {
+    display: block;
+    padding: 6px 0px;
+    font-size: 24px;
+    color: #512DA8;
+    text-transform: uppercase;
+}
+
+span.modal-close {
+    color: #ff4081;
+}
+
+/** CREATE FILTER MODAL **/
+div.modal-create-filter-option {
+    display: flex;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+input.modal-create-filter-label {
+    position: relative;
+    margin: 0px 10px 0px 5px;
+    bottom: -5px;
+}
+
+input.modal-create-filter-input {
+    flex: 3;
+    font-size: 16px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+button.button-submit-filter {
+    margin-top: 12px;
+}
+
 /* FOLDER PANEL */
 
-#folder-panel {
+div#folder-panel {
     position: relative;
     padding: 10px;
     color: #D1C4E9;
@@ -52,49 +121,48 @@ button:focus {
 
 /* FOLDER PANEL ICONS */
 
-.folder-panel-icons {
+div.folder-panel-icons {
     height: 50px;
     text-align: right;
 }
 
-.folder-panel-icon {
-    font-size: 32px;
+i.folder-panel-icon {
     padding: 15px 5px;
     color: #ffffff;
 }
 
-.folder-panel-icon:hover {
+i.folder-panel-icon:hover {
     color: #ff4081;
 }
 
-.folder-panel-icon:active{
+i.folder-panel-icon:active{
     color: #e83874;
 }
 
 /* FOLDER PANEL LISTS */
 
-.folder-panel-list-title {
+div.folder-panel-list-title {
     padding: 20px 0px 10px 0px;
     font-size: 20px;
     text-transform: uppercase;
 }
 
-.folder-panel-list-items {
+div.folder-panel-list-items {
     margin-left: 25px;
     padding-right: 10px;
 }
 
-.folder-panel-list-item {
+div.folder-panel-list-item {
     padding: 2px 0px;
 }
 
-.folder-panel-button {
+div.folder-panel-button {
     text-align: center;
 }
 
 /* MESSAGES PANEL */
 
-#messages-panel {
+div#messages-panel {
     position: relative;
     padding: 0;
     height: 100%;
@@ -102,13 +170,13 @@ button:focus {
     border: 1px solid #bdbdbd;
 }
 
-.search-bar {
+div.search-bar {
     width: 70%;
     height: 48px;
     display: inline-block;
 }
 
-.search-bar-input {
+input.search-bar-input {
     width: 100%;
     height: inherit;
     padding-left: 35px;
@@ -120,7 +188,7 @@ button:focus {
     border: none;
 }
 
-.search-bar-icon {
+span.search-bar-icon {
     position: absolute;
     margin-left: 10px;
     margin-top: 16px;
@@ -128,7 +196,7 @@ button:focus {
     color: #757575;
 }
 
-.messages-panel-sort {
+div.messages-panel-sort {
     width: 25%;
     padding: 10px;
     display: inline-block;
@@ -137,7 +205,7 @@ button:focus {
 
 /* MESSAGES */
 
-.messages-panel-list {
+div.messages-panel-list {
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -145,33 +213,33 @@ button:focus {
     padding-bottom: 48px;
 }
 
-.message-preview {
+div.message-preview {
     overflow: hidden;
     padding: 10px;
     border-bottom: 1px solid #bdbdbd;
     height: 100px;
 }
 
-.message-preview-date {
+span.message-preview-date {
     float: right;
     padding-right: 30px;
     color: #757575;
     font-size: 12px;
 }
 
-.message-preview-name {
+span.message-preview-name {
     display: block;
     color: #512DA8;
     font-size: 20px;
 }
 
-.message-preview-subject {
+span.message-preview-subject {
     display:block;
     color: #212121;
     font-size: 16px;
 }
 
-.message-preview-content {
+span.message-preview-content {
     color: #bdbdbd;
     font-size: 12px;
     font-weight: 300;
@@ -180,7 +248,7 @@ button:focus {
 
 /* CONTENT PANEL */
 
-#content-panel {
+div#content-panel {
     margin: 0px;
     padding: 0px;
     position: relative;
@@ -188,66 +256,65 @@ button:focus {
     background-color: #ffffff;
 }
 
-.content-message-header {
+div.content-message-header {
     height: 50px;
     margin: 12px;
     border-bottom: 1px solid #bdbdbd;
 }
 
-.content-message-subject {
+div.content-message-subject {
     font-size: 28px;
     color: #512DA8;
 }
 
-.content-panel-icon {
-    font-size: 32px;
+i.content-panel-icon {
     padding: 15px 5px;
     color: #ff4081;
 }
 
-.content-panel-icon:hover {
+i.content-panel-icon:hover {
     color: #e83874;
 }
 
-.content-panel-icon:active {
+i.content-panel-icon:active {
     color: #de366f;
 }
 
-.content-message-container {
+div.content-message-container {
     margin: 12px;
     height: 100%;
     overflow: auto;
     padding-bottom: 100px;
 }
 
-.content-message-sender {
+div.content-message-sender {
     font-size: 24px;
     color: #673AB7;
 }
 
-.content-message-sender-email {
+div.content-message-sender-email {
     font-size: 16px;
     line-height: 16px;
     color: #bdbdbd;
 }
 
-.content-message-email {
+div.content-message-email {
     padding: 3px 0px;
     display: block;
     clear: both;
     color: #757575;
 }
 
-.content-message-date {
+div.content-message-date {
     color: #757575;
     font-weight: 300;
 }
 
-.content-message-content {
+div.content-message-content {
     padding: 24px 0px;
     color: #212121;
 }
 
-.content-message-content p {
+div.content-message-content p {
     margin-bottom: 24px;
 }
