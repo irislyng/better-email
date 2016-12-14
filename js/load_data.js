@@ -23,3 +23,6 @@ function loadTestData() {
 
 		localStorage.setItem("email_data", JSON.stringify([d_item1, d_item2]));
 }
+
+
+loadTestData();
