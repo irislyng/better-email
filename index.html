@@ -16,7 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
-  <body>
+  <body onload="init()">
     <div class="modal-container modal-create-filter hidden">
       <div class="modal">
         <form name="CreateFilter">
@@ -60,31 +60,27 @@
           <div class="folder-panel-list-title">Folders</div>
           <div class="folder-panel-list-items">
             <div class="folder-panel-list-item">
-              Inbox
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('I')">Inbox</span>
               <span class="right">100</span>
             </div>
             <div class="folder-panel-list-item">
-              Drafts
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Drafts')">Drafts</span>
               <span class="right">2</span>
             </div>
             <div class="folder-panel-list-item">
-              Flagged
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Flagged')">Flagged</span>
               <span class="right">6</span>
             </div>
             <div class="folder-panel-list-item">
-              Deleted
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Deleted')">Deleted</span>
               <span class="right">10</span>
             </div>
             <div class="folder-panel-list-item">
-              Flagged
-              <span class="right">6</span>
-            </div>
-            <div class="folder-panel-list-item">
-              Spam
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Spam')">Spam</span>
               <span class="right">30</span>
             </div>
             <div class="folder-panel-list-item">
-              Sent
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Sent')">Sent</span>
             </div>
           </div>
         </div>

@@ -1,49 +1,66 @@
+var currentFolder = "I";
+
+function setCurrentFolder(folder) {
+	currentFolder = folder;
+	loadEmailList();
+}
+
+function init() {
+	loadEmailList();
+	loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id) // TODO: change email displayed
+}
+
 function loadEmailList() {
 	let parent = document.getElementById("email-list");
-	console.log(parent);
-	while(parent.firstChild){
-	    parent.removeChild(parent.firstChild);
-	}
-	console.log(parent);
+	var content = getFolderContent();
+
+	parent.innerHTML = content.innerHTML;
+}
+
+function getFolderContent() {
+	let newContent = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	for (var i = 0; i < emails.length; i++) {
-		let email = document.createElement("div");
-		let date = document.createElement("span");
-		let name = document.createElement("span");
-		let subject = document.createElement("span");
-		let content = document.createElement("span");
+		if (emails[i].folder.indexOf(currentFolder) > -1) {
+			let email = document.createElement("div");
+			let date = document.createElement("span");
+			let name = document.createElement("span");
+			let subject = document.createElement("span");
+			let content = document.createElement("span");
 
-		let strong = document.createElement("strong");
-		let checkbox = document.createElement("span");
-		let input = document.createElement("input");
-		checkbox.className = "input-group-addon";
-		input.setAttribute("type", "checkbox")
-		input.setAttribute("aria-label", "...")
-		checkbox.appendChild(input);
-		strong.appendChild(checkbox);
-
-
-		date.innerHTML = emails[i].datetime;
-		name.innerHTML = emails[i].first_name_from + " " + emails[i].last_name_from;
-		subject.innerHTML = emails[i].subject;
-		content.innerHTML = emails[i].content;
-
-		email.className = "message-preview";
-		email.setAttribute("onclick", "loadEmail(" + emails[i].id + ")");
-		date.className = "message-preview-date";
-		name.className = "message-preview-name";
-		subject.className = "message-preview-subject";
-		content.className = "message-preview-content";
-
-		email.appendChild(strong);
-		email.appendChild(date);
-		email.appendChild(name);
-		email.appendChild(subject);
-		email.appendChild(content);
+			let strong = document.createElement("strong");
+			let checkbox = document.createElement("span");
+			let input = document.createElement("input");
+			checkbox.className = "input-group-addon";
+			input.setAttribute("type", "checkbox")
+			input.setAttribute("aria-label", "...")
+			checkbox.appendChild(input);
+			strong.appendChild(checkbox);
 
 
-		parent.appendChild(email);
+			date.innerHTML = emails[i].datetime;
+			name.innerHTML = emails[i].first_name_from + " " + emails[i].last_name_from;
+			subject.innerHTML = emails[i].subject;
+			content.innerHTML = emails[i].content;
+
+			email.className = "message-preview";
+			email.setAttribute("onclick", "loadEmail(" + emails[i].id + ")");
+			date.className = "message-preview-date";
+			name.className = "message-preview-name";
+			subject.className = "message-preview-subject";
+			content.className = "message-preview-content";
+
+			email.appendChild(strong);
+			email.appendChild(date);
+			email.appendChild(name);
+			email.appendChild(subject);
+			email.appendChild(content);
+
+			newContent.appendChild(email);
+		}
 	}
+
+	return newContent;
 }
 
 function loadEmail(id) {
@@ -94,6 +111,3 @@ function composeEmail() {
 
 	hideCompose();
 }
-
-loadEmailList();
-loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id)
