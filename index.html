@@ -17,7 +17,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <div id="modal-create-filter" class="modal-container hidden">
+    <div class="modal-container modal-create-filter hidden">
       <div class="modal">
         <form name="CreateFilter">
           <div class="modal-header">
@@ -103,14 +103,20 @@
         <div class="messages-panel-sort">
           Sort By <i class="fa fa-lg fa-angle-down"></i>
         </div>
+<<<<<<< HEAD
         <div class="messages-panel-list">
           <div class="message-preview"><strong>
 			<span class="input-group-addon"><input type="checkbox" aria-label="..."></span>
+=======
+        <div id="email-list" class="messages-panel-list">
+          <!-- <div id="email-preview" class="message-preview">
+>>>>>>> origin/master
             <span class="message-preview-date">Dec 12 12:09 AM</span>
             <span class="message-preview-name">Test Name</span>
             <span class="message-preview-subject">Subject</span>
             <span class="message-preview-content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+<<<<<<< HEAD
             </span></strong>
           </div>
           <div class="message-preview"><strong>
@@ -158,12 +164,17 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </span>
           </div>
+=======
+            </span>
+          </div> -->
+
+>>>>>>> origin/master
         </div>
       </div>
       <div id="content-panel" class="col-6 content-panel">
         <div class="content-panel-message">
           <div class="content-message-header">
-              <div class="content-message-subject left">Subject</div>
+              <div class="content-message-subject left truncate">Subject</div>
               <div class="content-message-icons right">
                 <i class="fa fa-lg fa-flag-o content-panel-icon"></i>
                 <i class="fa fa-lg fa-plus content-panel-icon"></i>
@@ -201,9 +212,14 @@
             </div>
           </div>
         </div>
+<!-- <<<<<<< HEAD -->
         <div id="content-panel-compose"  class="modal fade" tabindex="-1" style="display: none;">
-		<div class="modal-dialog">
+		    <div class="modal-dialog">
           <div class="compose-message-header" class="hidden">
+<!-- =======
+        <div class="content-panel-compose hidden">
+          <div class="compose-message-header">
+>>>>>>> origin/master -->
             <div class="compose-title left">Compose Email</div>
             <span class="compose-close right"><button data-dismiss="modal"><i class="fa fa-lg fa-times"></i></button></span>
           </div>
@@ -236,11 +252,13 @@
 		</div>
       </div>
     </div>
-    
+
 
     <script type="text/javascript" src="emails.json"></script>
 
     <script type="text/javascript" src="js/load_data.js"></script>
-	<script type="text/javascript" src="js/emailStorage.js"></script>    
+    <script type="text/javascript" src="js/emailStorage.js"></script>    
+    <script type="text/javascript" src="js/main.js"></script>
+
   </body>
 </html>
