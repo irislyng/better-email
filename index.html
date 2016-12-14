@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
   </head>
-  <body onload="loadEmail()">
+  <body>
     <div class="modal-container modal-create-filter hidden">
       <div class="modal">
         <form name="CreateFilter">
@@ -99,55 +99,16 @@
         <div class="messages-panel-sort">
           Sort By <i class="fa fa-lg fa-angle-down"></i>
         </div>
-        <div class="messages-panel-list">
-          <div class="message-preview">
+        <div id="email-list" class="messages-panel-list">
+          <!-- <div id="email-preview" class="message-preview">
             <span class="message-preview-date">Dec 12 12:09 AM</span>
             <span class="message-preview-name">Test Name</span>
             <span class="message-preview-subject">Subject</span>
             <span class="message-preview-content">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </span>
-          </div>
-          <div class="message-preview">
-            <span class="message-preview-date">Dec 12 12:09 AM</span>
-            <span class="message-preview-name">Test Name</span>
-            <span class="message-preview-subject">Subject</span>
-            <span class="message-preview-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-          </div>
-          <div class="message-preview">
-            <span class="message-preview-date">Dec 12 12:09 AM</span>
-            <span class="message-preview-name">Test Name</span>
-            <span class="message-preview-subject">Subject</span>
-            <span class="message-preview-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-          </div>
-          <div class="message-preview">
-            <span class="message-preview-date">Dec 12 12:09 AM</span>
-            <span class="message-preview-name">Test Name</span>
-            <span class="message-preview-subject">Subject</span>
-            <span class="message-preview-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-          </div>
-          <div class="message-preview">
-            <span class="message-preview-date">Dec 12 12:09 AM</span>
-            <span class="message-preview-name">Test Name</span>
-            <span class="message-preview-subject">Subject</span>
-            <span class="message-preview-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-          </div>
-          <div class="message-preview">
-            <span class="message-preview-date">Dec 12 12:09 AM</span>
-            <span class="message-preview-name">Test Name</span>
-            <span class="message-preview-subject">Subject</span>
-            <span class="message-preview-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-          </div>
+          </div> -->
+          
         </div>
       </div>
       <div id="content-panel" class="col-6 content-panel">
@@ -228,6 +189,7 @@
 
     <script type="text/javascript" src="emails.json"></script>
     <script type="text/javascript" src="js/load_data.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     
   </body>
 </html>

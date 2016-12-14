@@ -229,6 +229,11 @@ div.message-preview {
     height: 100px;
 }
 
+div.message-preview:hover {
+    background-color: #ff4081;
+    cursor: pointer;
+}
+
 span.message-preview-date {
     float: right;
     padding-right: 30px;
