@@ -1,0 +1,19 @@
+function store(){
+	
+	var newHash = {};
+	var current = JSON.parse(localStorage.getItem("email_data"));
+	var new_id = current.length+1;
+	
+	newHash["id"] = new_id;
+     var EmailTo= document.getElementById("compose-to");
+     newHash["to"] = EmailTo;
+	 
+	 var EmailCC= document.getElementById("compose-cc");
+     newHash["CC"] = EmailCC;
+	 
+	 var EmailBCC= document.getElementById("compose-bcc");
+     newHash["CC"] = EmailBCC;
+	 
+	 var EmailSubject= document.getElementById("compose-subject");
+     localStorage.setItem("compose-subject", EmailSubject.value);
+    }
