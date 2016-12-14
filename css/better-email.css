@@ -19,6 +19,13 @@ body {
     float: right;
 }
 
+.truncate {
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 button {
     width: 150px;
     height: 35px;
@@ -230,7 +237,7 @@ div.message-preview {
 }
 
 div.message-preview:hover {
-    background-color: #ff4081;
+    background-color: #e2e2e2;
     cursor: pointer;
 }
 

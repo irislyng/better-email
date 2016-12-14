@@ -46,7 +46,8 @@ function loadEmail(id) {
 	let content = document.querySelector("#content-panel .content-message-content");
 
 	subject.innerHTML = email.subject;
-	name.innerHTML = email.first_name_from + " " + email.last_name_from + " " 
+	subject.title = email.subject;
+	name.innerHTML = email.first_name_from + " " + email.last_name_from + " "
 	+ "<span class='content-message-sender-email'>" + email.from + "</span>";
 	date.innerHTML = email.datetime;
 	temail.innerHTML = email.to;
