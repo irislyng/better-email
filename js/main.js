@@ -50,7 +50,7 @@ function loadEmail(id) {
 	name.innerHTML = email.first_name_from + " " + email.last_name_from + " "
 	+ "<span class='content-message-sender-email'>" + email.from + "</span>";
 	date.innerHTML = email.datetime;
-	temail.innerHTML = email.to;
+	temail.innerHTML = "To: " + email.to;
 	content.innerHTML = email.content;
 }
 
