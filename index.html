@@ -11,8 +11,8 @@
 
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
-	
-	
+
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
@@ -50,7 +50,7 @@
     <div class="container flex">
       <div id="folder-panel" class="col-2">
         <div class="folder-panel-icons">
-          <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left" role="dialog" data-toggle="modal" data-target="#content-panel-compose"></i>
+          <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left" onclick="showCompose()"></i>
           <i class="fa fa-lg fa-plus folder-panel-icon"></i>
           <i class="fa fa-lg fa-envelope-open-o folder-panel-icon"></i>
           <i class="fa fa-lg fa-envelope-o folder-panel-icon"></i>
@@ -103,16 +103,10 @@
         <div class="messages-panel-sort">
           Sort By <i class="fa fa-lg fa-angle-down"></i>
         </div>
-
-        <!-- <div class="messages-panel-list">
-          <div class="message-preview"><strong>
-            <span class="input-group-addon"><input type="checkbox" aria-label="..."></span></strong>
-        </div> -->
-
         <div id="email-list" class="messages-panel-list">
         </div>
       </div>
-      <div id="content-panel" class="col-6 content-panel">
+      <div id="content-panel" class="col-6">
         <div class="content-panel-message">
           <div class="content-message-header">
               <div class="content-message-subject left truncate">Subject</div>
@@ -129,42 +123,16 @@
             <div class="content-message-sender left">Name <span class="content-message-sender-email">sender@sender.com</span></div>
             <div class="content-message-date right">Dec 12 12:09 AM</div>
             <div class="content-message-email">To: example@example.com <i class="fa fa-lg fa-angle-down"></i></div>
-            <div class="content-message-content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a nulla sit amet dui ullamcorper tincidunt. Praesent et laoreet urna. Suspendisse gravida nisi diam, vel malesuada magna dictum vitae. Donec mollis ipsum consectetur arcu euismod scelerisque. Fusce elit ipsum, efficitur ut tempor ut, facilisis quis nisi. Suspendisse ligula ante, lobortis vitae dignissim in, euismod at libero. Cras imperdiet tempus augue, eget mollis turpis hendrerit sit amet. In vitae odio varius, luctus justo in, pellentesque justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam nec nisi rutrum, dictum diam eu, luctus diam. Phasellus vehicula fringilla scelerisque. Cras euismod purus nec ullamcorper pharetra. Nunc ac gravida massa, pulvinar luctus neque. Vestibulum hendrerit urna quis ligula finibus, pharetra posuere purus accumsan. Nulla facilisi.
-              </p>
-
-              <p>
-                 Integer ultricies tellus non justo vulputate, non euismod risus dictum. Vestibulum tristique ipsum nec odio consectetur pharetra. Fusce pulvinar leo a urna facilisis rhoncus. Curabitur aliquam massa sapien, eget finibus urna egestas vel. Duis dolor velit, sagittis et maximus sit amet, consequat id odio. Vestibulum sodales tellus ut efficitur cursus. Integer dolor enim, facilisis non luctus a, sagittis in magna. Donec vulputate ligula arcu, sed laoreet ipsum commodo mattis. Vestibulum ut ornare nunc. Vivamus pretium porttitor mauris, in feugiat ex. Etiam molestie justo massa, sed aliquet ipsum varius a. Phasellus tortor nisi, ornare at nibh ut, varius dictum augue.
-              </p>
-
-              <p>
-                Vivamus lacinia ante tempus scelerisque lacinia. Vestibulum posuere mattis dolor ac ultricies. Fusce fringilla at ligula id pellentesque. Praesent vel dictum sapien. Donec dictum sollicitudin odio nec feugiat. Pellentesque elementum, risus et rhoncus aliquam, velit urna pretium orci, et ultrices arcu turpis finibus purus. Sed ac nisl eget dui pellentesque maximus. Phasellus a turpis et purus mattis egestas. Pellentesque semper, ipsum et efficitur placerat, ante sem ornare mauris, malesuada convallis nunc libero sed est. Pellentesque lacinia eleifend dolor, ac fermentum nunc dictum quis.
-              </p>
-
-              <p>
-                Fusce vitae tortor vitae dui mattis vulputate. Duis risus augue, imperdiet ac fermentum vitae, volutpat iaculis odio. Proin sed eros vel mi ultrices fermentum maximus tristique sem. Aliquam sed lorem quis metus malesuada laoreet ac eu tortor. Morbi diam turpis, sodales tempus neque et, tincidunt porta augue. Nulla accumsan nisi non ante molestie euismod. Pellentesque aliquet lacus urna, vitae ornare massa ultrices eu.
-              </p>
-
-              <p>
-                Etiam vehicula sagittis ipsum vitae porta. Vivamus lacinia lorem scelerisque tortor varius, sed feugiat sem blandit. Aenean et malesuada tellus. Fusce sed ornare tellus. In eleifend velit fermentum, placerat mauris at, elementum nunc. Vivamus nec consectetur urna. Suspendisse bibendum nulla et viverra placerat. Duis facilisis fermentum nunc, ut molestie ligula suscipit nec. Aenean nibh est, pretium et mattis ut, fermentum id turpis. Aenean diam ipsum, volutpat vel lacus vel, mollis consectetur lorem. Cras sodales tincidunt nisl ut accumsan. Donec tempus pellentesque urna sit amet ultrices. Mauris convallis lorem quis dui lobortis, non feugiat lorem semper. Phasellus scelerisque interdum arcu vel facilisis. Duis scelerisque tortor enim, eu hendrerit est varius vel. Mauris vehicula urna et tellus dapibus consequat in at elit.
-              </p>
-
-            </div>
+            <div class="content-message-content"></div>
           </div>
         </div>
-<!-- <<<<<<< HEAD -->
-        <div id="content-panel-compose"  class="modal fade" tabindex="-1" style="display: none;">
-		    <div class="modal-dialog">
-          <div class="compose-message-header" class="hidden">
-<!-- =======
-        <div class="content-panel-compose hidden">
+      </div>
+      <div id="content-panel-compose" class="content-panel col-6 hidden">
           <div class="compose-message-header">
->>>>>>> origin/master -->
             <div class="compose-title left">Compose Email</div>
-            <span class="compose-close right"><button data-dismiss="modal"><i class="fa fa-lg fa-times"></i></button></span>
+            <span class="compose-close right" onclick="hideCompose()"><i class="fa fa-lg fa-times"></i></span>
           </div>
-          <form>
+          <form id="compose-email">
             <div class="compose-section">
               <label class="compose-label">To: </label>
               <input id="compose-to" class="compose-input" type="text">
@@ -190,15 +158,12 @@
             </div>
           </form>
         </div>
-		</div>
-      </div>
     </div>
-
-
     <script type="text/javascript" src="emails.json"></script>
 
+    <script type="text/javascript" src="js/iconActions.js"></script>
     <script type="text/javascript" src="js/load_data.js"></script>
-    <script type="text/javascript" src="js/emailStorage.js"></script>    
+    <script type="text/javascript" src="js/emailStorage.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
   </body>
