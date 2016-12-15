@@ -10,6 +10,7 @@ function init() {
 }
 
 function loadCurrentList() {
+	selectedEmails = []
 	if (currentFolder) {
 		setCurrentFolder(currentFolder);
 	} else if (currentFilter) {
@@ -299,7 +300,7 @@ function getEmail(id) {
 	return email;
 }
 
-function setEmail(id, email) {
+function setEmail(id, email, notification) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	var result = emails.filter(function(obj) {
 	    return obj.id == id; // Filter out the appropriate one
@@ -309,6 +310,8 @@ function setEmail(id, email) {
 	emails[index] = email;
 	localStorage.setItem("email_data", JSON.stringify(emails));
 	loadCurrentList();
+
+	if (notification) showNotification(notification);
 }
 
 function createFilter() {

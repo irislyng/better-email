@@ -41,7 +41,5 @@ function deleteEmail() {
         email.folder = ['Deleted']
     }
 
-    setEmail(email_id, email);
-
-    showNotification("Your email has been moved to \"Deleted\"!");
+    setEmail(email_id, email, "Your email has been moved to \"Deleted\"!");
 }

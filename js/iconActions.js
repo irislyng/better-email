@@ -51,17 +51,19 @@ function toggleFlagged(id) {
 
     email.flagged = flagged;
 
-    setEmail(id, email);
+    setEmail(id, email, false);
 }
 
 function toggleIcons() {
     if (selectedEmails.length > 0) {
-        var move = document.getElementById("folder-panel-move");
-        move.classList.remove("disabled");
-        move.setAttribute("onclick", "showModal('modal-move');");
+        var moveIcon = document.getElementById("folder-panel-move");
+        moveIcon.classList.remove("disabled");
+        moveIcon.setAttribute("onclick", "showModal('modal-move');");
         document.getElementById("folder-panel-mark-unread").classList.remove("disabled");
         document.getElementById("folder-panel-mark-read").classList.remove("disabled");
-        document.getElementById("folder-panel-delete").classList.remove("disabled");
+        var deleteIcon = document.getElementById("folder-panel-delete");
+        deleteIcon.classList.remove("disabled");
+        deleteIcon.setAttribute("onclick", "deleteEmail();");
     } else {
         document.getElementById("folder-panel-move").classList.add("disabled");
         document.getElementById("folder-panel-mark-unread").classList.add("disabled");

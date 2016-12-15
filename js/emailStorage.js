@@ -88,5 +88,5 @@ function showNotification(value) {
 
 	setInterval(function(){
 		notification.classList.add("hidden");
-	}, 1500);
+	}, 2000);
 }
