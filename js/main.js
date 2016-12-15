@@ -206,12 +206,91 @@ function loadEmail(id) {
 
 	subject.innerHTML = email.subject;
 	subject.title = email.subject;
+	// save the email id in the content message header. 
+	subject.setAttribute("email_id", email.id);
 	name.innerHTML = email.first_name_from + " " + email.last_name_from + " "
 	+ "<span class='content-message-sender-email'>" + email.from + "</span>";
 	date.innerHTML = email.datetime;
 	temail.innerHTML = "To: " + email.to;
 	content.innerHTML = email.content;
 }
+
+
+function forward() {
+	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
+	var email = getEmail(email_id);
+	var composeState = "Forward";
+	showCompose(composeState);
+	formatForward(email);
+}
+
+
+function formatForward(email) {
+	var subject = document.getElementById("compose-subject");
+	var content = document.getElementById("compose-content");
+
+	subject.value = email.subject;
+
+	var prevDate = new Date(email.datetime);
+	content.value = "\r\r\r----------------\r" 
+		+ "FORWARDED MESSAGE\r" 
+		+ "From: " + email.first_name_from + " " + email.last_name_from + "<" + email.from +">" +"\r"
+		+ "Date: " + prevDate + "\r"
+		+ "Subject: " + email.subject + "\r"
+		+ "To: " + email.to
+		+ "\r----------------"
+		+  "\r\r\r" 
+		+ email.content;
+	// console.log()
+
+}
+
+
+
+
+
+
+
+// functions for reply, reply-all, forward buttons 
+function reply(replyAll=false) {
+	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
+	var email = getEmail(email_id);
+	var composeState = "Reply";
+	if(replyAll) {
+		composeState = "Reply-All";
+	}
+	showCompose(composeState);
+	formatReply(email, replyAll, false);
+}
+
+function formatReply(email, replyAll) {
+	var temail = document.getElementById("compose-to");
+	var subject = document.getElementById("compose-subject");
+	var cc = document.getElementById("compose-cc");
+	var bcc = document.getElementById("compose-bcc");
+	var content = document.getElementById("compose-content");
+
+	if(replyAll) {
+		cc.value = email.cc;
+		bcc.value = email.bcc;
+	}
+
+	temail.value = email.from;
+	subject.value = "RE: " + email.subject;
+
+	var prevDate = new Date(email.datetime);
+	content.value = "\r\r\r----------------\r" 
+		+ "On " 
+		+ prevDate 
+		+ " " 
+		+ email.first_name_from + " " + email.last_name_from + "<" + email.from + "> wrote:"
+		+ "\r----------------"
+		+  "\r\r\r" 
+		+ email.content;
+	// console.log()
+
+}
+
 
 function getEmail(id) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));

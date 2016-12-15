@@ -1,8 +1,13 @@
-function showCompose() {
+function showCompose(messageState) {
+    // messageState is just a string to say whether it is composing,
+    // replying or forwarding
     var message = document.getElementById('content-panel');
     message.classList.add("hidden");
     var compose = document.getElementById('content-panel-compose');
     compose.classList.remove("hidden");
+
+    var title = document.querySelector('#content-panel-compose .compose-title');
+    title.innerHTML = messageState + " Email"
 }
 
 function hideCompose() {
