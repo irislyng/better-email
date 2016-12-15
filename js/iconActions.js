@@ -20,7 +20,7 @@ function hideCompose() {
 }
 
 function toggleFlagged(id) {
-    var email = getCurrentEmail(id);
+    var email = getEmail(id);
     var flag = document.getElementById("content-message-flagged");
     var flagged = null;
 
@@ -43,5 +43,5 @@ function toggleFlagged(id) {
 
     email.flagged = flagged;
 
-    setCurrentEmail(id, email);
+    setEmail(id, email);
 }

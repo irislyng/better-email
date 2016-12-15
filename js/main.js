@@ -150,7 +150,7 @@ function toggleCheckbox(id) {
 }
 
 function loadEmail(id) {
-	var email = getCurrentEmail(id);
+	var email = getEmail(id);
 	// if (!email.read) markAsRead(id, email);
 	let flag = document.getElementById("content-message-flagged");
 	flag.setAttribute("onclick", "toggleFlagged(" + email.id + ")");
@@ -177,7 +177,7 @@ function loadEmail(id) {
 	content.innerHTML = email.content;
 }
 
-function getCurrentEmail(id) {
+function getEmail(id) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	let email;
 	for (var i = 0; i < emails.length; i++) {
@@ -190,7 +190,7 @@ function getCurrentEmail(id) {
 	return email;
 }
 
-function setCurrentEmail(id, email) {
+function setEmail(id, email) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	var result = emails.filter(function(obj) {
 	    return obj.id === id; // Filter out the appropriate one
