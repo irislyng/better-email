@@ -345,15 +345,32 @@ function createFilter() {
 
 	let div = document.createElement('div');
 	div.classList.add('folder-panel-list-item');
+	div.id = "filter-" + filter.name;
 	let span = document.createElement('span');
 	span.classList.add("folder-panel-list-item-nav");
 	span.innerHTML = filter.name;
 	span.setAttribute("onclick", "setCurrentFilter('" + filter.name + "')");
+	let remove = document.createElement('span');
+	remove.classList.add("right");
+	remove.setAttribute("onclick", "removeFilter('" + filter.name + "')");
+	remove.innerHTML = "<i class=\"fa fa-lg fa-times\"></i>"
 
 	div.appendChild(span);
+	div.appendChild(remove);
 	parent.appendChild(div);
 
 	closeModal('modal-create-filter');
+}
+
+function removeFilter(filter) {
+	for(var i = 0; i < filters.length; i++) {
+	    if(filters[i].name === filter) {
+	        filters.splice(i, 1);
+	        break;
+	    }
+	}
+
+	document.getElementById("filter-"+filter).remove();
 }
 
 function markSelectedAsUnread() {
