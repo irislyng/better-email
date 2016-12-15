@@ -19,7 +19,7 @@ function store(isSent){
 
 	var current = JSON.parse(localStorage.getItem("email_data"));
 
-	var new_id = current.length + 1;
+	var new_id = current[current.length-1].id + 1;
 	email.id = new_id;
   	email.to = document.getElementById("compose-to").value;
   	email.subject = document.getElementById("compose-subject").value;
