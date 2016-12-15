@@ -75,7 +75,7 @@
       <div id="folder-panel" class="col-2">
         <div class="folder-panel-icons">
           <i title="Compose Email" class="fa fa-lg fa-pencil-square-o folder-panel-icon left" onclick="showCompose('Compose')"></i>
-          <i id="folder-panel-move" title="Move to Folder" class="fa fa-lg fa-plus folder-panel-icon disabled"></i>
+          <i id="folder-panel-move" title="Move to Folder" class="fa fa-lg fa-folder folder-panel-icon disabled"></i>
           <i id="folder-panel-mark-read" title="Mark As Read" class="fa fa-lg fa-envelope-open-o folder-panel-icon disabled" onclick="markSelectedAsRead()"></i>
           <i id="folder-panel-mark-unread" title="Mark As Unread" class="fa fa-lg fa-envelope-o folder-panel-icon disabled" onclick="markSelectedAsUnread()"></i>
           <i id="folder-panel-delete" title="Delete" class="fa fa-lg fa-trash-o folder-panel-icon disabled"></i>
@@ -128,6 +128,9 @@
         </div> -->
       </div>
       <div id="messages-panel" class="col-4">
+        <div class="messages-panel-folder">
+          <span id="current-folder">Inbox</span>
+        </div>
         <div class="search-bar">
           <span class="fa fa-search search-bar-icon"></span>
           <input id="search-bar-input" class="search-bar-input" type="text" placeholder="Search Messages">
@@ -147,7 +150,7 @@
               <div class="content-message-subject left truncate">Subject</div>
               <div class="content-message-icons right">
                 <i id="content-message-flagged" title="Flag" class="fa fa-lg content-panel-icon"></i>
-                <i title="Move to Folder" class="fa fa-lg fa-plus content-panel-icon"></i>
+                <!-- <i title="Move to Folder" class="fa fa-lg fa-folder content-panel-icon"></i> -->
                 <i onClick="reply(false)" title="Reply" class="fa fa-lg fa-reply content-panel-icon"></i>
                 <i onclick="reply(true)" title="Reply All" class="fa fa-lg fa-reply-all content-panel-icon"></i>
                 <i onclick="forward()" title="Forward" class="fa fa-lg fa-share content-panel-icon"></i>

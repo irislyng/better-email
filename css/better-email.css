@@ -298,6 +298,15 @@ div.search-button button {
 
 /* MESSAGES */
 
+div.messages-panel-folder {
+    border-bottom: 1px solid #bdbdbd;
+    text-align: center;
+    padding: 3px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #009688;
+}
+
 div.messages-panel-list {
     width: 100%;
     height: 100%;
@@ -346,7 +355,7 @@ span.message-preview-subject {
 
 span.message-preview-flagged {
     float: right;
-    color: #009688;
+    color: #bdbdbd;
 }
 
 span.message-preview-content {

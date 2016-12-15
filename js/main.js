@@ -22,11 +22,17 @@ function loadCurrentList() {
 	}
 }
 
+function setFolderName(value) {
+	var folder = document.getElementById("current-folder");
+	folder.innerHTML = value;
+}
+
 function setCurrentFolder(folder) {
 	currentFolder = folder;
 	currentFilter = null;
 	currentSearch = null;
 	loadEmailList(folder, false, false);
+	setFolderName(folder);
 }
 
 function setCurrentFilter(filter) {
@@ -34,6 +40,7 @@ function setCurrentFilter(filter) {
 	currentFilter = filter;
 	currentSearch = null;
 	loadEmailList(filter, true, false);
+	setFolderName("Filter: " + filter);
 }
 
 function setCurrentSearch() {
@@ -42,6 +49,7 @@ function setCurrentSearch() {
 	currentFilter = null;
 	currentSearch = keyword;
 	loadEmailList(keyword, false, true)
+	setFolderName("Search: " + keyword)
 }
 
 function loadEmailList(value, isFilter, isSearch) {
