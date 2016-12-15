@@ -34,6 +34,7 @@ function getCurrentEmail(id) {
 function getFolderContent() {
 	let newContent = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
+	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
 		if (emails[i].folder.indexOf(currentFolder) > -1) {
 			let email = document.createElement("div");
@@ -68,29 +69,15 @@ function getFolderContent() {
 			email.appendChild(subject);
 			email.appendChild(content);
 
+			// if (!emails[i].read) {
+			// 	email.style.fontWeight = "bold";
+			// }
+
 			newContent.appendChild(email);
 		}
 	}
 
 	return newContent;
-}
-
-function loadEmail(id) {
-	var email = getCurrentEmail(id);
-
-	let subject = document.querySelector("#content-panel .content-message-subject");
-	let name = document.querySelector("#content-panel .content-message-sender");
-	let date = document.querySelector("#content-panel .content-message-date");
-	let temail = document.querySelector("#content-panel .content-message-email");
-	let content = document.querySelector("#content-panel .content-message-content");
-
-	subject.innerHTML = email.subject;
-	subject.title = email.subject;
-	name.innerHTML = email.first_name_from + " " + email.last_name_from + " "
-	+ "<span class='content-message-sender-email'>" + email.from + "</span>";
-	date.innerHTML = email.datetime;
-	temail.innerHTML = "To: " + email.to;
-	content.innerHTML = email.content;
 }
 
 function toggleCheckbox(id) {
@@ -115,25 +102,32 @@ function toggleCheckbox(id) {
 	}
 }
 
-function composeEmail() {
-	let datetime = new Date();
-	datetime = datetime.toLocaleString();
+function loadEmail(id) {
+	var email = getCurrentEmail(id);
+	// if (!email.read) markAsRead(id, email);
 
-	let emails = JSON.parse(localStorage.getItem("email_data"));
-	let id = emails[emails.length - 1].id + 1;
+	let subject = document.querySelector("#content-panel .content-message-subject");
+	let name = document.querySelector("#content-panel .content-message-sender");
+	let date = document.querySelector("#content-panel .content-message-date");
+	let temail = document.querySelector("#content-panel .content-message-email");
+	let content = document.querySelector("#content-panel .content-message-content");
 
-	let email = {
-		id: id,
-		to: document.getElementById("to").value,
-		from: document.getElementById("from").value,
-		subject: document.getElementById("subject").value,
-		content: document.getElementById("content").value,
-		datetime: datetime,
-		folder: ["Sent"]
-	};
-
-	emails.push(email);
-	localstorage.setItem("email_data", JSON.stringify(emails));
-
-	hideCompose();
+	subject.innerHTML = email.subject;
+	subject.title = email.subject;
+	name.innerHTML = email.first_name_from + " " + email.last_name_from + " "
+	+ "<span class='content-message-sender-email'>" + email.from + "</span>";
+	date.innerHTML = email.datetime;
+	temail.innerHTML = "To: " + email.to;
+	content.innerHTML = email.content;
 }
+
+// function markAsRead(id, email) {
+// 	emails = JSON.parse(localStorage.getItem("email_data"));
+// 	var result = emails.filter(function(obj) {
+// 	    return obj.id === id; // Filter out the appropriate one
+// 	})[0];
+// 	var index = emails.indexOf(result);
+
+// 	result.read = true;
+// 	loadEmailList();
+// }
