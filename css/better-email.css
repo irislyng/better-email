@@ -420,3 +420,7 @@ textarea.compose-textarea {
     color: #212121;
     border: none;
 }
+
+.unread {
+    font-weight: bold;
+}
