@@ -5,7 +5,7 @@ var selectedEmails = [];
 var filters = [];
 
 function init() {
-	loadEmailList("Inbox", false);
+	setCurrentFolder("Inbox");
 	loadEmail(JSON.parse(localStorage.getItem("email_data"))[99].id) // TODO: change email displayed
 }
 
@@ -142,7 +142,7 @@ function createEmailPreview(email) {
 	subject.innerHTML = email.subject;
 	content.innerHTML = email.content;
 
-	preview.className = "message-preview";
+	preview.className = (email.read) ? "message-preview":"message-preview unread";
 	preview.setAttribute("onclick", "loadEmail(" + email.id + ")");
 	date.className = "message-preview-date";
 	name.className = "message-preview-name";
@@ -190,7 +190,7 @@ function toggleCheckbox(id) {
 
 function loadEmail(id) {
 	var email = getEmail(id);
-	// if (!email.read) markAsRead(id, email);
+	if (!email.read) markAsRead(id, email);
 	let flag = document.getElementById("content-message-flagged");
 	flag.setAttribute("onclick", "toggleFlagged(" + email.id + ")");
 	if (email.flagged) {
@@ -286,13 +286,47 @@ function createFilter() {
 	closeModal('modal-create-filter');
 }
 
-// function markAsRead(id, email) {
-// 	emails = JSON.parse(localStorage.getItem("email_data"));
-// 	var result = emails.filter(function(obj) {
-// 	    return obj.id === id; // Filter out the appropriate one
-// 	})[0];
-// 	var index = emails.indexOf(result);
+function markSelectedAsUnread() {
+	var emails = JSON.parse(localStorage.getItem("email_data"));
+	for (var i = 0; i < selectedEmails.length; i++) {
+		for (var j = 0; j < emails.length; j++) {
+			if(selectedEmails[i] === emails[j].id) {
+				emails[j].read = false;
+				break;
+			}
+		}
+	}
 
-// 	result.read = true;
-// 	loadEmailList();
-// }
+	localStorage.setItem("email_data", JSON.stringify(emails));
+	
+	loadCurrentList();
+}
+
+function markSelectedAsRead() {
+	var emails = JSON.parse(localStorage.getItem("email_data"));
+	for (var i = 0; i < selectedEmails.length; i++) {
+		for (var j = 0; j < emails.length; j++) {
+			if(selectedEmails[i] === emails[j].id) {
+				emails[j].read = true;
+				break;
+			}
+		}
+	}
+
+	localStorage.setItem("email_data", JSON.stringify(emails));
+	
+	loadCurrentList();
+}
+
+function markAsRead(id, email) {
+	var emails = JSON.parse(localStorage.getItem("email_data"));
+	var result = emails.filter(function(obj) {
+	    return obj.id === id; // Filter out the appropriate one
+	})[0];
+	var index = emails.indexOf(result);
+	emails[index].read = true;
+
+	localStorage.setItem("email_data", JSON.stringify(emails));
+
+	loadCurrentList();
+}
