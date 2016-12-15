@@ -5,7 +5,7 @@ function store(isSent){
 
 	if (!document.getElementById("compose-to").value) {
 		error.classList.remove("hidden");
-		document.getElementById('compose-error-value').innerHTML = "Error: Please enter a keyword for sender."
+		document.getElementById('compose-error-value').innerHTML = "Error: Please enter a recipient email address."
 		return;
 	}
 	var notificationValue = null;
