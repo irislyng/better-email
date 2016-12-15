@@ -100,6 +100,14 @@ function createEmailPreview(email) {
 	preview.appendChild(date);
 	preview.appendChild(name);
 	preview.appendChild(subject);
+
+	if (email.flagged) {
+		let flagged = document.createElement("span");
+		flagged.className = "message-preview-flagged";
+		flagged.innerHTML = "<i class=\"fa fa-flag message-preview-icon\"></i>"
+		preview.appendChild(flagged);
+	}
+
 	preview.appendChild(content);
 
 	return preview;
@@ -130,6 +138,14 @@ function toggleCheckbox(id) {
 function loadEmail(id) {
 	var email = getCurrentEmail(id);
 	// if (!email.read) markAsRead(id, email);
+	let flag = document.getElementById("content-message-flagged");
+	if (email.flagged) {
+		flag.classList.remove("fa-flag-o");
+		flag.classList.add("fa-flag");
+	} else {
+		flag.classList.remove("fa-flag");
+		flag.classList.add("fa-flag-o");
+	}
 
 	let subject = document.querySelector("#content-panel .content-message-subject");
 	let name = document.querySelector("#content-panel .content-message-sender");

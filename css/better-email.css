@@ -305,12 +305,19 @@ span.message-preview-name {
 }
 
 span.message-preview-subject {
-    display:block;
+    float: left;
     color: #212121;
     font-size: 16px;
 }
 
+span.message-preview-flagged {
+    float: right;
+    color: #ff4081;
+}
+
 span.message-preview-content {
+    display: block;
+    clear: both;
     color: #bdbdbd;
     font-size: 12px;
     font-weight: 300;
