@@ -56,7 +56,9 @@ function toggleFlagged(id) {
 
 function toggleIcons() {
     if (selectedEmails.length > 0) {
-        document.getElementById("folder-panel-move").classList.remove("disabled");
+        var move = document.getElementById("folder-panel-move");
+        move.classList.remove("disabled");
+        move.setAttribute("onclick", "showModal('modal-move');");
         document.getElementById("folder-panel-mark-unread").classList.remove("disabled");
         document.getElementById("folder-panel-mark-read").classList.remove("disabled");
         document.getElementById("folder-panel-delete").classList.remove("disabled");
