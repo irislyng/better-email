@@ -1,8 +1,13 @@
-function showCompose() {
+function showCompose(messageState) {
+    // messageState is just a string to say whether it is composing,
+    // replying or forwarding
     var message = document.getElementById('content-panel');
     message.classList.add("hidden");
     var compose = document.getElementById('content-panel-compose');
     compose.classList.remove("hidden");
+
+    var title = document.querySelector('#content-panel-compose .compose-title');
+    title.innerHTML = messageState + " Email"
 }
 
 function hideCompose() {
@@ -44,4 +49,18 @@ function toggleFlagged(id) {
     email.flagged = flagged;
 
     setEmail(id, email);
+}
+
+function toggleIcons() {
+    if (selectedEmails.length > 0) {
+        document.getElementById("folder-panel-move").classList.remove("disabled");
+        document.getElementById("folder-panel-mark-unread").classList.remove("disabled");
+        document.getElementById("folder-panel-mark-read").classList.remove("disabled");
+        document.getElementById("folder-panel-delete").classList.remove("disabled");
+    } else {
+        document.getElementById("folder-panel-move").classList.add("disabled");
+        document.getElementById("folder-panel-mark-unread").classList.add("disabled");
+        document.getElementById("folder-panel-mark-read").classList.add("disabled");
+        document.getElementById("folder-panel-delete").classList.add("disabled");
+    }
 }

@@ -60,6 +60,8 @@ function loadEmailList(value, isFilter, isSearch) {
 function getFolderContent(folderName) {
 	let content = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
+	updateCounts(emails);
+
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
 		if (emails[i].folder.indexOf(folderName) > -1) {
@@ -78,6 +80,7 @@ function getFilterContent(filterName) {
 
 	let content = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
+	updateCounts(emails);
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
 		var inFilter = true;
@@ -102,6 +105,7 @@ function getSearchContent(keyword) {
 
 	var keywords = keyword.split(" ");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
+	updateCounts(emails);
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 
 	for (var i = 0; i < emails.length; i++) {
@@ -178,17 +182,7 @@ function toggleCheckbox(id) {
 		selectedEmails.push(id);
 	}
 
-	if (selectedEmails.length > 0) {
-		document.getElementById("folder-panel-move").classList.remove("disabled");
-		document.getElementById("folder-panel-mark-unread").classList.remove("disabled");
-		document.getElementById("folder-panel-mark-read").classList.remove("disabled");
-		document.getElementById("folder-panel-delete").classList.remove("disabled");
-	} else {
-		document.getElementById("folder-panel-move").classList.add("disabled");
-		document.getElementById("folder-panel-mark-unread").classList.add("disabled");
-		document.getElementById("folder-panel-mark-read").classList.add("disabled");
-		document.getElementById("folder-panel-delete").classList.add("disabled");
-	}
+	toggleIcons();
 }
 
 function loadEmail(id) {
@@ -212,12 +206,85 @@ function loadEmail(id) {
 
 	subject.innerHTML = email.subject;
 	subject.title = email.subject;
+	// save the email id in the content message header.
+	subject.setAttribute("email_id", email.id);
 	name.innerHTML = email.first_name_from + " " + email.last_name_from + " "
 	+ "<span class='content-message-sender-email'>" + email.from + "</span>";
 	date.innerHTML = email.datetime;
 	temail.innerHTML = "To: " + email.to;
 	content.innerHTML = email.content;
 }
+
+
+function forward() {
+	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
+	var email = getEmail(email_id);
+	var composeState = "Forward";
+	showCompose(composeState);
+	formatForward(email);
+}
+
+
+function formatForward(email) {
+	var subject = document.getElementById("compose-subject");
+	var content = document.getElementById("compose-content");
+
+	subject.value = "FW: " + email.subject;
+
+	var prevDate = new Date(email.datetime);
+	content.value = "\r\r\r----------------\r"
+		+ "FORWARDED MESSAGE\r"
+		+ "From: " + email.first_name_from + " " + email.last_name_from + "<" + email.from +">" +"\r"
+		+ "Date: " + prevDate + "\r"
+		+ "Subject: " + email.subject + "\r"
+		+ "To: " + email.to
+		+ "\r----------------"
+		+  "\r\r\r"
+		+ email.content;
+	// console.log()
+
+}
+
+// functions for reply, reply-all, forward buttons
+function reply(replyAll=false) {
+	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
+	var email = getEmail(email_id);
+	var composeState = "Reply";
+	if(replyAll) {
+		composeState = "Reply-All";
+	}
+	showCompose(composeState);
+	formatReply(email, replyAll, false);
+}
+
+function formatReply(email, replyAll) {
+	var temail = document.getElementById("compose-to");
+	var subject = document.getElementById("compose-subject");
+	var cc = document.getElementById("compose-cc");
+	var bcc = document.getElementById("compose-bcc");
+	var content = document.getElementById("compose-content");
+
+	if(replyAll) {
+		cc.value = email.cc;
+		bcc.value = email.bcc;
+	}
+
+	temail.value = email.from;
+	subject.value = "RE: " + email.subject;
+
+	var prevDate = new Date(email.datetime);
+	content.value = "\r\r\r----------------\r"
+		+ "On "
+		+ prevDate
+		+ " "
+		+ email.first_name_from + " " + email.last_name_from + "<" + email.from + "> wrote:"
+		+ "\r----------------"
+		+  "\r\r\r"
+		+ email.content;
+	// console.log()
+
+}
+
 
 function getEmail(id) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
@@ -245,48 +312,113 @@ function setEmail(id, email) {
 }
 
 function createFilter() {
+	var error = document.getElementById('modal-create-filter-error');
+	error.classList.add("hidden");
+
 	var filter = {
 		name: null,
 		filterBy: []
 	}
 
-	filter.name = document.getElementById('create-filter-name').value;
-	if (document.getElementById('create-filter-by-subject').checked) {
-		filter.filterBy.push({
-			type: 'subject',
-			keyword: document.getElementById('create-filter-subject').value
-		})
+	var filterName = document.getElementById('create-filter-name').value
+	var existingFilter = filters.filter(function(obj) {
+	    return obj.name === filterName; // Filter out the appropriate one
+	})[0];
+
+
+	if (filterName && !existingFilter) {
+		var filterBySubject = document.getElementById('create-filter-by-subject');
+		var filterByMessage = document.getElementById('create-filter-by-message');
+		var filterBySender = document.getElementById('create-filter-by-sender');
+
+		filter.name = filterName;
+		if (filterBySubject.checked) {
+			var filterSubject = document.getElementById('create-filter-subject').value;
+			if (filterSubject != "") {
+				filter.filterBy.push({
+					type: 'subject',
+					keyword: filterSubject
+				})
+			} else {
+				error.classList.remove("hidden");
+				document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please enter a keyword for subject."
+				return;
+			}
+		}
+		if (filterByMessage.checked) {
+			var filterMessage = document.getElementById('create-filter-message').value;
+			if (filterMessage != "") {
+				filter.filterBy.push({
+					type: 'content',
+					keyword: filterMessage
+				})
+			} else {
+				error.classList.remove("hidden");
+				document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please enter a keyword for message."
+				return;
+			}
+		}
+
+		if (!filterBySubject.checked && !filterByMessage.checked && !filterBySender.checked) {
+			error.classList.remove("hidden");
+			document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please select a method of filtering."
+			return;
+		}
+
+		if (filterBySender.checked) {
+			var filterSender = document.getElementById('create-filter-sender').value;
+			if (filterSender != "") {
+				filter.filterBy.push({
+					type: 'from',
+					keyword: filterSender
+				})
+			} else {
+				error.classList.remove("hidden");
+				document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please enter a keyword for sender."
+				return;
+			}
+		}
+
+		filters.push(filter);
+
+		let parent = document.getElementById('folder-panel-filters-items');
+
+		let div = document.createElement('div');
+		div.classList.add('folder-panel-list-item');
+		div.id = "filter-" + filter.name;
+		let span = document.createElement('span');
+		span.classList.add("folder-panel-list-item-nav");
+		span.innerHTML = filter.name;
+		span.setAttribute("onclick", "setCurrentFilter('" + filter.name + "')");
+		let remove = document.createElement('span');
+		remove.classList.add("right");
+		remove.setAttribute("onclick", "removeFilter('" + filter.name + "')");
+		remove.innerHTML = "<i class=\"fa fa-lg fa-times\"></i>"
+
+		div.appendChild(span);
+		div.appendChild(remove);
+		parent.appendChild(div);
+
+		closeModal('modal-create-filter');
+	} else if (existingFilter) {
+		error.classList.remove("hidden");
+		document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please select a unique name for your filter."
+	} else {
+		error.classList.remove("hidden");
+		document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please select a name for your filter."
 	}
 
-	if (document.getElementById('create-filter-by-message').checked) {
-		filter.filterBy.push({
-			type: 'content',
-			keyword: document.getElementById('create-filter-message').value
-		})
+}
+
+function removeFilter(filter) {
+	for(var i = 0; i < filters.length; i++) {
+	    if(filters[i].name === filter) {
+	        filters.splice(i, 1);
+	        break;
+	    }
 	}
 
-	if (document.getElementById('create-filter-by-sender').checked) {
-		filter.filterBy.push({
-			type: 'from',
-			keyword: document.getElementById('create-filter-sender').value
-		})
-	}
-
-	filters.push(filter);
-
-	let parent = document.getElementById('folder-panel-filters-items');
-
-	let div = document.createElement('div');
-	div.classList.add('folder-panel-list-item');
-	let span = document.createElement('span');
-	span.classList.add("folder-panel-list-item-nav");
-	span.innerHTML = filter.name;
-	span.setAttribute("onclick", "setCurrentFilter('" + filter.name + "')");
-
-	div.appendChild(span);
-	parent.appendChild(div);
-
-	closeModal('modal-create-filter');
+	document.getElementById("filter-"+filter).remove();
 }
 
 function markSelectedAsUnread() {
@@ -302,6 +434,7 @@ function markSelectedAsUnread() {
 
 	localStorage.setItem("email_data", JSON.stringify(emails));
 	selectedEmails = [];
+	toggleIcons();
 	loadCurrentList();
 }
 
@@ -318,6 +451,7 @@ function markSelectedAsRead() {
 
 	localStorage.setItem("email_data", JSON.stringify(emails));
 	selectedEmails = [];
+	toggleIcons();
 	loadCurrentList();
 }
 
@@ -332,4 +466,29 @@ function markAsRead(id, email) {
 	localStorage.setItem("email_data", JSON.stringify(emails));
 
 	loadCurrentList();
+}
+
+function updateCounts(emails) {
+	var inbox = 0;
+	var drafts = 0;
+	var flagged = 0;
+	var deleted = 0;
+	var spam = 0;
+
+	for (var i = emails.length - 1; i >= 0; i--) {
+		var folders = emails[i].folder
+		for (var j = folders.length - 1; j >= 0; j--) {
+			if(folders[j] == "Inbox") inbox++;
+			else if(folders[j] == "Drafts") drafts++;
+			else if(folders[j] == "Flagged") flagged++;
+			else if(folders[j] == "Deleted") deleted++;
+			else if(folders[j] == "Spam") spam++;
+		}
+	}
+
+	document.getElementById("inbox-count").innerHTML = inbox;
+	document.getElementById("drafts-count").innerHTML = drafts;
+	document.getElementById("flagged-count").innerHTML = flagged;
+	document.getElementById("deleted-count").innerHTML = deleted;
+	document.getElementById("spam-count").innerHTML = spam;
 }

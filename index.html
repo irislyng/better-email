@@ -39,6 +39,9 @@
           <input id="create-filter-by-sender" class="modal-create-filter-label" type="checkbox">Sender's email containing keywords:</input>
           <input id="create-filter-sender" class="modal-create-filter-entry" type="text">
         </div>
+        <div id="modal-create-filter-error" class="modal-error hidden">
+          <span id="modal-create-filter-error-value"></span>
+        </div>
         <div class="modal-button right">
           <button class="button-submit-filter" onclick="createFilter()">Create</button>
         </div>
@@ -52,12 +55,12 @@
     <div class="container flex">
       <div id="folder-panel" class="col-2">
         <div class="folder-panel-icons">
-          <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left" onclick="showCompose()"></i>
+          <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left" onclick="showCompose('Compose')"></i>
           <i id="folder-panel-move" class="fa fa-lg fa-plus folder-panel-icon disabled"></i>
 
           <i id="folder-panel-mark-read" class="fa fa-lg fa-envelope-open-o folder-panel-icon disabled" onclick="markSelectedAsRead()"></i>
           <i id="folder-panel-mark-unread" class="fa fa-lg fa-envelope-o folder-panel-icon disabled" onclick="markSelectedAsUnread()"></i>
-          <i id="folder-panel-delete" class="fa fa-lg fa-trash-o folder-panel-icon disabled" onclick="MoveToDeleted()"></i>
+          <i id="folder-panel-delete" class="fa fa-lg fa-trash-o folder-panel-icon disabled" onclick="MoveToDeleted(0)"></i>
 
         </div>
         <div id="folder-panel-folders" class="folder-panel-list">
@@ -65,23 +68,23 @@
           <div class="folder-panel-list-items">
             <div class="folder-panel-list-item">
               <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Inbox')">Inbox</span>
-              <span class="right">100</span>
+              <span id="inbox-count" class="right">100</span>
             </div>
             <div class="folder-panel-list-item">
               <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Drafts')">Drafts</span>
-              <span class="right">2</span>
+              <span id="drafts-count" class="right">2</span>
             </div>
             <div class="folder-panel-list-item">
               <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Flagged')">Flagged</span>
-              <span class="right">6</span>
+              <span id="flagged-count" class="right">6</span>
             </div>
             <div class="folder-panel-list-item">
               <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Deleted')">Deleted</span>
-              <span class="right">10</span>
+              <span id="deleted-count" class="right">10</span>
             </div>
             <div class="folder-panel-list-item">
               <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Spam')">Spam</span>
-              <span class="right">30</span>
+              <span id="spam-count" class="right">30</span>
             </div>
             <div class="folder-panel-list-item">
               <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Sent')">Sent</span>
@@ -127,10 +130,11 @@
               <div class="content-message-icons right">
                 <i id="content-message-flagged" class="fa fa-lg content-panel-icon"></i>
                 <i class="fa fa-lg fa-plus content-panel-icon"></i>
-                <i class="fa fa-lg fa-reply content-panel-icon"></i>
-                <i class="fa fa-lg fa-reply-all content-panel-icon"></i>
-                <i class="fa fa-lg fa-share content-panel-icon"></i>
+                <i onClick="reply(false)" class="fa fa-lg fa-reply content-panel-icon"></i>
+                <i onclick="reply(true)" class="fa fa-lg fa-reply-all content-panel-icon"></i>
+                <i onclick="forward()" class="fa fa-lg fa-share content-panel-icon"></i>
                 <i onclick="deleteCurrent()" class="fa fa-lg fa-trash-o content-panel-icon"></i>
+
               </div>
           </div>
           <div class="content-message-container">

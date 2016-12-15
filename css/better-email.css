@@ -102,9 +102,9 @@ div.modal {
     top: 50%;
     left:50%;
     margin-left: -250px;
-    margin-top: -140px;
+    margin-top: -150px;
     width: 500px;
-    height: 280px;
+    height: 300px;
     padding: 12px;
     background-color: white;
     border-radius: 10px;
@@ -121,6 +121,13 @@ span.modal-title {
     font-size: 24px;
     color: #512DA8;
     text-transform: uppercase;
+}
+
+div.modal-error {
+    text-align: center;
+    color: #ff4081;
+    font-size: 14px;
+    font-style: italic;
 }
 
 span.modal-close {
@@ -288,7 +295,7 @@ div.messages-panel-list {
 
 div.message-preview {
     overflow: hidden;
-    margin-top: -10px;
+    margin-top: -12px;
     padding: 10px;
     border-bottom: 1px solid #bdbdbd;
     height: 100px;

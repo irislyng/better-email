@@ -41,16 +41,16 @@ function MoveToInbox() {
 
 function deleteCurrent() {
 	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
-	console.log(email_id);
-	MoveToDeleted(email_id);
+	
+	MoveToDeleted(parseInt(email_id));
 }
 
 
 function MoveToDeleted(email_id=0) {
 	
 	if(email_id != 0) {
-		selectedEmails.push(email_id);
-		console.log(email_id);
+		toggleCheckbox(email_id);
+		console.log(selectedEmails);
 	}
 	
 	var current = JSON.parse(localStorage.getItem("email_data"));
