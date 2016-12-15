@@ -248,6 +248,10 @@ div.message-preview:hover {
     cursor: pointer;
 }
 
+span.message-preview-select {
+    float: right;
+}
+
 span.message-preview-date {
     float: right;
     padding-right: 30px;
@@ -291,7 +295,7 @@ div.content-message-header {
 }
 
 div.content-message-subject {
-    font-size: 28px;
+    font-size: 24px;
     color: #512DA8;
 }
 
@@ -316,7 +320,7 @@ div.content-message-container {
 }
 
 div.content-message-sender {
-    font-size: 24px;
+    font-size: 22px;
     color: #673AB7;
 }
 

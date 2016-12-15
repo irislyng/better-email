@@ -1,4 +1,5 @@
 var currentFolder = "I";
+var selectedEmails = [];
 
 function init() {
 	loadEmailList();
@@ -28,15 +29,11 @@ function getFolderContent() {
 			let subject = document.createElement("span");
 			let content = document.createElement("span");
 
-			let strong = document.createElement("strong");
 			let checkbox = document.createElement("span");
 			let input = document.createElement("input");
-			checkbox.className = "input-group-addon";
+			checkbox.className = "message-preview-select";
 			input.setAttribute("type", "checkbox")
-			input.setAttribute("aria-label", "...")
 			checkbox.appendChild(input);
-			strong.appendChild(checkbox);
-
 
 			date.innerHTML = emails[i].datetime;
 			name.innerHTML = emails[i].first_name_from + " " + emails[i].last_name_from;
@@ -50,7 +47,7 @@ function getFolderContent() {
 			subject.className = "message-preview-subject";
 			content.className = "message-preview-content";
 
-			email.appendChild(strong);
+			email.appendChild(checkbox);
 			email.appendChild(date);
 			email.appendChild(name);
 			email.appendChild(subject);
