@@ -10,5 +10,6 @@ function closeModal(id) {
     var inputs = modal.getElementsByTagName('input');
     for (var i = 0; i < inputs.length; i += 1) {
         inputs[i].value = '';
+        inputs[i].checked = false;
     }
 }
