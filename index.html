@@ -18,32 +18,30 @@
   <body onload="init()">
     <div id="modal-create-filter" class="modal-container hidden">
       <div class="modal">
-        <form name="CreateFilter">
-          <div class="modal-header">
-            <span class="modal-title left">Create New Filter</span>
-            <span class="modal-close right"><i class="fa fa-lg fa-times"></i></span>
-          </div>
-          <div class="modal-create-filter-option">
-            <span class="modal-create-filter-label">Filter Name:</span>
-            <input class="modal-create-filter-input" type="text" name="FilterName">
-          </div>
-          <span class="modal-title">Filter By</span>
-          <div class="modal-create-filter-option">
-            <input class="modal-create-filter-label" type="checkbox" name="SelectFilterBySubject" value="">Subject containing keywords:</input>
-            <input class="modal-create-filter-input" type="text" name="FilterBySubject">
-          </div>
-          <div class="modal-create-filter-option">
-            <input class="modal-create-filter-label" type="checkbox" name="SelectFilterByMessage" value="">Message containing keywords:</input>
-            <input class="modal-create-filter-input" type="text" name="FilterByMessage">
-          </div>
-          <div class="modal-create-filter-option">
-            <input class="modal-create-filter-label" type="checkbox" name="SelectFilterBySender" value="">Sender's email containing keywords:</input>
-            <input class="modal-create-filter-input" type="text" name="FilterBySender">
-          </div>
-          <div class="modal-button right">
-            <button class="button-submit-filter" type="submit">Create</button>
-          </div>
-        </form>
+        <div class="modal-header">
+          <span class="modal-title left">Create New Filter</span>
+          <span class="modal-close right" onclick="closeModal('modal-create-filter')"><i class="fa fa-lg fa-times"></i></span>
+        </div>
+        <div class="modal-create-filter-option">
+          <span class="modal-create-filter-label">Filter Name:</span>
+          <input id="create-filter-name" class="modal-create-filter-entry" type="text">
+        </div>
+        <span class="modal-title">Filter By</span>
+        <div class="modal-create-filter-option">
+          <input id="create-filter-by-subject" class="modal-create-filter-label" type="checkbox">Subject containing keywords:</input>
+          <input id="create-filter-subject" class="modal-create-filter-entry" type="text">
+        </div>
+        <div class="modal-create-filter-option">
+          <input id="create-filter-by-message" class="modal-create-filter-label" type="checkbox">Message containing keywords:</input>
+          <input id="create-filter-message" class="modal-create-filter-entry" type="text">
+        </div>
+        <div class="modal-create-filter-option">
+          <input id="create-filter-by-sender" class="modal-create-filter-label" type="checkbox">Sender's email containing keywords:</input>
+          <input id="create-filter-sender" class="modal-create-filter-entry" type="text">
+        </div>
+        <div class="modal-button right">
+          <button class="button-submit-filter" onclick="createFilter()">Create</button>
+        </div>
       </div>
     </div>
     <div class="container flex">
@@ -85,8 +83,10 @@
         </div>
         <div id="folder-panel-filters" class="folder-panel-list">
           <div class="folder-panel-list-title">Filters</div>
+          <div id="folder-panel-filters-items" class="folder-panel-list-items">
+          </div>
           <div class="folder-panel-button">
-            <button>Create Filter</button>
+            <button class="button-create-filter" onclick="showModal('modal-create-filter')">Create Filter</button>
           </div>
         </div>
       </div>
@@ -156,6 +156,7 @@
     </div>
     <script type="text/javascript" src="emails.json"></script>
 
+    <script type="text/javascript" src="js/modalActions.js"></script>
     <script type="text/javascript" src="js/iconActions.js"></script>
     <script type="text/javascript" src="js/load_data.js"></script>
     <script type="text/javascript" src="js/emailStorage.js"></script>

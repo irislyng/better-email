@@ -1,5 +1,6 @@
 var currentFolder = "Inbox";
 var selectedEmails = [];
+var filters = [];
 
 function init() {
 	loadEmailList();
@@ -16,19 +17,6 @@ function loadEmailList() {
 	var content = getFolderContent();
 
 	parent.innerHTML = content.innerHTML;
-}
-
-function getCurrentEmail(id) {
-	let emails = JSON.parse(localStorage.getItem("email_data"));
-	let email;
-	for (var i = 0; i < emails.length; i++) {
-		if (emails[i].id == id) {
-			email = emails[i];
-			break;
-		}
-	}
-
-	return email;
 }
 
 function getFolderContent() {
@@ -119,6 +107,62 @@ function loadEmail(id) {
 	date.innerHTML = email.datetime;
 	temail.innerHTML = "To: " + email.to;
 	content.innerHTML = email.content;
+}
+
+function getCurrentEmail(id) {
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	let email;
+	for (var i = 0; i < emails.length; i++) {
+		if (emails[i].id == id) {
+			email = emails[i];
+			break;
+		}
+	}
+
+	return email;
+}
+
+function createFilter() {
+	var filter = {
+		name: null,
+		filterBy: []
+	}
+
+	filter.name = document.getElementById('create-filter-name').value;
+	if (document.getElementById('create-filter-by-subject').checked) {
+		filter.filterBy.push({
+			type: 'subject',
+			keyword: document.getElementById('create-filter-subject').value
+		})
+	}
+
+	if (document.getElementById('create-filter-by-message').checked) {
+		filter.filterBy.push({
+			type: 'message',
+			keyword: document.getElementById('create-filter-message').value
+		})
+	}
+
+	if (document.getElementById('create-filter-by-sender').checked) {
+		filter.filterBy.push({
+			type: 'sender',
+			keyword: document.getElementById('create-filter-sender').value
+		})
+	}
+	filters.push(filter);
+
+	let parent = document.getElementById('folder-panel-filters-items');
+
+	let div = document.createElement('div');
+	div.classList.add('folder-panel-list-item');
+	let span = document.createElement('span');
+	span.classList.add("folder-panel-list-item-nav");
+	span.innerHTML = filter.name;
+
+	div.appendChild(span);
+	parent.appendChild(div);
+
+	closeModal('modal-create-filter');
 }
 
 // function markAsRead(id, email) {
