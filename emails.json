@@ -8,12 +8,13 @@ var email_data = [{
   "from" : "tfowler0@columbia.edu",
   "subject" : "maximize bricks-and-clicks infrastructures",
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-  "datetime" : "2016-01-10 04:56:44",
+  "datetime" : "2016-01-10 04:56 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 2,
   "first_name" : "Bob",
@@ -24,12 +25,13 @@ var email_data = [{
   "from" : "hmason1@wikia.com",
   "subject" : "syndicate visionary ROI",
   "content" : "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-  "datetime" : "2016-07-25 17:16:55",
+  "datetime" : "2016-07-25 05:16 PM",
   "folder" : [
-    "I"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 3,
   "first_name" : "Bob",
@@ -40,12 +42,13 @@ var email_data = [{
   "from" : "psims2@hao123.com",
   "subject" : "streamline integrated eyeballs",
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-  "datetime" : "2015-12-15 02:46:47",
+  "datetime" : "2015-12-15 02:46 AM",
   "folder" : [
-    "Drafts"
+    "Inbox"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 4,
   "first_name" : "Bob",
@@ -56,12 +59,13 @@ var email_data = [{
   "from" : "agomez3@meetup.com",
   "subject" : "monetize vertical interfaces",
   "content" : "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-  "datetime" : "2016-02-17 22:05:45",
+  "datetime" : "2016-02-17 10:05 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 5,
   "first_name" : "Bob",
@@ -72,12 +76,13 @@ var email_data = [{
   "from" : "sferguson4@rakuten.co.jp",
   "subject" : "streamline extensible action-items",
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-  "datetime" : "2016-10-09 10:01:07",
+  "datetime" : "2016-10-09 10:01 AM",
   "folder" : [
-    "Drafts"
+    "Inbox"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 6,
   "first_name" : "Bob",
@@ -88,12 +93,13 @@ var email_data = [{
   "from" : "astewart5@woothemes.com",
   "subject" : "aggregate value-added convergence",
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-  "datetime" : "2016-07-22 09:19:01",
+  "datetime" : "2016-07-22 09:19 AM",
   "folder" : [
-    "IF"
+    "Deleted", "Flagged"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : true
 }, {
   "id" : 7,
   "first_name" : "Bob",
@@ -104,12 +110,13 @@ var email_data = [{
   "from" : "swarren6@ft.com",
   "subject" : "utilize rich infomediaries",
   "content" : "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-  "datetime" : "2016-04-28 06:30:52",
+  "datetime" : "2016-04-28 06:30 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 8,
   "first_name" : "Bob",
@@ -120,12 +127,13 @@ var email_data = [{
   "from" : "jgonzales7@tiny.cc",
   "subject" : "matrix proactive infomediaries",
   "content" : "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-  "datetime" : "2016-01-22 20:22:11",
+  "datetime" : "2016-01-22 08:22 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 9,
   "first_name" : "Bob",
@@ -136,12 +144,13 @@ var email_data = [{
   "from" : "jhart8@odnoklassniki.ru",
   "subject" : "innovate e-business supply-chains",
   "content" : "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-  "datetime" : "2016-08-11 01:32:42",
+  "datetime" : "2016-08-11 01:32 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 10,
   "first_name" : "Bob",
@@ -152,12 +161,13 @@ var email_data = [{
   "from" : "shicks9@yellowbook.com",
   "subject" : "iterate ubiquitous infomediaries",
   "content" : "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-  "datetime" : "2016-02-12 15:06:59",
+  "datetime" : "2016-02-12 3:06 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 11,
   "first_name" : "Bob",
@@ -168,12 +178,13 @@ var email_data = [{
   "from" : "lportera@artisteer.com",
   "subject" : "extend clicks-and-mortar functionalities",
   "content" : "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-  "datetime" : "2016-04-01 06:06:05",
+  "datetime" : "2016-04-01 06:06 AM",
   "folder" : [
-    "IF"
+    "Deleted", "Flagged"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : true
 }, {
   "id" : 12,
   "first_name" : "Bob",
@@ -184,12 +195,13 @@ var email_data = [{
   "from" : "mfranklinb@de.vu",
   "subject" : "transform distributed relationships",
   "content" : "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-  "datetime" : "2016-09-01 20:34:23",
+  "datetime" : "2016-09-01 08:34 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 13,
   "first_name" : "Bob",
@@ -200,12 +212,13 @@ var email_data = [{
   "from" : "bkellyc@wired.com",
   "subject" : "synthesize world-class technologies",
   "content" : "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-  "datetime" : "2016-11-17 13:59:55",
+  "datetime" : "2016-11-17 01:59 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 14,
   "first_name" : "Bob",
@@ -216,12 +229,13 @@ var email_data = [{
   "from" : "fnelsond@accuweather.com",
   "subject" : "drive back-end partnerships",
   "content" : "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-  "datetime" : "2016-10-09 06:01:54",
+  "datetime" : "2016-10-09 06:01 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 15,
   "first_name" : "Bob",
@@ -232,12 +246,13 @@ var email_data = [{
   "from" : "tturnere@washingtonpost.com",
   "subject" : "utilize plug-and-play architectures",
   "content" : "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-  "datetime" : "2016-05-18 16:16:22",
+  "datetime" : "2016-05-18 04:16 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 16,
   "first_name" : "Bob",
@@ -248,12 +263,13 @@ var email_data = [{
   "from" : "msandersf@paypal.com",
   "subject" : "empower web-enabled networks",
   "content" : "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-  "datetime" : "2016-01-12 06:08:16",
+  "datetime" : "2016-01-12 06:08 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 17,
   "first_name" : "Bob",
@@ -264,12 +280,13 @@ var email_data = [{
   "from" : "wlarsong@goodreads.com",
   "subject" : "envisioneer best-of-breed communities",
   "content" : "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-  "datetime" : "2016-10-27 15:39:06",
+  "datetime" : "2016-10-27 03:39 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 18,
   "first_name" : "Bob",
@@ -280,12 +297,13 @@ var email_data = [{
   "from" : "agreenh@sohu.com",
   "subject" : "generate cross-media web services",
   "content" : "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-  "datetime" : "2016-06-12 22:25:58",
+  "datetime" : "2016-06-12 10:25 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 19,
   "first_name" : "Bob",
@@ -296,12 +314,13 @@ var email_data = [{
   "from" : "aparkeri@yahoo.co.jp",
   "subject" : "drive synergistic e-markets",
   "content" : "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-  "datetime" : "2016-01-15 22:00:38",
+  "datetime" : "2016-01-15 10:00 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 20,
   "first_name" : "Bob",
@@ -312,12 +331,13 @@ var email_data = [{
   "from" : "rstanleyj@uiuc.edu",
   "subject" : "orchestrate viral e-business",
   "content" : "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-  "datetime" : "2016-06-28 05:33:30",
+  "datetime" : "2016-06-28 05:33 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 21,
   "first_name" : "Bob",
@@ -328,12 +348,13 @@ var email_data = [{
   "from" : "rmitchellk@wsj.com",
   "subject" : "transition dot-com functionalities",
   "content" : "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-  "datetime" : "2015-12-31 10:39:30",
+  "datetime" : "2015-12-31 10:39 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 22,
   "first_name" : "Bob",
@@ -344,12 +365,13 @@ var email_data = [{
   "from" : "jrodriguezl@purevolume.com",
   "subject" : "extend enterprise e-business",
   "content" : "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-  "datetime" : "2016-07-02 07:04:02",
+  "datetime" : "2016-07-02 07:04 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 23,
   "first_name" : "Bob",
@@ -360,12 +382,13 @@ var email_data = [{
   "from" : "jhendersonm@forbes.com",
   "subject" : "reinvent 24/7 technologies",
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
-  "datetime" : "2016-01-31 10:13:35",
+  "datetime" : "2016-01-31 10:13 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 24,
   "first_name" : "Bob",
@@ -376,12 +399,13 @@ var email_data = [{
   "from" : "jnicholsn@creativecommons.org",
   "subject" : "orchestrate dynamic platforms",
   "content" : "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-  "datetime" : "2016-07-09 11:21:34",
+  "datetime" : "2016-07-09 11:21 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 25,
   "first_name" : "Bob",
@@ -392,12 +416,13 @@ var email_data = [{
   "from" : "ckellyo@hhs.gov",
   "subject" : "engage best-of-breed models",
   "content" : "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-  "datetime" : "2016-01-07 09:12:48",
+  "datetime" : "2016-01-07 09:12 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 26,
   "first_name" : "Bob",
@@ -408,12 +433,13 @@ var email_data = [{
   "from" : "jrobertsp@irs.gov",
   "subject" : "scale global relationships",
   "content" : "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-  "datetime" : "2016-03-28 05:48:34",
+  "datetime" : "2016-03-28 05:48 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 27,
   "first_name" : "Bob",
@@ -424,12 +450,13 @@ var email_data = [{
   "from" : "amcdonaldq@ovh.net",
   "subject" : "streamline visionary convergence",
   "content" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-  "datetime" : "2016-04-09 19:16:14",
+  "datetime" : "2016-04-09 07:16 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 28,
   "first_name" : "Bob",
@@ -440,12 +467,13 @@ var email_data = [{
   "from" : "rcrawfordr@xinhuanet.com",
   "subject" : "harness visionary schemas",
   "content" : "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-  "datetime" : "2016-03-19 19:23:09",
+  "datetime" : "2016-03-19 07:23 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 29,
   "first_name" : "Bob",
@@ -456,12 +484,13 @@ var email_data = [{
   "from" : "cbankss@biblegateway.com",
   "subject" : "engage bricks-and-clicks content",
   "content" : "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-  "datetime" : "2016-08-13 03:30:43",
+  "datetime" : "2016-08-13 03:30 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 30,
   "first_name" : "Bob",
@@ -472,12 +501,13 @@ var email_data = [{
   "from" : "tperkinst@sakura.ne.jp",
   "subject" : "mesh plug-and-play relationships",
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-  "datetime" : "2016-06-25 06:39:52",
+  "datetime" : "2016-06-25 06:39 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 31,
   "first_name" : "Bob",
@@ -488,12 +518,13 @@ var email_data = [{
   "from" : "cmurrayu@howstuffworks.com",
   "subject" : "expedite dot-com technologies",
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-  "datetime" : "2016-03-12 17:07:31",
+  "datetime" : "2016-03-12 05:07 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 32,
   "first_name" : "Bob",
@@ -504,12 +535,13 @@ var email_data = [{
   "from" : "sriverav@hibu.com",
   "subject" : "evolve plug-and-play users",
   "content" : "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-  "datetime" : "2016-04-05 08:16:13",
+  "datetime" : "2016-04-05 08:16 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 33,
   "first_name" : "Bob",
@@ -520,12 +552,13 @@ var email_data = [{
   "from" : "calvarezw@gnu.org",
   "subject" : "evolve sticky systems",
   "content" : "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-  "datetime" : "2016-06-12 15:02:22",
+  "datetime" : "2016-06-12 03:02 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 34,
   "first_name" : "Bob",
@@ -536,12 +569,13 @@ var email_data = [{
   "from" : "maustinx@so-net.ne.jp",
   "subject" : "target viral portals",
   "content" : "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-  "datetime" : "2016-10-09 04:51:44",
+  "datetime" : "2016-10-09 04:51 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 35,
   "first_name" : "Bob",
@@ -552,12 +586,13 @@ var email_data = [{
   "from" : "rhamiltony@webnode.com",
   "subject" : "aggregate value-added technologies",
   "content" : "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-  "datetime" : "2016-03-01 16:50:46",
+  "datetime" : "2016-03-01 04:50 PM",
   "folder" : [
-    "I"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 36,
   "first_name" : "Bob",
@@ -568,12 +603,13 @@ var email_data = [{
   "from" : "dpricez@usnews.com",
   "subject" : "e-enable dynamic web services",
   "content" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-  "datetime" : "2016-12-06 00:14:15",
+  "datetime" : "2016-12-06 12:14 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 37,
   "first_name" : "Bob",
@@ -584,12 +620,13 @@ var email_data = [{
   "from" : "dhoward10@ca.gov",
   "subject" : "embrace impactful e-commerce",
   "content" : "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-  "datetime" : "2016-02-29 21:12:05",
+  "datetime" : "2016-02-29 21:12 ",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 38,
   "first_name" : "Bob",
@@ -600,12 +637,13 @@ var email_data = [{
   "from" : "dspencer11@geocities.com",
   "subject" : "enable scalable models",
   "content" : "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-  "datetime" : "2016-05-20 05:31:20",
+  "datetime" : "2016-05-20 05:31 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 39,
   "first_name" : "Bob",
@@ -616,12 +654,13 @@ var email_data = [{
   "from" : "aturner12@jimdo.com",
   "subject" : "deliver extensible mindshare",
   "content" : "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
-  "datetime" : "2016-04-14 18:17:31",
+  "datetime" : "2016-04-14 06:17 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 40,
   "first_name" : "Bob",
@@ -632,12 +671,13 @@ var email_data = [{
   "from" : "jharvey13@mediafire.com",
   "subject" : "exploit proactive niches",
   "content" : "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-  "datetime" : "2016-05-17 01:00:20",
+  "datetime" : "2016-05-17 01:00 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 41,
   "first_name" : "Bob",
@@ -648,12 +688,13 @@ var email_data = [{
   "from" : "mbutler14@imdb.com",
   "subject" : "enable integrated infomediaries",
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-  "datetime" : "2016-05-02 19:05:41",
+  "datetime" : "2016-05-02 07:05 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 42,
   "first_name" : "Bob",
@@ -664,12 +705,13 @@ var email_data = [{
   "from" : "hmcdonald15@usda.gov",
   "subject" : "strategize sexy models",
   "content" : "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-  "datetime" : "2016-11-04 15:07:58",
+  "datetime" : "2016-11-04 03:07 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 43,
   "first_name" : "Bob",
@@ -680,12 +722,13 @@ var email_data = [{
   "from" : "jperkins16@va.gov",
   "subject" : "strategize compelling technologies",
   "content" : "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-  "datetime" : "2016-07-10 01:12:47",
+  "datetime" : "2016-07-10 01:12 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 44,
   "first_name" : "Bob",
@@ -696,12 +739,13 @@ var email_data = [{
   "from" : "smarshall17@yellowpages.com",
   "subject" : "optimize web-enabled partnerships",
   "content" : "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-  "datetime" : "2016-11-25 02:34:18",
+  "datetime" : "2016-11-25 02:34 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 45,
   "first_name" : "Bob",
@@ -712,12 +756,13 @@ var email_data = [{
   "from" : "dlane18@dagondesign.com",
   "subject" : "unleash plug-and-play e-services",
   "content" : "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-  "datetime" : "2016-06-09 12:26:42",
+  "datetime" : "2016-06-09 12:26 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 46,
   "first_name" : "Bob",
@@ -728,12 +773,13 @@ var email_data = [{
   "from" : "hhunter19@bravesites.com",
   "subject" : "scale bricks-and-clicks networks",
   "content" : "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
-  "datetime" : "2016-11-06 14:37:55",
+  "datetime" : "2016-11-06 02:37 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 47,
   "first_name" : "Bob",
@@ -744,12 +790,13 @@ var email_data = [{
   "from" : "bcole1a@bigcartel.com",
   "subject" : "grow impactful users",
   "content" : "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-  "datetime" : "2016-05-14 15:28:38",
+  "datetime" : "2016-05-14 03:28 PM",
   "folder" : [
-    "IF"
+    "Deleted", "Flagged"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : true
 }, {
   "id" : 48,
   "first_name" : "Bob",
@@ -760,12 +807,13 @@ var email_data = [{
   "from" : "wwarren1b@cnn.com",
   "subject" : "productize frictionless users",
   "content" : "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-  "datetime" : "2016-04-15 19:59:07",
+  "datetime" : "2016-04-15 07:59 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 49,
   "first_name" : "Bob",
@@ -776,12 +824,13 @@ var email_data = [{
   "from" : "egrant1c@google.pl",
   "subject" : "strategize end-to-end action-items",
   "content" : "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-  "datetime" : "2016-07-16 12:15:35",
+  "datetime" : "2016-07-16 12:15 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 50,
   "first_name" : "Bob",
@@ -792,12 +841,13 @@ var email_data = [{
   "from" : "jmorgan1d@soup.io",
   "subject" : "grow cross-platform users",
   "content" : "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-  "datetime" : "2016-02-24 06:43:32",
+  "datetime" : "2016-02-24 06:43 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 51,
   "first_name" : "Bob",
@@ -808,12 +858,13 @@ var email_data = [{
   "from" : "awells1e@diigo.com",
   "subject" : "synergize synergistic systems",
   "content" : "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
-  "datetime" : "2016-01-16 00:05:49",
+  "datetime" : "2016-01-16 12:05 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 52,
   "first_name" : "Bob",
@@ -824,12 +875,13 @@ var email_data = [{
   "from" : "tjohnston1f@live.com",
   "subject" : "architect virtual functionalities",
   "content" : "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-  "datetime" : "2016-10-23 08:43:13",
+  "datetime" : "2016-10-23 08:43 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 53,
   "first_name" : "Bob",
@@ -840,12 +892,13 @@ var email_data = [{
   "from" : "hmorris1g@paginegialle.it",
   "subject" : "facilitate virtual models",
   "content" : "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-  "datetime" : "2016-07-12 07:24:51",
+  "datetime" : "2016-07-12 07:24 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 54,
   "first_name" : "Bob",
@@ -856,12 +909,13 @@ var email_data = [{
   "from" : "abanks1h@exblog.jp",
   "subject" : "orchestrate clicks-and-mortar e-services",
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-  "datetime" : "2016-07-08 04:45:18",
+  "datetime" : "2016-07-08 04:45 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 55,
   "first_name" : "Bob",
@@ -872,12 +926,13 @@ var email_data = [{
   "from" : "mclark1i@people.com.cn",
   "subject" : "morph turn-key e-commerce",
   "content" : "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-  "datetime" : "2016-05-11 06:54:48",
+  "datetime" : "2016-05-11 06:54 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 56,
   "first_name" : "Bob",
@@ -888,12 +943,13 @@ var email_data = [{
   "from" : "clee1j@redcross.org",
   "subject" : "repurpose web-enabled initiatives",
   "content" : "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-  "datetime" : "2016-05-18 00:42:20",
+  "datetime" : "2016-05-18 12:42 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 57,
   "first_name" : "Bob",
@@ -904,12 +960,13 @@ var email_data = [{
   "from" : "aking1k@webeden.co.uk",
   "subject" : "reintermediate efficient bandwidth",
   "content" : "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-  "datetime" : "2016-06-27 09:42:35",
+  "datetime" : "2016-06-27 09:42 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 58,
   "first_name" : "Bob",
@@ -920,12 +977,13 @@ var email_data = [{
   "from" : "mwillis1l@about.com",
   "subject" : "iterate clicks-and-mortar architectures",
   "content" : "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-  "datetime" : "2016-11-10 22:10:05",
+  "datetime" : "2016-11-10 10:10 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 59,
   "first_name" : "Bob",
@@ -936,12 +994,13 @@ var email_data = [{
   "from" : "rcole1m@berkeley.edu",
   "subject" : "redefine distributed action-items",
   "content" : "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-  "datetime" : "2016-03-22 07:21:21",
+  "datetime" : "2016-03-22 07:21 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 60,
   "first_name" : "Bob",
@@ -952,12 +1011,13 @@ var email_data = [{
   "from" : "abradley1n@mail.ru",
   "subject" : "implement best-of-breed bandwidth",
   "content" : "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-  "datetime" : "2016-05-25 03:21:51",
+  "datetime" : "2016-05-25 03:21 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 61,
   "first_name" : "Bob",
@@ -968,12 +1028,13 @@ var email_data = [{
   "from" : "ariley1o@examiner.com",
   "subject" : "synthesize visionary e-markets",
   "content" : "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
-  "datetime" : "2016-04-19 12:16:52",
+  "datetime" : "2016-04-19 12:16 PM",
   "folder" : [
-    "I"
+    "Inbox"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 62,
   "first_name" : "Bob",
@@ -984,12 +1045,13 @@ var email_data = [{
   "from" : "tcoleman1p@artisteer.com",
   "subject" : "mesh visionary relationships",
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-  "datetime" : "2016-03-16 09:24:42",
+  "datetime" : "2016-03-16 09:24 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 63,
   "first_name" : "Bob",
@@ -1000,12 +1062,13 @@ var email_data = [{
   "from" : "ccastillo1q@examiner.com",
   "subject" : "evolve ubiquitous deliverables",
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-  "datetime" : "2016-05-01 13:08:36",
+  "datetime" : "2016-05-01 01:08 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 64,
   "first_name" : "Bob",
@@ -1016,12 +1079,13 @@ var email_data = [{
   "from" : "ctorres1r@creativecommons.org",
   "subject" : "monetize cross-platform web services",
   "content" : "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-  "datetime" : "2016-01-01 03:56:18",
+  "datetime" : "2016-01-01 03:56 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 65,
   "first_name" : "Bob",
@@ -1032,12 +1096,13 @@ var email_data = [{
   "from" : "lkelley1s@ask.com",
   "subject" : "reintermediate proactive initiatives",
   "content" : "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-  "datetime" : "2016-08-19 13:02:04",
+  "datetime" : "2016-08-19 01:02 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 66,
   "first_name" : "Bob",
@@ -1048,12 +1113,13 @@ var email_data = [{
   "from" : "jflores1t@ucla.edu",
   "subject" : "iterate clicks-and-mortar applications",
   "content" : "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-  "datetime" : "2016-05-04 02:10:35",
+  "datetime" : "2016-05-04 02:10 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 67,
   "first_name" : "Bob",
@@ -1064,12 +1130,13 @@ var email_data = [{
   "from" : "jfoster1u@instagram.com",
   "subject" : "orchestrate efficient solutions",
   "content" : "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-  "datetime" : "2016-03-22 11:15:07",
+  "datetime" : "2016-03-22 11:15 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 68,
   "first_name" : "Bob",
@@ -1080,12 +1147,13 @@ var email_data = [{
   "from" : "jcoleman1v@bloomberg.com",
   "subject" : "deploy intuitive metrics",
   "content" : "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-  "datetime" : "2016-02-19 00:40:16",
+  "datetime" : "2016-02-19 12:40 PM",
   "folder" : [
-    "I"
+    "Inbox"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 69,
   "first_name" : "Bob",
@@ -1096,12 +1164,13 @@ var email_data = [{
   "from" : "jvasquez1w@reference.com",
   "subject" : "iterate cutting-edge e-services",
   "content" : "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-  "datetime" : "2016-01-30 05:04:13",
+  "datetime" : "2016-01-30 05:04 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 70,
   "first_name" : "Bob",
@@ -1112,12 +1181,13 @@ var email_data = [{
   "from" : "ayoung1x@typepad.com",
   "subject" : "benchmark wireless platforms",
   "content" : "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-  "datetime" : "2016-04-29 01:26:17",
+  "datetime" : "2016-04-29 01:26 AM",
   "folder" : [
-    "IF"
+    "Inbox"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 71,
   "first_name" : "Bob",
@@ -1128,12 +1198,13 @@ var email_data = [{
   "from" : "mflores1y@nature.com",
   "subject" : "synthesize seamless bandwidth",
   "content" : "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-  "datetime" : "2016-04-07 19:01:57",
+  "datetime" : "2016-04-07 07:01 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 72,
   "first_name" : "Bob",
@@ -1144,12 +1215,13 @@ var email_data = [{
   "from" : "lstanley1z@xinhuanet.com",
   "subject" : "exploit B2B applications",
   "content" : "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-  "datetime" : "2016-01-18 15:59:11",
+  "datetime" : "2016-01-18 03:59 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 73,
   "first_name" : "Bob",
@@ -1160,12 +1232,13 @@ var email_data = [{
   "from" : "jlynch20@berkeley.edu",
   "subject" : "whiteboard next-generation e-tailers",
   "content" : "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
-  "datetime" : "2016-01-18 22:00:02",
+  "datetime" : "2016-01-18 10:00 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 74,
   "first_name" : "Bob",
@@ -1176,12 +1249,13 @@ var email_data = [{
   "from" : "hburns21@theatlantic.com",
   "subject" : "optimize cutting-edge web services",
   "content" : "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-  "datetime" : "2016-04-23 12:51:24",
+  "datetime" : "2016-04-23 12:51 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 75,
   "first_name" : "Bob",
@@ -1192,12 +1266,13 @@ var email_data = [{
   "from" : "rjones22@shareasale.com",
   "subject" : "repurpose cross-platform synergies",
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-  "datetime" : "2016-09-18 16:20:43",
+  "datetime" : "2016-09-18 04:20 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 76,
   "first_name" : "Bob",
@@ -1208,12 +1283,13 @@ var email_data = [{
   "from" : "amoreno23@ihg.com",
   "subject" : "facilitate collaborative e-services",
   "content" : "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-  "datetime" : "2016-04-03 00:07:24",
+  "datetime" : "2016-04-03 12:07 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 77,
   "first_name" : "Bob",
@@ -1224,12 +1300,13 @@ var email_data = [{
   "from" : "plong24@chicagotribune.com",
   "subject" : "strategize global convergence",
   "content" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-  "datetime" : "2016-03-06 17:06:17",
+  "datetime" : "2016-03-06 05:06 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 78,
   "first_name" : "Bob",
@@ -1240,12 +1317,13 @@ var email_data = [{
   "from" : "choward25@un.org",
   "subject" : "scale bricks-and-clicks vortals",
   "content" : "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
-  "datetime" : "2016-07-21 16:24:04",
+  "datetime" : "2016-07-21 04:24 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 79,
   "first_name" : "Bob",
@@ -1256,12 +1334,13 @@ var email_data = [{
   "from" : "acarpenter26@slashdot.org",
   "subject" : "expedite sticky infrastructures",
   "content" : "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-  "datetime" : "2016-07-23 02:42:32",
+  "datetime" : "2016-07-23 02:42 AM",
   "folder" : [
-    "IF"
+    "Deleted", "Flagged"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : true
 }, {
   "id" : 80,
   "first_name" : "Bob",
@@ -1272,12 +1351,13 @@ var email_data = [{
   "from" : "adavis27@examiner.com",
   "subject" : "engineer frictionless paradigms",
   "content" : "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
-  "datetime" : "2016-03-07 08:28:51",
+  "datetime" : "2016-03-07 08:28 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 81,
   "first_name" : "Bob",
@@ -1288,12 +1368,13 @@ var email_data = [{
   "from" : "jjones28@cargocollective.com",
   "subject" : "syndicate vertical architectures",
   "content" : "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-  "datetime" : "2016-01-08 09:17:26",
+  "datetime" : "2016-01-08 09:17 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 82,
   "first_name" : "Bob",
@@ -1304,12 +1385,13 @@ var email_data = [{
   "from" : "jmills29@spiegel.de",
   "subject" : "redefine proactive infomediaries",
   "content" : "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-  "datetime" : "2016-03-22 03:45:55",
+  "datetime" : "2016-03-22 03:45 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 83,
   "first_name" : "Bob",
@@ -1320,12 +1402,13 @@ var email_data = [{
   "from" : "tfisher2a@fastcompany.com",
   "subject" : "orchestrate web-enabled relationships",
   "content" : "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-  "datetime" : "2016-10-09 20:53:27",
+  "datetime" : "2016-10-09 08:53 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 84,
   "first_name" : "Bob",
@@ -1336,12 +1419,13 @@ var email_data = [{
   "from" : "lkelly2b@squarespace.com",
   "subject" : "deliver wireless experiences",
   "content" : "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-  "datetime" : "2016-10-18 00:10:39",
+  "datetime" : "2016-10-18 12:10 PM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 85,
   "first_name" : "Bob",
@@ -1352,12 +1436,13 @@ var email_data = [{
   "from" : "acarter2c@nydailynews.com",
   "subject" : "architect killer solutions",
   "content" : "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-  "datetime" : "2016-09-28 10:54:04",
+  "datetime" : "2016-09-28 10:54 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 86,
   "first_name" : "Bob",
@@ -1368,12 +1453,13 @@ var email_data = [{
   "from" : "cward2d@hud.gov",
   "subject" : "synergize sexy communities",
   "content" : "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-  "datetime" : "2016-02-06 18:25:51",
+  "datetime" : "2016-02-06 06:25 PM",
   "folder" : [
-    "I"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 87,
   "first_name" : "Bob",
@@ -1384,12 +1470,13 @@ var email_data = [{
   "from" : "jperkins2e@google.cn",
   "subject" : "cultivate innovative e-business",
   "content" : "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-  "datetime" : "2016-02-09 06:27:09",
+  "datetime" : "2016-02-09 06:27 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 88,
   "first_name" : "Bob",
@@ -1400,12 +1487,13 @@ var email_data = [{
   "from" : "cmcdonald2f@deliciousdays.com",
   "subject" : "aggregate holistic mindshare",
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-  "datetime" : "2016-02-10 08:49:53",
+  "datetime" : "2016-02-10 08:49 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 89,
   "first_name" : "Bob",
@@ -1416,12 +1504,13 @@ var email_data = [{
   "from" : "tgray2g@hao123.com",
   "subject" : "seize customized convergence",
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-  "datetime" : "2016-05-29 05:13:41",
+  "datetime" : "2016-05-29 05:13 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 90,
   "first_name" : "Bob",
@@ -1432,12 +1521,13 @@ var email_data = [{
   "from" : "egreen2h@ft.com",
   "subject" : "extend impactful synergies",
   "content" : "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-  "datetime" : "2015-12-24 16:32:07",
+  "datetime" : "2015-12-24 04:32 PM",
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 91,
   "first_name" : "Bob",
@@ -1448,12 +1538,13 @@ var email_data = [{
   "from" : "jsnyder2i@fc2.com",
   "subject" : "target enterprise ROI",
   "content" : "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
-  "datetime" : "2016-06-17 23:33:39",
+  "datetime" : "2016-06-17 11:33 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "false",
-  "deleted" : "true"
+  "read" : false,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 92,
   "first_name" : "Bob",
@@ -1464,12 +1555,13 @@ var email_data = [{
   "from" : "pwilliamson2j@exblog.jp",
   "subject" : "recontextualize clicks-and-mortar paradigms",
   "content" : "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-  "datetime" : "2016-01-30 07:07:02",
+  "datetime" : "2016-01-30 07:07 AM",
   "folder" : [
     "Spam"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 93,
   "first_name" : "Bob",
@@ -1480,12 +1572,13 @@ var email_data = [{
   "from" : "bgray2k@apple.com",
   "subject" : "innovate wireless ROI",
   "content" : "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-  "datetime" : "2016-11-06 12:10:08",
+  "datetime" : "2016-11-06 12:10 PM",
   "folder" : [
     "Sent"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 94,
   "first_name" : "Bob",
@@ -1496,12 +1589,13 @@ var email_data = [{
   "from" : "chanson2l@1und1.de",
   "subject" : "unleash magnetic solutions",
   "content" : "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-  "datetime" : "2016-07-06 01:15:52",
+  "datetime" : "2016-07-06 01:15 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 95,
   "first_name" : "Bob",
@@ -1512,12 +1606,13 @@ var email_data = [{
   "from" : "kwilson2m@dyndns.org",
   "subject" : "optimize proactive experiences",
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-  "datetime" : "2015-12-26 00:43:57",
+  "datetime" : "2015-12-26 12:43 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 96,
   "first_name" : "Bob",
@@ -1528,12 +1623,13 @@ var email_data = [{
   "from" : "khamilton2n@sourceforge.net",
   "subject" : "repurpose transparent interfaces",
   "content" : "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-  "datetime" : "2016-02-04 00:33:38",
+  "datetime" : "2016-02-04 12:33 PM",
   "folder" : [
-    "IF"
+    "Inbox", "Flagged"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : true
 }, {
   "id" : 97,
   "first_name" : "Bob",
@@ -1544,12 +1640,13 @@ var email_data = [{
   "from" : "rbarnes2o@free.fr",
   "subject" : "synergize ubiquitous models",
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
-  "datetime" : "2016-04-13 14:29:48",
+  "datetime" : "2016-04-13 02:29 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 98,
   "first_name" : "Bob",
@@ -1560,12 +1657,13 @@ var email_data = [{
   "from" : "tgeorge2p@t-online.de",
   "subject" : "empower dynamic e-services",
   "content" : "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-  "datetime" : "2016-08-08 19:22:10",
+  "datetime" : "2016-08-08 07:22 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 99,
   "first_name" : "Bob",
@@ -1576,12 +1674,13 @@ var email_data = [{
   "from" : "grobertson2q@plala.or.jp",
   "subject" : "empower impactful experiences",
   "content" : "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-  "datetime" : "2016-06-28 17:33:08",
+  "datetime" : "2016-06-28 05:33 PM",
   "folder" : [
-    "IF"
+    "Inbox", "Flagged"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : true
 }, {
   "id" : 100,
   "first_name" : "Bob",
@@ -1592,12 +1691,13 @@ var email_data = [{
   "from" : "rmatthews2r@nature.com",
   "subject" : "generate robust ROI",
   "content" : "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-  "datetime" : "2016-10-28 09:33:37",
+  "datetime" : "2016-10-28 09:33 AM",
   "folder" : [
-    "IF"
+    "Inbox", "Flagged"
   ],
-  "read" : "false",
-  "deleted" : "false"
+  "read" : false,
+  "deleted" : false,
+  "flagged" : true
 }, {
   "id" : 101,
   "first_name" : "Jack",
@@ -1608,12 +1708,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "incubate virtual supply-chains",
   "content" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-  "datetime" : "2016-04-21 17:33:51",
+  "datetime" : "2016-04-21 05:33 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 102,
   "first_name" : "Joseph",
@@ -1624,12 +1725,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "implement rich synergies",
   "content" : "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-  "datetime" : "2016-07-28 15:06:51",
+  "datetime" : "2016-07-28 03:06 PM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 103,
   "first_name" : "Deborah",
@@ -1640,12 +1742,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "strategize robust solutions",
   "content" : "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-  "datetime" : "2016-01-10 01:43:55",
+  "datetime" : "2016-01-10 01:43 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 104,
   "first_name" : "Terry",
@@ -1656,12 +1759,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "synergize clicks-and-mortar bandwidth",
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.",
-  "datetime" : "2016-07-13 01:28:36",
+  "datetime" : "2016-07-13 01:28 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 105,
   "first_name" : "Harold",
@@ -1672,12 +1776,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "mesh distributed networks",
   "content" : "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-  "datetime" : "2016-05-30 17:36:27",
+  "datetime" : "2016-05-30 05:36 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 106,
   "first_name" : "Thomas",
@@ -1688,12 +1793,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "recontextualize clicks-and-mortar ROI",
   "content" : "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-  "datetime" : "2016-12-04 07:54:56",
+  "datetime" : "2016-12-04 07:54 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 107,
   "first_name" : "Charles",
@@ -1704,12 +1810,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "unleash bricks-and-clicks paradigms",
   "content" : "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-  "datetime" : "2016-09-14 16:20:32",
+  "datetime" : "2016-09-14 04:20 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 108,
   "first_name" : "Randy",
@@ -1720,12 +1827,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "syndicate robust functionalities",
   "content" : "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-  "datetime" : "2016-03-31 16:42:27",
+  "datetime" : "2016-03-31 04:42 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 109,
   "first_name" : "Lillian",
@@ -1736,12 +1844,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "scale integrated initiatives",
   "content" : "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-  "datetime" : "2016-09-27 14:21:07",
+  "datetime" : "2016-09-27 02:21 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 110,
   "first_name" : "Andrew",
@@ -1752,12 +1861,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "engage scalable applications",
   "content" : "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-  "datetime" : "2016-05-20 19:29:12",
+  "datetime" : "2016-05-20 07:29 PM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 111,
   "first_name" : "Lori",
@@ -1768,12 +1878,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "seize transparent functionalities",
   "content" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-  "datetime" : "2015-12-17 11:06:41",
+  "datetime" : "2015-12-17 11:06 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 112,
   "first_name" : "Justin",
@@ -1784,12 +1895,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "synergize visionary mindshare",
   "content" : "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-  "datetime" : "2016-01-16 10:37:56",
+  "datetime" : "2016-01-16 10:37 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 113,
   "first_name" : "Douglas",
@@ -1800,12 +1912,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "deploy distributed users",
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-  "datetime" : "2016-04-08 01:09:15",
+  "datetime" : "2016-04-08 01:09 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 114,
   "first_name" : "Robin",
@@ -1816,12 +1929,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "harness global solutions",
   "content" : "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-  "datetime" : "2016-02-29 12:52:13",
+  "datetime" : "2016-02-29 12:52 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 115,
   "first_name" : "Wayne",
@@ -1832,12 +1946,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "recontextualize integrated applications",
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-  "datetime" : "2016-11-26 18:39:39",
+  "datetime" : "2016-11-26 06:39 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 116,
   "first_name" : "Ruby",
@@ -1848,12 +1963,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "grow end-to-end convergence",
   "content" : "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-  "datetime" : "2016-11-29 12:25:05",
+  "datetime" : "2016-11-29 12:25 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 117,
   "first_name" : "Heather",
@@ -1864,12 +1980,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "visualize 24/365 vortals",
   "content" : "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-  "datetime" : "2016-01-03 21:52:07",
+  "datetime" : "2016-01-03 21:52 ",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 118,
   "first_name" : "Johnny",
@@ -1880,12 +1997,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "drive extensible initiatives",
   "content" : "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-  "datetime" : "2016-03-05 05:38:33",
+  "datetime" : "2016-03-05 05:38 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 119,
   "first_name" : "Bonnie",
@@ -1896,12 +2014,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "monetize frictionless e-commerce",
   "content" : "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-  "datetime" : "2016-09-17 15:13:24",
+  "datetime" : "2016-09-17 03:13 PM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 120,
   "first_name" : "Joyce",
@@ -1912,12 +2031,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "innovate efficient networks",
   "content" : "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-  "datetime" : "2016-06-19 15:06:50",
+  "datetime" : "2016-06-19 03:06 PM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 121,
   "first_name" : "Marilyn",
@@ -1928,12 +2048,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "engage user-centric vortals",
   "content" : "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-  "datetime" : "2016-10-08 03:47:11",
+  "datetime" : "2016-10-08 03:47 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 122,
   "first_name" : "Virginia",
@@ -1944,12 +2065,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "seize mission-critical content",
   "content" : "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-  "datetime" : "2016-11-16 06:56:02",
+  "datetime" : "2016-11-16 06:56 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 123,
   "first_name" : "Rebecca",
@@ -1960,12 +2082,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "engineer enterprise infrastructures",
   "content" : "Fusce consequat. Nulla nisl. Nunc nisl.",
-  "datetime" : "2016-06-08 09:41:53",
+  "datetime" : "2016-06-08 09:41 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 124,
   "first_name" : "Shirley",
@@ -1976,12 +2099,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "envisioneer out-of-the-box networks",
   "content" : "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-  "datetime" : "2016-05-16 19:17:17",
+  "datetime" : "2016-05-16 07:17 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 125,
   "first_name" : "Lawrence",
@@ -1992,12 +2116,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "monetize interactive infomediaries",
   "content" : "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-  "datetime" : "2016-08-31 00:04:12",
+  "datetime" : "2016-08-31 12:04 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 126,
   "first_name" : "Patricia",
@@ -2008,12 +2133,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "iterate vertical methodologies",
   "content" : "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
-  "datetime" : "2016-02-29 00:38:53",
+  "datetime" : "2016-02-29 12:38 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 127,
   "first_name" : "Patrick",
@@ -2024,12 +2150,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "incubate dynamic schemas",
   "content" : "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-  "datetime" : "2016-06-20 09:54:08",
+  "datetime" : "2016-06-20 09:54 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 128,
   "first_name" : "Terry",
@@ -2040,12 +2167,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "engineer dot-com interfaces",
   "content" : "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-  "datetime" : "2016-05-19 12:13:46",
+  "datetime" : "2016-05-19 12:13 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 129,
   "first_name" : "Judith",
@@ -2056,12 +2184,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "exploit back-end synergies",
   "content" : "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-  "datetime" : "2016-09-30 11:34:42",
+  "datetime" : "2016-09-30 11:34 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 130,
   "first_name" : "Susan",
@@ -2072,12 +2201,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "aggregate next-generation convergence",
   "content" : "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-  "datetime" : "2016-04-13 21:36:14",
+  "datetime" : "2016-04-13 21:36 ",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 131,
   "first_name" : "Ryan",
@@ -2088,12 +2218,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "envisioneer real-time e-tailers",
   "content" : "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-  "datetime" : "2016-06-01 22:25:27",
+  "datetime" : "2016-06-01 10:25 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 132,
   "first_name" : "Walter",
@@ -2104,12 +2235,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "embrace dynamic models",
   "content" : "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-  "datetime" : "2016-01-03 14:47:02",
+  "datetime" : "2016-01-03 02:47 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 133,
   "first_name" : "Christine",
@@ -2120,12 +2252,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "syndicate plug-and-play architectures",
   "content" : "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
-  "datetime" : "2016-09-19 05:06:35",
+  "datetime" : "2016-09-19 05:06 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 134,
   "first_name" : "Victor",
@@ -2136,12 +2269,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "extend mission-critical synergies",
   "content" : "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-  "datetime" : "2016-11-16 18:01:35",
+  "datetime" : "2016-11-16 06:01 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 135,
   "first_name" : "Bobby",
@@ -2152,12 +2286,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "morph rich action-items",
   "content" : "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-  "datetime" : "2016-01-10 15:16:56",
+  "datetime" : "2016-01-10 03:16 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 136,
   "first_name" : "Patricia",
@@ -2168,12 +2303,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "whiteboard cross-platform initiatives",
   "content" : "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-  "datetime" : "2016-08-12 08:09:10",
+  "datetime" : "2016-08-12 08:09 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 137,
   "first_name" : "Terry",
@@ -2184,12 +2320,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "reinvent interactive mindshare",
   "content" : "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-  "datetime" : "2016-11-09 04:37:54",
+  "datetime" : "2016-11-09 04:37 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 138,
   "first_name" : "Jack",
@@ -2200,12 +2337,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "productize efficient eyeballs",
   "content" : "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
-  "datetime" : "2016-04-01 19:15:24",
+  "datetime" : "2016-04-01 07:15 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 139,
   "first_name" : "Heather",
@@ -2216,12 +2354,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "redefine ubiquitous channels",
   "content" : "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-  "datetime" : "2016-03-21 02:14:01",
+  "datetime" : "2016-03-21 02:14 AM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 140,
   "first_name" : "Marie",
@@ -2232,12 +2371,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "aggregate cross-media infrastructures",
   "content" : "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-  "datetime" : "2016-05-09 09:07:52",
+  "datetime" : "2016-05-09 09:07 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 141,
   "first_name" : "Lillian",
@@ -2248,12 +2388,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "cultivate impactful initiatives",
   "content" : "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
-  "datetime" : "2016-08-24 10:26:20",
+  "datetime" : "2016-08-24 10:26 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 142,
   "first_name" : "Deborah",
@@ -2264,12 +2405,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "mesh mission-critical schemas",
   "content" : "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
-  "datetime" : "2016-05-26 02:57:27",
+  "datetime" : "2016-05-26 02:57 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 143,
   "first_name" : "Laura",
@@ -2280,12 +2422,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "deploy front-end initiatives",
   "content" : "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-  "datetime" : "2016-05-19 13:18:16",
+  "datetime" : "2016-05-19 01:18 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 144,
   "first_name" : "Deborah",
@@ -2296,12 +2439,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "implement interactive initiatives",
   "content" : "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-  "datetime" : "2016-08-12 04:00:06",
+  "datetime" : "2016-08-12 04:00 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 145,
   "first_name" : "Virginia",
@@ -2312,12 +2456,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "optimize magnetic methodologies",
   "content" : "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-  "datetime" : "2016-04-23 16:48:50",
+  "datetime" : "2016-04-23 04:48 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
-  "read" : "true",
-  "deleted" : "true"
+  "read" : true,
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 146,
   "first_name" : "William",
@@ -2328,12 +2473,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "synergize next-generation communities",
   "content" : "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-  "datetime" : "2016-01-06 11:51:06",
+  "datetime" : "2016-01-06 11:51 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 147,
   "first_name" : "Sandra",
@@ -2344,12 +2490,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "morph seamless channels",
   "content" : "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-  "datetime" : "2015-12-30 05:48:52",
+  "datetime" : "2015-12-30 05:48 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 148,
   "first_name" : "Gerald",
@@ -2360,12 +2507,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "unleash bricks-and-clicks methodologies",
   "content" : "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-  "datetime" : "2016-07-28 15:47:58",
+  "datetime" : "2016-07-28 03:47 PM",
   "folder" : [
     "Sent"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 149,
   "first_name" : "George",
@@ -2376,12 +2524,13 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "morph rich eyeballs",
   "content" : "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-  "datetime" : "2015-12-31 12:32:03",
+  "datetime" : "2015-12-31 12:32 PM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 150,
   "first_name" : "Matthew",
@@ -2392,10 +2541,11 @@ var email_data = [{
   "from" : "bob_smith@mcmaster.ca",
   "subject" : "orchestrate enterprise e-business",
   "content" : "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
-  "datetime" : "2016-06-06 04:20:15",
+  "datetime" : "2016-06-06 04:20 AM",
   "folder" : [
     "Drafts"
   ],
-  "read" : "true",
-  "deleted" : "false"
+  "read" : true,
+  "deleted" : false,
+  "flagged" : false
 }]

@@ -35,6 +35,7 @@ function store(isSent){
 
 	if (hour >= 12) {
         hour = hour - 12;
+        hour = "0" + hour;
         dd = "PM";
     } else if (hour == 0) {
         hour = 12;
@@ -52,7 +53,7 @@ function store(isSent){
 		email.folder.push("Drafts");
 	}
 
-	current.push(email);
+	current.unshift(email);
 	console.log(email);
 
 	localStorage.setItem("email_data", JSON.stringify(current));
