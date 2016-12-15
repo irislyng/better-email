@@ -114,7 +114,7 @@ input.modal-create-filter-label {
     bottom: -5px;
 }
 
-input.modal-create-filter-input {
+input.modal-create-filter-entry {
     flex: 3;
     font-size: 16px;
     height: 24px;
@@ -192,6 +192,7 @@ span.folder-panel-list-item-nav:hover {
 }
 
 div.folder-panel-button {
+    margin-top: 12px;
     text-align: center;
 }
 
@@ -206,7 +207,7 @@ div#messages-panel {
 }
 
 div.search-bar {
-    width: 70%;
+    width: 100%;
     height: 48px;
     display: inline-block;
 }
