@@ -206,7 +206,7 @@ function loadEmail(id) {
 
 	subject.innerHTML = email.subject;
 	subject.title = email.subject;
-	// save the email id in the content message header. 
+	// save the email id in the content message header.
 	subject.setAttribute("email_id", email.id);
 	name.innerHTML = email.first_name_from + " " + email.last_name_from + " "
 	+ "<span class='content-message-sender-email'>" + email.from + "</span>";
@@ -229,29 +229,23 @@ function formatForward(email) {
 	var subject = document.getElementById("compose-subject");
 	var content = document.getElementById("compose-content");
 
-	subject.value = email.subject;
+	subject.value = "FW: " + email.subject;
 
 	var prevDate = new Date(email.datetime);
-	content.value = "\r\r\r----------------\r" 
-		+ "FORWARDED MESSAGE\r" 
+	content.value = "\r\r\r----------------\r"
+		+ "FORWARDED MESSAGE\r"
 		+ "From: " + email.first_name_from + " " + email.last_name_from + "<" + email.from +">" +"\r"
 		+ "Date: " + prevDate + "\r"
 		+ "Subject: " + email.subject + "\r"
 		+ "To: " + email.to
 		+ "\r----------------"
-		+  "\r\r\r" 
+		+  "\r\r\r"
 		+ email.content;
 	// console.log()
 
 }
 
-
-
-
-
-
-
-// functions for reply, reply-all, forward buttons 
+// functions for reply, reply-all, forward buttons
 function reply(replyAll=false) {
 	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
 	var email = getEmail(email_id);
@@ -279,13 +273,13 @@ function formatReply(email, replyAll) {
 	subject.value = "RE: " + email.subject;
 
 	var prevDate = new Date(email.datetime);
-	content.value = "\r\r\r----------------\r" 
-		+ "On " 
-		+ prevDate 
-		+ " " 
+	content.value = "\r\r\r----------------\r"
+		+ "On "
+		+ prevDate
+		+ " "
 		+ email.first_name_from + " " + email.last_name_from + "<" + email.from + "> wrote:"
 		+ "\r----------------"
-		+  "\r\r\r" 
+		+  "\r\r\r"
 		+ email.content;
 	// console.log()
 
