@@ -41,25 +41,22 @@ function MoveToInbox() {
 
 function deleteCurrent() {
 	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
-	
 	MoveToDeleted(parseInt(email_id));
 }
 
 
 function MoveToDeleted(email_id=0) {
-	
 	if(email_id != 0) {
 		toggleCheckbox(email_id);
-		console.log(selectedEmails);
 	}
 	
 	var current = JSON.parse(localStorage.getItem("email_data"));
-	
+
 	if(selectedEmails.length > 0){
 		for(var i = 0; i < selectedEmails.length; i++){
 			var temp = current[selectedEmails[i]-1]["folder"];
 
-			if(temp == "Inbox"){
+			if(temp[0] == "Inbox"){
 				current[selectedEmails[i]-1]["folder"] = ["Deleted"];
 				current[selectedEmails[i]-1]["deleted"] = true;
 			}
