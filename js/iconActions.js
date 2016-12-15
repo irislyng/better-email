@@ -65,9 +65,13 @@ function toggleIcons() {
         deleteIcon.classList.remove("disabled");
         deleteIcon.setAttribute("onclick", "deleteEmail();");
     } else {
-        document.getElementById("folder-panel-move").classList.add("disabled");
+        var moveIcon = document.getElementById("folder-panel-move");
+        moveIcon.classList.add("disabled");
+        moveIcon.removeAttribute("onclick");
         document.getElementById("folder-panel-mark-unread").classList.add("disabled");
         document.getElementById("folder-panel-mark-read").classList.add("disabled");
-        document.getElementById("folder-panel-delete").classList.add("disabled");
+        var deleteIcon = document.getElementById("folder-panel-delete");
+        deleteIcon.classList.add("disabled");
+        deleteIcon.removeAttribute("onclick");
     }
 }
