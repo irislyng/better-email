@@ -487,6 +487,7 @@ function updateCounts(emails) {
 	var flagged = 0;
 	var deleted = 0;
 	var spam = 0;
+	var sent = 0;
 
 	for (var i = emails.length - 1; i >= 0; i--) {
 		var folders = emails[i].folder
@@ -496,6 +497,7 @@ function updateCounts(emails) {
 			else if(folders[j] == "Flagged") flagged++;
 			else if(folders[j] == "Deleted") deleted++;
 			else if(folders[j] == "Spam") spam++;
+			else if(folders[j] == "Sent") sent++;
 		}
 	}
 
@@ -504,4 +506,5 @@ function updateCounts(emails) {
 	document.getElementById("flagged-count").innerHTML = flagged;
 	document.getElementById("deleted-count").innerHTML = deleted;
 	document.getElementById("spam-count").innerHTML = spam;
+	document.getElementById("sent-count").innerHTML = sent;
 }
