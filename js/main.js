@@ -325,9 +325,13 @@ function createFilter() {
 	    return obj.name === filterName; // Filter out the appropriate one
 	})[0];
 
+
 	if (filterName && !existingFilter) {
-		filter.name = filterName;
 		var filterBySubject = document.getElementById('create-filter-by-subject');
+		var filterByMessage = document.getElementById('create-filter-by-message');
+		var filterBySender = document.getElementById('create-filter-by-sender');
+
+		filter.name = filterName;
 		if (filterBySubject.checked) {
 			var filterSubject = document.getElementById('create-filter-subject').value;
 			if (filterSubject != "") {
@@ -341,7 +345,6 @@ function createFilter() {
 				return;
 			}
 		}
-		var filterByMessage = document.getElementById('create-filter-by-message');
 		if (filterByMessage.checked) {
 			var filterMessage = document.getElementById('create-filter-message').value;
 			if (filterMessage != "") {
@@ -356,7 +359,12 @@ function createFilter() {
 			}
 		}
 
-		var filterBySender = document.getElementById('create-filter-by-sender');
+		if (!filterBySubject.checked && !filterByMessage.checked && !filterBySender.checked) {
+			error.classList.remove("hidden");
+			document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please select a method of filtering."
+			return;
+		}
+
 		if (filterBySender.checked) {
 			var filterSender = document.getElementById('create-filter-sender').value;
 			if (filterSender != "") {
