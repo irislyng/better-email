@@ -124,6 +124,7 @@ function getSearchContent(keyword) {
 
 function createEmailPreview(email) {
 	let preview = document.createElement("div");
+	let container = document.createElement("div");
 	let date = document.createElement("span");
 	let name = document.createElement("span");
 	let subject = document.createElement("span");
@@ -142,26 +143,28 @@ function createEmailPreview(email) {
 	subject.innerHTML = email.subject;
 	content.innerHTML = email.content;
 
-	preview.className = (email.read) ? "message-preview":"message-preview unread";
-	preview.setAttribute("onclick", "loadEmail(" + email.id + ")");
+	container.className = (email.read) ? "message-preview":"message-preview unread";
+	container.setAttribute("onclick", "loadEmail(" + email.id + ")");
 	date.className = "message-preview-date";
 	name.className = "message-preview-name";
 	subject.className = "message-preview-subject";
 	content.className = "message-preview-content";
 
-	preview.appendChild(checkbox);
-	preview.appendChild(date);
-	preview.appendChild(name);
-	preview.appendChild(subject);
+	container.appendChild(date);
+	container.appendChild(name);
+	container.appendChild(subject);
 
 	if (email.flagged) {
 		let flagged = document.createElement("span");
 		flagged.className = "message-preview-flagged";
 		flagged.innerHTML = "<i class=\"fa fa-flag message-preview-icon\"></i>"
-		preview.appendChild(flagged);
+		container.appendChild(flagged);
 	}
 
-	preview.appendChild(content);
+	container.appendChild(content);
+
+	preview.appendChild(checkbox);
+	preview.appendChild(container);
 
 	return preview;
 }
@@ -298,7 +301,7 @@ function markSelectedAsUnread() {
 	}
 
 	localStorage.setItem("email_data", JSON.stringify(emails));
-	
+	selectedEmails = [];
 	loadCurrentList();
 }
 
@@ -314,7 +317,7 @@ function markSelectedAsRead() {
 	}
 
 	localStorage.setItem("email_data", JSON.stringify(emails));
-	
+	selectedEmails = [];
 	loadCurrentList();
 }
 
