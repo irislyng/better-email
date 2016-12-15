@@ -1,5 +1,7 @@
 // isSent is a boolean to say whether sent or if in drafts
 function store(isSent){
+	var notificationValue = null;
+
 	var email = {
 		id: null,
 		first_name: null,
@@ -54,14 +56,29 @@ function store(isSent){
 
 	if(isSent){
 		email.folder.push("Sent");
+		notificationValue = "Your email has been successfully sent!"
 	} else {
 		email.folder.push("Drafts");
+		notificationValue = "Your email has been saved in \"Drafts\"!"
 	}
 
 	current.push(email);
 	console.log(email);
 
 	localStorage.setItem("email_data", JSON.stringify(current));
-	loadEmailList();
+	loadEmailList("Inbox");
+	showNotification(notificationValue);
 	hideCompose();
+}
+
+function showNotification(value) {
+	var notification = document.getElementById("notification");
+	notification.classList.remove("hidden");
+
+	var content = document.getElementById("notification-content");
+	content.innerHTML = value;
+
+	setInterval(function(){
+		notification.classList.add("hidden");
+	}, 1500);
 }
