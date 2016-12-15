@@ -44,14 +44,21 @@
         </div>
       </div>
     </div>
+    <div id="notification" class="notification hidden">
+      <div class="notification-container">
+        <span id="notification-content" class="notification-content"></span>
+      </div>
+    </div>
     <div class="container flex">
       <div id="folder-panel" class="col-2">
         <div class="folder-panel-icons">
           <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left" onclick="showCompose()"></i>
           <i id="folder-panel-move" class="fa fa-lg fa-plus folder-panel-icon disabled"></i>
-          <i id="folder-panel-mark-unread" class="fa fa-lg fa-envelope-open-o folder-panel-icon disabled"></i>
-          <i id="folder-panel-mark-read" class="fa fa-lg fa-envelope-o folder-panel-icon disabled"></i>
+		  
+          <i id="folder-panel-mark-read" class="fa fa-lg fa-envelope-open-o folder-panel-icon disabled" onclick="markSelectedAsRead()"></i>
+          <i id="folder-panel-mark-unread" class="fa fa-lg fa-envelope-o folder-panel-icon disabled" onclick="markSelectedAsUnread()"></i>
           <i id="folder-panel-delete" class="fa fa-lg fa-trash-o folder-panel-icon disabled" onclick="MoveToDeleted()"></i>
+
         </div>
         <div id="folder-panel-folders" class="folder-panel-list">
           <div class="folder-panel-list-title">Folders</div>
@@ -93,11 +100,14 @@
       <div id="messages-panel" class="col-4">
         <div class="search-bar">
           <span class="fa fa-search search-bar-icon"></span>
-          <input class="search-bar-input" type="text" placeholder="Search Messages">
+          <input id="search-bar-input" class="search-bar-input" type="text" placeholder="Search Messages">
         </div>
         <!-- <div class="messages-panel-sort">
           Sort By <i class="fa fa-lg fa-angle-down"></i>
         </div> -->
+        <div class="search-button">
+          <button onclick="setCurrentSearch()">Search</button>
+        </div>
         <div id="email-list" class="messages-panel-list">
         </div>
       </div>
@@ -106,7 +116,7 @@
           <div class="content-message-header">
               <div class="content-message-subject left truncate">Subject</div>
               <div class="content-message-icons right">
-                <i class="fa fa-lg fa-flag-o content-panel-icon"></i>
+                <i id="content-message-flagged" class="fa fa-lg content-panel-icon"></i>
                 <i class="fa fa-lg fa-plus content-panel-icon"></i>
                 <i class="fa fa-lg fa-reply content-panel-icon"></i>
                 <i class="fa fa-lg fa-reply-all content-panel-icon"></i>
