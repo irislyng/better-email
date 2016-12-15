@@ -47,6 +47,25 @@
         </div>
       </div>
     </div>
+    <div id="modal-move" class="modal-container hidden">
+      <div class="modal">
+        <div class="modal-header">
+          <span class="modal-title left">Move to Folder</span>
+          <span class="modal-close right" onclick="closeModal('modal-move')"><i class="fa fa-lg fa-times"></i></span>
+        </div>
+        <div id="modal-move-error" class="modal-error hidden">
+          <span id="modal-create-filter-error-value"></span>
+        </div>
+        <select id="modal-move-select" class="modal-select">
+          <option>Inbox</option>
+          <option>Deleted</option>
+          <option>Spam</option>
+        </select>
+        <div class="modal-button right">
+          <button class="button-submit-filter" onclick="moveEmails()">Move</button>
+        </div>
+      </div>
+    </div>
     <div id="notification" class="notification hidden">
       <div class="notification-container">
         <span id="notification-content" class="notification-content"></span>
@@ -57,10 +76,9 @@
         <div class="folder-panel-icons">
           <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left" onclick="showCompose('Compose')"></i>
           <i id="folder-panel-move" class="fa fa-lg fa-plus folder-panel-icon disabled"></i>
-
           <i id="folder-panel-mark-read" class="fa fa-lg fa-envelope-open-o folder-panel-icon disabled" onclick="markSelectedAsRead()"></i>
           <i id="folder-panel-mark-unread" class="fa fa-lg fa-envelope-o folder-panel-icon disabled" onclick="markSelectedAsUnread()"></i>
-          <i id="folder-panel-delete" class="fa fa-lg fa-trash-o folder-panel-icon disabled" onclick="MoveToDeleted(0)"></i>
+          <i id="folder-panel-delete" class="fa fa-lg fa-trash-o folder-panel-icon disabled"></i>
 
         </div>
         <div id="folder-panel-folders" class="folder-panel-list">
@@ -99,15 +117,15 @@
             <button class="button-create-filter" onclick="showModal('modal-create-filter')">Create Filter</button>
           </div>
         </div>
-		<div id="folder-panel-move" class="folder-panel-list">
+<!-- 		<div id="folder-panel-move" class="folder-panel-list">
           <div class="folder-panel-list-title">Move Items</div>
           <select id="move-to-folder">
             <option value="inbox">Inbox</option>
             <option value="spam">Spam</option>
           </select>
           <button class="button-create-filter" onclick="MoveDecision()">OK</button>
-          
-        </div>
+
+        </div> -->
       </div>
       <div id="messages-panel" class="col-4">
         <div class="search-bar">
@@ -133,7 +151,7 @@
                 <i onClick="reply(false)" class="fa fa-lg fa-reply content-panel-icon"></i>
                 <i onclick="reply(true)" class="fa fa-lg fa-reply-all content-panel-icon"></i>
                 <i onclick="forward()" class="fa fa-lg fa-share content-panel-icon"></i>
-                <i onclick="deleteCurrent()" class="fa fa-lg fa-trash-o content-panel-icon"></i>
+                <i onclick="deleteEmail()" class="fa fa-lg fa-trash-o content-panel-icon"></i>
 
               </div>
           </div>
@@ -181,13 +199,13 @@
         </div>
     </div>
     <script type="text/javascript" src="emails.json"></script>
-
     <script type="text/javascript" src="js/modalActions.js"></script>
     <script type="text/javascript" src="js/iconActions.js"></script>
     <script type="text/javascript" src="js/load_data.js"></script>
     <script type="text/javascript" src="js/emailStorage.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/Move.js"></script>
+  <!-- <script type="text/javascript" src="js/Move.js"></script> -->
+	 <script type="text/javascript" src="js/moveEmails.js"></script>
 
   </body>
 </html>
