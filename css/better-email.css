@@ -340,20 +340,21 @@ span.message-preview-date {
 }
 
 span.message-preview-name {
-    display: block;
+    float: left;
     color: #455A64;
     font-size: 20px;
 }
 
-span.message-preview-subject {
-    float: left;
-    color: #212121;
-    font-size: 16px;
+span.message-preview-flagged {
+    padding-left: 6px;
+    color: #bdbdbd;
 }
 
-span.message-preview-flagged {
-    float: right;
-    color: #bdbdbd;
+span.message-preview-subject {
+    display: block;
+    clear: both;
+    color: #212121;
+    font-size: 16px;
 }
 
 span.message-preview-content {
@@ -407,7 +408,7 @@ div.content-message-container {
 }
 
 div.content-message-sender {
-    font-size: 22px;
+    font-size: 20px;
     color: #607D8B;
 }
 

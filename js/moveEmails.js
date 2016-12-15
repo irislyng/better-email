@@ -28,6 +28,8 @@ function moveEmails() {
     showNotification("Your emails have been moved to " + folder + "!");
 }
 
+
+
 function deleteEmail() {
     var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
     console.log(email_id)

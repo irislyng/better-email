@@ -167,8 +167,6 @@ function createEmailPreview(email) {
 
 	container.appendChild(date);
 	container.appendChild(name);
-	container.appendChild(subject);
-
 	if (email.flagged) {
 		let flagged = document.createElement("span");
 		flagged.className = "message-preview-flagged";
@@ -176,6 +174,7 @@ function createEmailPreview(email) {
 		container.appendChild(flagged);
 	}
 
+	container.appendChild(subject);
 	container.appendChild(content);
 
 	preview.appendChild(checkbox);
