@@ -123,6 +123,10 @@ span.modal-title {
     text-transform: uppercase;
 }
 
+div.modal-button {
+    display: block;
+}
+
 div.modal-error {
     text-align: center;
     color: #ff4081;
@@ -130,8 +134,17 @@ div.modal-error {
     font-style: italic;
 }
 
+select.modal-select {
+    width: 100%;
+}
+
 span.modal-close {
     color: #ff4081;
+}
+
+div#modal-move .modal {
+    height: 150px;
+    margin-top: -75px;
 }
 
 /** CREATE FILTER MODAL **/

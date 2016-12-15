@@ -302,7 +302,7 @@ function getEmail(id) {
 function setEmail(id, email) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	var result = emails.filter(function(obj) {
-	    return obj.id === id; // Filter out the appropriate one
+	    return obj.id == id; // Filter out the appropriate one
 	})[0];
 	var index = emails.indexOf(result);
 

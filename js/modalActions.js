@@ -15,4 +15,7 @@ function closeModal(id) {
 
     var error = modal.getElementsByClassName('modal-error')[0];
     error.classList.add("hidden");
+
+    var select = modal.getElementsByTagName('select')[0];
+    select.value = [];
 }
