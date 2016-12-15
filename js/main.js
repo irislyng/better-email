@@ -312,54 +312,94 @@ function setEmail(id, email) {
 }
 
 function createFilter() {
+	var error = document.getElementById('modal-create-filter-error');
+	error.classList.add("hidden");
+
 	var filter = {
 		name: null,
 		filterBy: []
 	}
 
-	filter.name = document.getElementById('create-filter-name').value;
-	if (document.getElementById('create-filter-by-subject').checked) {
-		filter.filterBy.push({
-			type: 'subject',
-			keyword: document.getElementById('create-filter-subject').value
-		})
+	var filterName = document.getElementById('create-filter-name').value
+	var existingFilter = filters.filter(function(obj) {
+	    return obj.name === filterName; // Filter out the appropriate one
+	})[0];
+
+	if (filterName && !existingFilter) {
+		filter.name = filterName;
+		var filterBySubject = document.getElementById('create-filter-by-subject');
+		if (filterBySubject.checked) {
+			var filterSubject = document.getElementById('create-filter-subject').value;
+			if (filterSubject != "") {
+				filter.filterBy.push({
+					type: 'subject',
+					keyword: filterSubject
+				})
+			} else {
+				error.classList.remove("hidden");
+				document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please enter a keyword for subject."
+				return;
+			}
+		}
+		var filterByMessage = document.getElementById('create-filter-by-message');
+		if (filterByMessage.checked) {
+			var filterMessage = document.getElementById('create-filter-message').value;
+			if (filterMessage != "") {
+				filter.filterBy.push({
+					type: 'content',
+					keyword: filterMessage
+				})
+			} else {
+				error.classList.remove("hidden");
+				document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please enter a keyword for message."
+				return;
+			}
+		}
+
+		var filterBySender = document.getElementById('create-filter-by-sender');
+		if (filterBySender.checked) {
+			var filterSender = document.getElementById('create-filter-sender').value;
+			if (filterSender != "") {
+				filter.filterBy.push({
+					type: 'from',
+					keyword: filterSender
+				})
+			} else {
+				error.classList.remove("hidden");
+				document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please enter a keyword for sender."
+				return;
+			}
+		}
+
+		filters.push(filter);
+
+		let parent = document.getElementById('folder-panel-filters-items');
+
+		let div = document.createElement('div');
+		div.classList.add('folder-panel-list-item');
+		div.id = "filter-" + filter.name;
+		let span = document.createElement('span');
+		span.classList.add("folder-panel-list-item-nav");
+		span.innerHTML = filter.name;
+		span.setAttribute("onclick", "setCurrentFilter('" + filter.name + "')");
+		let remove = document.createElement('span');
+		remove.classList.add("right");
+		remove.setAttribute("onclick", "removeFilter('" + filter.name + "')");
+		remove.innerHTML = "<i class=\"fa fa-lg fa-times\"></i>"
+
+		div.appendChild(span);
+		div.appendChild(remove);
+		parent.appendChild(div);
+
+		closeModal('modal-create-filter');
+	} else if (existingFilter) {
+		error.classList.remove("hidden");
+		document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please select a unique name for your filter."
+	} else {
+		error.classList.remove("hidden");
+		document.getElementById('modal-create-filter-error-value').innerHTML = "Error: Please select a name for your filter."
 	}
 
-	if (document.getElementById('create-filter-by-message').checked) {
-		filter.filterBy.push({
-			type: 'content',
-			keyword: document.getElementById('create-filter-message').value
-		})
-	}
-
-	if (document.getElementById('create-filter-by-sender').checked) {
-		filter.filterBy.push({
-			type: 'from',
-			keyword: document.getElementById('create-filter-sender').value
-		})
-	}
-
-	filters.push(filter);
-
-	let parent = document.getElementById('folder-panel-filters-items');
-
-	let div = document.createElement('div');
-	div.classList.add('folder-panel-list-item');
-	div.id = "filter-" + filter.name;
-	let span = document.createElement('span');
-	span.classList.add("folder-panel-list-item-nav");
-	span.innerHTML = filter.name;
-	span.setAttribute("onclick", "setCurrentFilter('" + filter.name + "')");
-	let remove = document.createElement('span');
-	remove.classList.add("right");
-	remove.setAttribute("onclick", "removeFilter('" + filter.name + "')");
-	remove.innerHTML = "<i class=\"fa fa-lg fa-times\"></i>"
-
-	div.appendChild(span);
-	div.appendChild(remove);
-	parent.appendChild(div);
-
-	closeModal('modal-create-filter');
 }
 
 function removeFilter(filter) {

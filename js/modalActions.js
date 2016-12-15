@@ -12,4 +12,7 @@ function closeModal(id) {
         inputs[i].value = '';
         inputs[i].checked = false;
     }
+
+    var error = modal.getElementsByClassName('modal-error')[0];
+    error.classList.add("hidden");
 }
