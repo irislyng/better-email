@@ -155,6 +155,18 @@ i.folder-panel-icon:active{
     color: #e83874;
 }
 
+i.folder-panel-icon.disabled {
+    color: #bdbdbd;
+}
+
+i.folder-panel-icon.disabled:hover {
+    color: #bdbdbd;
+}
+
+i.folder-panel-icon.disabled:active {
+    color: #bdbdbd;
+}
+
 /* FOLDER PANEL LISTS */
 
 div.folder-panel-list-title {

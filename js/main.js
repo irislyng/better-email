@@ -18,6 +18,19 @@ function loadEmailList() {
 	parent.innerHTML = content.innerHTML;
 }
 
+function getCurrentEmail(id) {
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	let email;
+	for (var i = 0; i < emails.length; i++) {
+		if (emails[i].id == id) {
+			email = emails[i];
+			break;
+		}
+	}
+
+	return email;
+}
+
 function getFolderContent() {
 	let newContent = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
@@ -30,8 +43,10 @@ function getFolderContent() {
 			let content = document.createElement("span");
 
 			let checkbox = document.createElement("span");
-			let input = document.createElement("input");
 			checkbox.className = "message-preview-select";
+			checkbox.setAttribute("onchange", "toggleCheckbox(" + emails[i].id + ")");
+
+			let input = document.createElement("input");
 			input.setAttribute("type", "checkbox")
 			checkbox.appendChild(input);
 
@@ -61,14 +76,7 @@ function getFolderContent() {
 }
 
 function loadEmail(id) {
-	let emails = JSON.parse(localStorage.getItem("email_data"));
-	let email;
-	for (var i = 0; i < emails.length; i++) {
-		if (emails[i].id == id) {
-			email = emails[i];
-			break;
-		}
-	}
+	var email = getCurrentEmail(id);
 
 	let subject = document.querySelector("#content-panel .content-message-subject");
 	let name = document.querySelector("#content-panel .content-message-sender");
@@ -85,13 +93,34 @@ function loadEmail(id) {
 	content.innerHTML = email.content;
 }
 
+function toggleCheckbox(id) {
+	var index = selectedEmails.indexOf(id);
+
+	if (index > -1) {
+		selectedEmails.splice(index, 1);
+	} else {
+		selectedEmails.push(id);
+	}
+
+	if (selectedEmails.length > 0) {
+		document.getElementById("folder-panel-move").classList.remove("disabled");
+		document.getElementById("folder-panel-mark-unread").classList.remove("disabled");
+		document.getElementById("folder-panel-mark-read").classList.remove("disabled");
+		document.getElementById("folder-panel-delete").classList.remove("disabled");
+	} else {
+		document.getElementById("folder-panel-move").classList.add("disabled");
+		document.getElementById("folder-panel-mark-unread").classList.add("disabled");
+		document.getElementById("folder-panel-mark-read").classList.add("disabled");
+		document.getElementById("folder-panel-delete").classList.add("disabled");
+	}
+}
+
 function composeEmail() {
 	let datetime = new Date();
 	datetime = datetime.toLocaleString();
 
 	let emails = JSON.parse(localStorage.getItem("email_data"));
-	let id = emails[emails.length - 1].id;
-	id = id + 1;
+	let id = emails[emails.length - 1].id + 1;
 
 	let email = {
 		id: id,
