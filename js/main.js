@@ -139,11 +139,25 @@ function loadEmail(id) {
 
 	subject.innerHTML = email.subject;
 	subject.title = email.subject;
+	// save the email id in the content message header. 
+	subject.setAttribute("email_id", email.id);
 	name.innerHTML = email.first_name_from + " " + email.last_name_from + " "
 	+ "<span class='content-message-sender-email'>" + email.from + "</span>";
 	date.innerHTML = email.datetime;
 	temail.innerHTML = "To: " + email.to;
 	content.innerHTML = email.content;
+}
+
+
+// functions for reply, reply-all, forward buttons 
+function reply(replyAll=false) {
+	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
+	var email = getCurrentEmail(email_id);
+	var composeState = "Reply";
+	if(replyAll) {
+		composeState = "Reply-All";
+	}
+	showCompose(composeState);
 }
 
 function getCurrentEmail(id) {
