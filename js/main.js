@@ -10,7 +10,9 @@ function init() {
 }
 
 function loadCurrentList() {
-	selectedEmails = []
+	selectedEmails = [];
+	toggleIcons();
+
 	if (currentFolder) {
 		setCurrentFolder(currentFolder);
 	} else if (currentFilter) {
