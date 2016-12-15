@@ -45,3 +45,17 @@ function toggleFlagged(id) {
 
     setEmail(id, email);
 }
+
+function toggleIcons() {
+    if (selectedEmails.length > 0) {
+        document.getElementById("folder-panel-move").classList.remove("disabled");
+        document.getElementById("folder-panel-mark-unread").classList.remove("disabled");
+        document.getElementById("folder-panel-mark-read").classList.remove("disabled");
+        document.getElementById("folder-panel-delete").classList.remove("disabled");
+    } else {
+        document.getElementById("folder-panel-move").classList.add("disabled");
+        document.getElementById("folder-panel-mark-unread").classList.add("disabled");
+        document.getElementById("folder-panel-mark-read").classList.add("disabled");
+        document.getElementById("folder-panel-delete").classList.add("disabled");
+    }
+}
