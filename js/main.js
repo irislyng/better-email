@@ -60,6 +60,8 @@ function loadEmailList(value, isFilter, isSearch) {
 function getFolderContent(folderName) {
 	let content = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
+	updateCounts(emails);
+
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
 		if (emails[i].folder.indexOf(folderName) > -1) {
@@ -78,6 +80,7 @@ function getFilterContent(filterName) {
 
 	let content = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
+	updateCounts(emails);
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
 		var inFilter = true;
@@ -102,6 +105,7 @@ function getSearchContent(keyword) {
 
 	var keywords = keyword.split(" ");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
+	updateCounts(emails);
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 
 	for (var i = 0; i < emails.length; i++) {
@@ -324,4 +328,29 @@ function markAsRead(id, email) {
 	localStorage.setItem("email_data", JSON.stringify(emails));
 
 	loadCurrentList();
+}
+
+function updateCounts(emails) {
+	var inbox = 0;
+	var drafts = 0;
+	var flagged = 0;
+	var deleted = 0;
+	var spam = 0;
+
+	for (var i = emails.length - 1; i >= 0; i--) {
+		var folders = emails[i].folder
+		for (var j = folders.length - 1; j >= 0; j--) {
+			if(folders[j] == "Inbox") inbox++;
+			else if(folders[j] == "Drafts") drafts++;
+			else if(folders[j] == "Flagged") flagged++;
+			else if(folders[j] == "Deleted") deleted++;
+			else if(folders[j] == "Spam") spam++;
+		}
+	}
+
+	document.getElementById("inbox-count").innerHTML = inbox;
+	document.getElementById("drafts-count").innerHTML = drafts;
+	document.getElementById("flagged-count").innerHTML = flagged;
+	document.getElementById("deleted-count").innerHTML = deleted;
+	document.getElementById("spam-count").innerHTML = spam;
 }
