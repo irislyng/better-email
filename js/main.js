@@ -29,52 +29,17 @@ function loadEmailList(name, isFilter) {
 }
 
 function getFolderContent(folder) {
-	let newContent = document.createElement("div");
+	let content = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
 		if (emails[i].folder.indexOf(folder) > -1) {
-			let email = document.createElement("div");
-			let date = document.createElement("span");
-			let name = document.createElement("span");
-			let subject = document.createElement("span");
-			let content = document.createElement("span");
-
-			let checkbox = document.createElement("span");
-			checkbox.className = "message-preview-select";
-			checkbox.setAttribute("onchange", "toggleCheckbox(" + emails[i].id + ")");
-
-			let input = document.createElement("input");
-			input.setAttribute("type", "checkbox")
-			checkbox.appendChild(input);
-
-			date.innerHTML = emails[i].datetime;
-			name.innerHTML = emails[i].first_name_from + " " + emails[i].last_name_from;
-			subject.innerHTML = emails[i].subject;
-			content.innerHTML = emails[i].content;
-
-			email.className = "message-preview";
-			email.setAttribute("onclick", "loadEmail(" + emails[i].id + ")");
-			date.className = "message-preview-date";
-			name.className = "message-preview-name";
-			subject.className = "message-preview-subject";
-			content.className = "message-preview-content";
-
-			email.appendChild(checkbox);
-			email.appendChild(date);
-			email.appendChild(name);
-			email.appendChild(subject);
-			email.appendChild(content);
-
-			// if (!emails[i].read) {
-			// 	email.style.fontWeight = "bold";
-			// }
-
-			newContent.appendChild(email);
+			var email = createEmailPreview(emails[i]);
+			content.appendChild(email);
 		}
 	}
 
-	return newContent;
+	return content;
 }
 
 function getFilterContent(filterName) {
@@ -82,7 +47,7 @@ function getFilterContent(filterName) {
 	    return obj.name === filterName; // Filter out the appropriate one
 	})[0];
 
-	let newContent = document.createElement("div");
+	let content = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
@@ -96,44 +61,48 @@ function getFilterContent(filterName) {
 		}
 
 		if (!inFilter) continue;
-		console.log('in filter!')
 
-		let email = document.createElement("div");
-		let date = document.createElement("span");
-		let name = document.createElement("span");
-		let subject = document.createElement("span");
-		let content = document.createElement("span");
-
-		let checkbox = document.createElement("span");
-		checkbox.className = "message-preview-select";
-		checkbox.setAttribute("onchange", "toggleCheckbox(" + emails[i].id + ")");
-
-		let input = document.createElement("input");
-		input.setAttribute("type", "checkbox")
-		checkbox.appendChild(input);
-
-		date.innerHTML = emails[i].datetime;
-		name.innerHTML = emails[i].first_name_from + " " + emails[i].last_name_from;
-		subject.innerHTML = emails[i].subject;
-		content.innerHTML = emails[i].content;
-
-		email.className = "message-preview";
-		email.setAttribute("onclick", "loadEmail(" + emails[i].id + ")");
-		date.className = "message-preview-date";
-		name.className = "message-preview-name";
-		subject.className = "message-preview-subject";
-		content.className = "message-preview-content";
-
-		email.appendChild(checkbox);
-		email.appendChild(date);
-		email.appendChild(name);
-		email.appendChild(subject);
-		email.appendChild(content);
-
-		newContent.appendChild(email);
+		var email = createEmailPreview(emails[i]);
+		content.appendChild(email);
 	}
 
-	return newContent;
+	return content;
+}
+
+function createEmailPreview(email) {
+	let preview = document.createElement("div");
+	let date = document.createElement("span");
+	let name = document.createElement("span");
+	let subject = document.createElement("span");
+	let content = document.createElement("span");
+
+	let checkbox = document.createElement("span");
+	checkbox.className = "message-preview-select";
+	checkbox.setAttribute("onchange", "toggleCheckbox(" + email.id + ")");
+
+	let input = document.createElement("input");
+	input.setAttribute("type", "checkbox")
+	checkbox.appendChild(input);
+
+	date.innerHTML = email.datetime;
+	name.innerHTML = email.first_name_from + " " + email.last_name_from;
+	subject.innerHTML = email.subject;
+	content.innerHTML = email.content;
+
+	preview.className = "message-preview";
+	preview.setAttribute("onclick", "loadEmail(" + email.id + ")");
+	date.className = "message-preview-date";
+	name.className = "message-preview-name";
+	subject.className = "message-preview-subject";
+	content.className = "message-preview-content";
+
+	preview.appendChild(checkbox);
+	preview.appendChild(date);
+	preview.appendChild(name);
+	preview.appendChild(subject);
+	preview.appendChild(content);
+
+	return preview;
 }
 
 function toggleCheckbox(id) {
