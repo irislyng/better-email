@@ -233,7 +233,7 @@ div#messages-panel {
 }
 
 div.search-bar {
-    width: 100%;
+    width: 70%;
     height: 48px;
     display: inline-block;
 }
@@ -263,6 +263,17 @@ div.messages-panel-sort {
     padding: 10px;
     display: inline-block;
     text-align: right;
+}
+
+div.search-button {
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+}
+
+div.search-button button {
+    width: 100%;
+    padding: 0px;
 }
 
 /* MESSAGES */
