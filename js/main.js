@@ -1,5 +1,6 @@
 var currentFolder = "Inbox";
 var currentFilter = null;
+var currentSearch = null;
 var selectedEmails = [];
 var filters = [];
 
@@ -13,41 +14,55 @@ function loadCurrentList() {
 		setCurrentFolder(currentFolder);
 	} else if (currentFilter) {
 		setCurrentFilter(currentFilter);
+	} else if (currentSearch) {
+		setCurrentSearch();
 	}
 }
 
 function setCurrentFolder(folder) {
 	currentFolder = folder;
 	currentFilter = null;
-	loadEmailList(folder, false);
+	currentSearch = null;
+	loadEmailList(folder, false, false);
 }
 
 function setCurrentFilter(filter) {
 	currentFolder = null;
 	currentFilter = filter;
-	loadEmailList(filter, true);
+	currentSearch = null;
+	loadEmailList(filter, true, false);
 }
 
-function loadEmailList(name, isFilter) {
+function setCurrentSearch() {
+	let keyword = document.getElementById("search-bar-input").value;
+	currentFolder = null;
+	currentFilter = null;
+	currentSearch = keyword;
+	loadEmailList(keyword, false, true)
+}
+
+function loadEmailList(value, isFilter, isSearch) {
 	let parent = document.getElementById("email-list");
 
 	var content = null;
 
 	if (isFilter) {
-		content = getFilterContent(name);
+		content = getFilterContent(value);
+	} else if (isSearch) {
+		content = getSearchContent(value);
 	} else {
-		content = getFolderContent(name);
+		content = getFolderContent(value);
 	}
 
 	parent.innerHTML = content.innerHTML;
 }
 
-function getFolderContent(folder) {
+function getFolderContent(folderName) {
 	let content = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
-		if (emails[i].folder.indexOf(folder) > -1) {
+		if (emails[i].folder.indexOf(folderName) > -1) {
 			var email = createEmailPreview(emails[i]);
 			content.appendChild(email);
 		}
@@ -69,7 +84,6 @@ function getFilterContent(filterName) {
 		for (var j = 0; j < filter.filterBy.length; j++) {
 			var filterBy = filter.filterBy[j];
 			var current = emails[i];
-			console.log(current)
 			var type = filterBy.type;
 			if (!current[type].includes(filterBy.keyword)) inFilter = false;
 		}
@@ -83,8 +97,34 @@ function getFilterContent(filterName) {
 	return content;
 }
 
+function getSearchContent(keyword) {
+	let content = document.createElement("div");
+
+	var keywords = keyword.split(" ");
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
+
+	for (var i = 0; i < emails.length; i++) {
+		var inSearch = false;
+		for (var j = 0; j < keywords.length; j++) {
+			var word = keywords[j];
+			var email = JSON.stringify(emails[i]);
+			if (email.includes(word)) inSearch = true;
+		}
+
+		if (!inSearch) continue;
+
+		var email = createEmailPreview(emails[i]);
+		content.appendChild(email);
+	}
+
+	return content;
+
+}
+
 function createEmailPreview(email) {
 	let preview = document.createElement("div");
+	let container = document.createElement("div");
 	let date = document.createElement("span");
 	let name = document.createElement("span");
 	let subject = document.createElement("span");
@@ -103,26 +143,28 @@ function createEmailPreview(email) {
 	subject.innerHTML = email.subject;
 	content.innerHTML = email.content;
 
-	preview.className = (email.read) ? "message-preview":"message-preview unread";
-	preview.setAttribute("onclick", "loadEmail(" + email.id + ")");
+	container.className = (email.read) ? "message-preview":"message-preview unread";
+	container.setAttribute("onclick", "loadEmail(" + email.id + ")");
 	date.className = "message-preview-date";
 	name.className = "message-preview-name";
 	subject.className = "message-preview-subject";
 	content.className = "message-preview-content";
 
-	preview.appendChild(checkbox);
-	preview.appendChild(date);
-	preview.appendChild(name);
-	preview.appendChild(subject);
+	container.appendChild(date);
+	container.appendChild(name);
+	container.appendChild(subject);
 
 	if (email.flagged) {
 		let flagged = document.createElement("span");
 		flagged.className = "message-preview-flagged";
 		flagged.innerHTML = "<i class=\"fa fa-flag message-preview-icon\"></i>"
-		preview.appendChild(flagged);
+		container.appendChild(flagged);
 	}
 
-	preview.appendChild(content);
+	container.appendChild(content);
+
+	preview.appendChild(checkbox);
+	preview.appendChild(container);
 
 	return preview;
 }
@@ -259,7 +301,7 @@ function markSelectedAsUnread() {
 	}
 
 	localStorage.setItem("email_data", JSON.stringify(emails));
-	
+	selectedEmails = [];
 	loadCurrentList();
 }
 
@@ -275,7 +317,7 @@ function markSelectedAsRead() {
 	}
 
 	localStorage.setItem("email_data", JSON.stringify(emails));
-	
+	selectedEmails = [];
 	loadCurrentList();
 }
 
