@@ -1,16 +1,30 @@
+var currentFolder = "Inbox";
+var currentFilter = null;
 var selectedEmails = [];
 var filters = [];
 
 function init() {
 	loadEmailList("Inbox", false);
-	loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id) // TODO: change email displayed
+	loadEmail(JSON.parse(localStorage.getItem("email_data"))[99].id) // TODO: change email displayed
+}
+
+function loadCurrentList() {
+	if (currentFolder) {
+		setCurrentFolder(currentFolder);
+	} else if (currentFilter) {
+		setCurrentFilter(currentFilter);
+	}
 }
 
 function setCurrentFolder(folder) {
+	currentFolder = folder;
+	currentFilter = null;
 	loadEmailList(folder, false);
 }
 
 function setCurrentFilter(filter) {
+	currentFolder = null;
+	currentFilter = filter;
 	loadEmailList(filter, true);
 }
 
@@ -100,6 +114,14 @@ function createEmailPreview(email) {
 	preview.appendChild(date);
 	preview.appendChild(name);
 	preview.appendChild(subject);
+
+	if (email.flagged) {
+		let flagged = document.createElement("span");
+		flagged.className = "message-preview-flagged";
+		flagged.innerHTML = "<i class=\"fa fa-flag message-preview-icon\"></i>"
+		preview.appendChild(flagged);
+	}
+
 	preview.appendChild(content);
 
 	return preview;
@@ -128,8 +150,17 @@ function toggleCheckbox(id) {
 }
 
 function loadEmail(id) {
-	var email = getCurrentEmail(id);
+	var email = getEmail(id);
 	// if (!email.read) markAsRead(id, email);
+	let flag = document.getElementById("content-message-flagged");
+	flag.setAttribute("onclick", "toggleFlagged(" + email.id + ")");
+	if (email.flagged) {
+		flag.classList.remove("fa-flag-o");
+		flag.classList.add("fa-flag");
+	} else {
+		flag.classList.remove("fa-flag");
+		flag.classList.add("fa-flag-o");
+	}
 
 	let subject = document.querySelector("#content-panel .content-message-subject");
 	let name = document.querySelector("#content-panel .content-message-sender");
@@ -146,7 +177,7 @@ function loadEmail(id) {
 	content.innerHTML = email.content;
 }
 
-function getCurrentEmail(id) {
+function getEmail(id) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	let email;
 	for (var i = 0; i < emails.length; i++) {
@@ -157,6 +188,18 @@ function getCurrentEmail(id) {
 	}
 
 	return email;
+}
+
+function setEmail(id, email) {
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	var result = emails.filter(function(obj) {
+	    return obj.id === id; // Filter out the appropriate one
+	})[0];
+	var index = emails.indexOf(result);
+
+	emails[index] = email;
+	localStorage.setItem("email_data", JSON.stringify(emails));
+	loadCurrentList();
 }
 
 function createFilter() {

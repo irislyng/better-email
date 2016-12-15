@@ -18,3 +18,30 @@ function hideCompose() {
     document.getElementById('compose-subject').value = "";
     document.getElementById('compose-content').value = "";
 }
+
+function toggleFlagged(id) {
+    var email = getEmail(id);
+    var flag = document.getElementById("content-message-flagged");
+    var flagged = null;
+
+    if (flag.classList.contains("fa-flag")) {
+        flag.classList.add("fa-flag-o");
+        flag.classList.remove("fa-flag");
+        flagged = false;
+    } else if (flag.classList.contains("fa-flag-o")) {
+        flag.classList.add("fa-flag");
+        flag.classList.remove("fa-flag-o");
+        flagged = true;
+    }
+
+    if (flagged) {
+        email.folder.push("Flagged");
+    } else {
+        var index = email.folder.indexOf("Flagged");
+        if (index > -1) email.folder.splice(index, 1);
+    }
+
+    email.flagged = flagged;
+
+    setEmail(id, email);
+}
