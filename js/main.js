@@ -1,4 +1,4 @@
-var currentFolder = "I";
+var currentFolder = "Inbox";
 var selectedEmails = [];
 
 function init() {

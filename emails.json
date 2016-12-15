@@ -10,10 +10,11 @@ var email_data = [{
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
   "datetime" : "2016-01-10 04:56 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 2,
   "first_name" : "Bob",
@@ -26,10 +27,11 @@ var email_data = [{
   "content" : "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
   "datetime" : "2016-07-25 05:16 PM",
   "folder" : [
-    "I"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 3,
   "first_name" : "Bob",
@@ -42,10 +44,11 @@ var email_data = [{
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
   "datetime" : "2015-12-15 02:46 AM",
   "folder" : [
-    "Drafts"
+    "Inbox"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 4,
   "first_name" : "Bob",
@@ -61,7 +64,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 5,
   "first_name" : "Bob",
@@ -74,10 +78,11 @@ var email_data = [{
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
   "datetime" : "2016-10-09 10:01 AM",
   "folder" : [
-    "Drafts"
+    "Inbox"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 6,
   "first_name" : "Bob",
@@ -88,12 +93,13 @@ var email_data = [{
   "from" : "astewart5@woothemes.com",
   "subject" : "aggregate value-added convergence",
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-  "datetime" : "2016-07-22 09:19 AMAM",
+  "datetime" : "2016-07-22 09:19 AM",
   "folder" : [
-    "IF"
+    "Deleted", "Flagged"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : true
 }, {
   "id" : 7,
   "first_name" : "Bob",
@@ -106,10 +112,11 @@ var email_data = [{
   "content" : "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
   "datetime" : "2016-04-28 06:30 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 8,
   "first_name" : "Bob",
@@ -125,7 +132,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 9,
   "first_name" : "Bob",
@@ -141,7 +149,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 10,
   "first_name" : "Bob",
@@ -154,10 +163,11 @@ var email_data = [{
   "content" : "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
   "datetime" : "2016-02-12 3:06 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 11,
   "first_name" : "Bob",
@@ -168,12 +178,13 @@ var email_data = [{
   "from" : "lportera@artisteer.com",
   "subject" : "extend clicks-and-mortar functionalities",
   "content" : "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-  "datetime" : "2016-04-01 06:06 AMAM",
+  "datetime" : "2016-04-01 06:06 AM",
   "folder" : [
-    "IF"
+    "Deleted", "Flagged"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : true
 }, {
   "id" : 12,
   "first_name" : "Bob",
@@ -189,7 +200,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 13,
   "first_name" : "Bob",
@@ -202,10 +214,11 @@ var email_data = [{
   "content" : "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
   "datetime" : "2016-11-17 01:59 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 14,
   "first_name" : "Bob",
@@ -221,7 +234,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 15,
   "first_name" : "Bob",
@@ -234,10 +248,11 @@ var email_data = [{
   "content" : "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
   "datetime" : "2016-05-18 04:16 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 16,
   "first_name" : "Bob",
@@ -253,7 +268,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 17,
   "first_name" : "Bob",
@@ -266,10 +282,11 @@ var email_data = [{
   "content" : "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
   "datetime" : "2016-10-27 03:39 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 18,
   "first_name" : "Bob",
@@ -285,7 +302,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 19,
   "first_name" : "Bob",
@@ -301,7 +319,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 20,
   "first_name" : "Bob",
@@ -317,7 +336,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 21,
   "first_name" : "Bob",
@@ -333,7 +353,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 22,
   "first_name" : "Bob",
@@ -349,7 +370,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 23,
   "first_name" : "Bob",
@@ -365,7 +387,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 24,
   "first_name" : "Bob",
@@ -378,10 +401,11 @@ var email_data = [{
   "content" : "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
   "datetime" : "2016-07-09 11:21 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 25,
   "first_name" : "Bob",
@@ -394,10 +418,11 @@ var email_data = [{
   "content" : "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
   "datetime" : "2016-01-07 09:12 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 26,
   "first_name" : "Bob",
@@ -410,10 +435,11 @@ var email_data = [{
   "content" : "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
   "datetime" : "2016-03-28 05:48 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 27,
   "first_name" : "Bob",
@@ -426,10 +452,11 @@ var email_data = [{
   "content" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
   "datetime" : "2016-04-09 07:16 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 28,
   "first_name" : "Bob",
@@ -442,10 +469,11 @@ var email_data = [{
   "content" : "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
   "datetime" : "2016-03-19 07:23 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 29,
   "first_name" : "Bob",
@@ -458,10 +486,11 @@ var email_data = [{
   "content" : "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
   "datetime" : "2016-08-13 03:30 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 30,
   "first_name" : "Bob",
@@ -477,7 +506,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 31,
   "first_name" : "Bob",
@@ -493,7 +523,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 32,
   "first_name" : "Bob",
@@ -506,10 +537,11 @@ var email_data = [{
   "content" : "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
   "datetime" : "2016-04-05 08:16 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 33,
   "first_name" : "Bob",
@@ -525,7 +557,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 34,
   "first_name" : "Bob",
@@ -538,10 +571,11 @@ var email_data = [{
   "content" : "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
   "datetime" : "2016-10-09 04:51 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 35,
   "first_name" : "Bob",
@@ -554,10 +588,11 @@ var email_data = [{
   "content" : "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
   "datetime" : "2016-03-01 04:50 PM",
   "folder" : [
-    "I"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 36,
   "first_name" : "Bob",
@@ -570,10 +605,11 @@ var email_data = [{
   "content" : "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
   "datetime" : "2016-12-06 12:14 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 37,
   "first_name" : "Bob",
@@ -586,10 +622,11 @@ var email_data = [{
   "content" : "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
   "datetime" : "2016-02-29 21:12 ",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 38,
   "first_name" : "Bob",
@@ -605,7 +642,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 39,
   "first_name" : "Bob",
@@ -618,10 +656,11 @@ var email_data = [{
   "content" : "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
   "datetime" : "2016-04-14 06:17 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 40,
   "first_name" : "Bob",
@@ -634,10 +673,11 @@ var email_data = [{
   "content" : "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
   "datetime" : "2016-05-17 01:00 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 41,
   "first_name" : "Bob",
@@ -653,7 +693,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 42,
   "first_name" : "Bob",
@@ -669,7 +710,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 43,
   "first_name" : "Bob",
@@ -685,7 +727,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 44,
   "first_name" : "Bob",
@@ -701,7 +744,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 45,
   "first_name" : "Bob",
@@ -717,7 +761,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 46,
   "first_name" : "Bob",
@@ -733,7 +778,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 47,
   "first_name" : "Bob",
@@ -746,10 +792,11 @@ var email_data = [{
   "content" : "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
   "datetime" : "2016-05-14 03:28 PM",
   "folder" : [
-    "IF"
+    "Deleted", "Flagged"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : true
 }, {
   "id" : 48,
   "first_name" : "Bob",
@@ -762,10 +809,11 @@ var email_data = [{
   "content" : "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
   "datetime" : "2016-04-15 07:59 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 49,
   "first_name" : "Bob",
@@ -781,7 +829,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 50,
   "first_name" : "Bob",
@@ -797,7 +846,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 51,
   "first_name" : "Bob",
@@ -810,10 +860,11 @@ var email_data = [{
   "content" : "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
   "datetime" : "2016-01-16 12:05 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 52,
   "first_name" : "Bob",
@@ -829,7 +880,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 53,
   "first_name" : "Bob",
@@ -842,10 +894,11 @@ var email_data = [{
   "content" : "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
   "datetime" : "2016-07-12 07:24 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 54,
   "first_name" : "Bob",
@@ -858,10 +911,11 @@ var email_data = [{
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
   "datetime" : "2016-07-08 04:45 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 55,
   "first_name" : "Bob",
@@ -874,10 +928,11 @@ var email_data = [{
   "content" : "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
   "datetime" : "2016-05-11 06:54 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 56,
   "first_name" : "Bob",
@@ -890,10 +945,11 @@ var email_data = [{
   "content" : "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
   "datetime" : "2016-05-18 12:42 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 57,
   "first_name" : "Bob",
@@ -909,7 +965,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 58,
   "first_name" : "Bob",
@@ -925,7 +982,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 59,
   "first_name" : "Bob",
@@ -938,10 +996,11 @@ var email_data = [{
   "content" : "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
   "datetime" : "2016-03-22 07:21 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 60,
   "first_name" : "Bob",
@@ -954,10 +1013,11 @@ var email_data = [{
   "content" : "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
   "datetime" : "2016-05-25 03:21 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 61,
   "first_name" : "Bob",
@@ -970,10 +1030,11 @@ var email_data = [{
   "content" : "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
   "datetime" : "2016-04-19 12:16 PM",
   "folder" : [
-    "I"
+    "Inbox"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 62,
   "first_name" : "Bob",
@@ -989,7 +1050,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 63,
   "first_name" : "Bob",
@@ -1002,10 +1064,11 @@ var email_data = [{
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
   "datetime" : "2016-05-01 01:08 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 64,
   "first_name" : "Bob",
@@ -1021,7 +1084,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 65,
   "first_name" : "Bob",
@@ -1037,7 +1101,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 66,
   "first_name" : "Bob",
@@ -1050,10 +1115,11 @@ var email_data = [{
   "content" : "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
   "datetime" : "2016-05-04 02:10 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 67,
   "first_name" : "Bob",
@@ -1069,7 +1135,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 68,
   "first_name" : "Bob",
@@ -1082,10 +1149,11 @@ var email_data = [{
   "content" : "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
   "datetime" : "2016-02-19 12:40 PM",
   "folder" : [
-    "I"
+    "Inbox"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 69,
   "first_name" : "Bob",
@@ -1098,10 +1166,11 @@ var email_data = [{
   "content" : "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
   "datetime" : "2016-01-30 05:04 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 70,
   "first_name" : "Bob",
@@ -1117,7 +1186,8 @@ var email_data = [{
     "Inbox"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 71,
   "first_name" : "Bob",
@@ -1130,10 +1200,11 @@ var email_data = [{
   "content" : "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
   "datetime" : "2016-04-07 07:01 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 72,
   "first_name" : "Bob",
@@ -1146,10 +1217,11 @@ var email_data = [{
   "content" : "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
   "datetime" : "2016-01-18 03:59 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 73,
   "first_name" : "Bob",
@@ -1162,10 +1234,11 @@ var email_data = [{
   "content" : "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
   "datetime" : "2016-01-18 10:00 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 74,
   "first_name" : "Bob",
@@ -1178,10 +1251,11 @@ var email_data = [{
   "content" : "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
   "datetime" : "2016-04-23 12:51 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 75,
   "first_name" : "Bob",
@@ -1194,10 +1268,11 @@ var email_data = [{
   "content" : "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
   "datetime" : "2016-09-18 04:20 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 76,
   "first_name" : "Bob",
@@ -1210,10 +1285,11 @@ var email_data = [{
   "content" : "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
   "datetime" : "2016-04-03 12:07 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 77,
   "first_name" : "Bob",
@@ -1229,7 +1305,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 78,
   "first_name" : "Bob",
@@ -1242,10 +1319,11 @@ var email_data = [{
   "content" : "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
   "datetime" : "2016-07-21 04:24 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 79,
   "first_name" : "Bob",
@@ -1258,10 +1336,11 @@ var email_data = [{
   "content" : "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
   "datetime" : "2016-07-23 02:42 AM",
   "folder" : [
-    "IF"
+    "Deleted", "Flagged"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : true
 }, {
   "id" : 80,
   "first_name" : "Bob",
@@ -1277,7 +1356,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 81,
   "first_name" : "Bob",
@@ -1293,7 +1373,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 82,
   "first_name" : "Bob",
@@ -1306,10 +1387,11 @@ var email_data = [{
   "content" : "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
   "datetime" : "2016-03-22 03:45 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 83,
   "first_name" : "Bob",
@@ -1322,10 +1404,11 @@ var email_data = [{
   "content" : "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
   "datetime" : "2016-10-09 08:53 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 84,
   "first_name" : "Bob",
@@ -1341,7 +1424,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 85,
   "first_name" : "Bob",
@@ -1354,10 +1438,11 @@ var email_data = [{
   "content" : "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
   "datetime" : "2016-09-28 10:54 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 86,
   "first_name" : "Bob",
@@ -1370,10 +1455,11 @@ var email_data = [{
   "content" : "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
   "datetime" : "2016-02-06 06:25 PM",
   "folder" : [
-    "I"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 87,
   "first_name" : "Bob",
@@ -1386,10 +1472,11 @@ var email_data = [{
   "content" : "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
   "datetime" : "2016-02-09 06:27 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 88,
   "first_name" : "Bob",
@@ -1402,10 +1489,11 @@ var email_data = [{
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
   "datetime" : "2016-02-10 08:49 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 89,
   "first_name" : "Bob",
@@ -1418,10 +1506,11 @@ var email_data = [{
   "content" : "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
   "datetime" : "2016-05-29 05:13 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 90,
   "first_name" : "Bob",
@@ -1437,7 +1526,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 91,
   "first_name" : "Bob",
@@ -1450,10 +1540,11 @@ var email_data = [{
   "content" : "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
   "datetime" : "2016-06-17 11:33 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : false,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 92,
   "first_name" : "Bob",
@@ -1469,7 +1560,8 @@ var email_data = [{
     "Spam"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 93,
   "first_name" : "Bob",
@@ -1485,7 +1577,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 94,
   "first_name" : "Bob",
@@ -1498,10 +1591,11 @@ var email_data = [{
   "content" : "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
   "datetime" : "2016-07-06 01:15 AM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 95,
   "first_name" : "Bob",
@@ -1514,10 +1608,11 @@ var email_data = [{
   "content" : "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
   "datetime" : "2015-12-26 12:43 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 96,
   "first_name" : "Bob",
@@ -1530,10 +1625,11 @@ var email_data = [{
   "content" : "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
   "datetime" : "2016-02-04 12:33 PM",
   "folder" : [
-    "IF"
+    "Inbox", "Flagged"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : true
 }, {
   "id" : 97,
   "first_name" : "Bob",
@@ -1549,7 +1645,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 98,
   "first_name" : "Bob",
@@ -1562,10 +1659,11 @@ var email_data = [{
   "content" : "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
   "datetime" : "2016-08-08 07:22 PM",
   "folder" : [
-    "Spam"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 99,
   "first_name" : "Bob",
@@ -1578,10 +1676,11 @@ var email_data = [{
   "content" : "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
   "datetime" : "2016-06-28 05:33 PM",
   "folder" : [
-    "IF"
+    "Inbox", "Flagged"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : true
 }, {
   "id" : 100,
   "first_name" : "Bob",
@@ -1594,10 +1693,11 @@ var email_data = [{
   "content" : "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
   "datetime" : "2016-10-28 09:33 AM",
   "folder" : [
-    "IF"
+    "Inbox", "Flagged"
   ],
   "read" : false,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : true
 }, {
   "id" : 101,
   "first_name" : "Jack",
@@ -1613,7 +1713,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 102,
   "first_name" : "Joseph",
@@ -1629,7 +1730,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 103,
   "first_name" : "Deborah",
@@ -1642,10 +1744,11 @@ var email_data = [{
   "content" : "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
   "datetime" : "2016-01-10 01:43 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 104,
   "first_name" : "Terry",
@@ -1661,7 +1764,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 105,
   "first_name" : "Harold",
@@ -1674,10 +1778,11 @@ var email_data = [{
   "content" : "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
   "datetime" : "2016-05-30 05:36 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 106,
   "first_name" : "Thomas",
@@ -1693,7 +1798,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 107,
   "first_name" : "Charles",
@@ -1706,10 +1812,11 @@ var email_data = [{
   "content" : "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
   "datetime" : "2016-09-14 04:20 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 108,
   "first_name" : "Randy",
@@ -1725,7 +1832,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 109,
   "first_name" : "Lillian",
@@ -1738,10 +1846,11 @@ var email_data = [{
   "content" : "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
   "datetime" : "2016-09-27 02:21 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 110,
   "first_name" : "Andrew",
@@ -1757,7 +1866,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 111,
   "first_name" : "Lori",
@@ -1773,7 +1883,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 112,
   "first_name" : "Justin",
@@ -1786,10 +1897,11 @@ var email_data = [{
   "content" : "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
   "datetime" : "2016-01-16 10:37 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 113,
   "first_name" : "Douglas",
@@ -1805,7 +1917,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 114,
   "first_name" : "Robin",
@@ -1818,10 +1931,11 @@ var email_data = [{
   "content" : "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
   "datetime" : "2016-02-29 12:52 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 115,
   "first_name" : "Wayne",
@@ -1837,7 +1951,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 116,
   "first_name" : "Ruby",
@@ -1853,7 +1968,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 117,
   "first_name" : "Heather",
@@ -1866,10 +1982,11 @@ var email_data = [{
   "content" : "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
   "datetime" : "2016-01-03 21:52 ",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 118,
   "first_name" : "Johnny",
@@ -1882,10 +1999,11 @@ var email_data = [{
   "content" : "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
   "datetime" : "2016-03-05 05:38 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 119,
   "first_name" : "Bonnie",
@@ -1901,7 +2019,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 120,
   "first_name" : "Joyce",
@@ -1917,7 +2036,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 121,
   "first_name" : "Marilyn",
@@ -1930,10 +2050,11 @@ var email_data = [{
   "content" : "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
   "datetime" : "2016-10-08 03:47 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 122,
   "first_name" : "Virginia",
@@ -1946,10 +2067,11 @@ var email_data = [{
   "content" : "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
   "datetime" : "2016-11-16 06:56 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 123,
   "first_name" : "Rebecca",
@@ -1965,7 +2087,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 124,
   "first_name" : "Shirley",
@@ -1978,10 +2101,11 @@ var email_data = [{
   "content" : "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
   "datetime" : "2016-05-16 07:17 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 125,
   "first_name" : "Lawrence",
@@ -1994,10 +2118,11 @@ var email_data = [{
   "content" : "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
   "datetime" : "2016-08-31 12:04 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 126,
   "first_name" : "Patricia",
@@ -2013,7 +2138,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 127,
   "first_name" : "Patrick",
@@ -2029,7 +2155,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 128,
   "first_name" : "Terry",
@@ -2045,7 +2172,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 129,
   "first_name" : "Judith",
@@ -2058,10 +2186,11 @@ var email_data = [{
   "content" : "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
   "datetime" : "2016-09-30 11:34 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 130,
   "first_name" : "Susan",
@@ -2074,10 +2203,11 @@ var email_data = [{
   "content" : "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
   "datetime" : "2016-04-13 21:36 ",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 131,
   "first_name" : "Ryan",
@@ -2090,10 +2220,11 @@ var email_data = [{
   "content" : "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
   "datetime" : "2016-06-01 10:25 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 132,
   "first_name" : "Walter",
@@ -2106,10 +2237,11 @@ var email_data = [{
   "content" : "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
   "datetime" : "2016-01-03 02:47 PM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 133,
   "first_name" : "Christine",
@@ -2125,7 +2257,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 134,
   "first_name" : "Victor",
@@ -2138,10 +2271,11 @@ var email_data = [{
   "content" : "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
   "datetime" : "2016-11-16 06:01 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 135,
   "first_name" : "Bobby",
@@ -2157,7 +2291,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 136,
   "first_name" : "Patricia",
@@ -2173,7 +2308,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 137,
   "first_name" : "Terry",
@@ -2189,7 +2325,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 138,
   "first_name" : "Jack",
@@ -2202,10 +2339,11 @@ var email_data = [{
   "content" : "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
   "datetime" : "2016-04-01 07:15 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 139,
   "first_name" : "Heather",
@@ -2221,7 +2359,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 140,
   "first_name" : "Marie",
@@ -2234,10 +2373,11 @@ var email_data = [{
   "content" : "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.\n\nMaecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
   "datetime" : "2016-05-09 09:07 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 141,
   "first_name" : "Lillian",
@@ -2253,7 +2393,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 142,
   "first_name" : "Deborah",
@@ -2266,10 +2407,11 @@ var email_data = [{
   "content" : "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
   "datetime" : "2016-05-26 02:57 AM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 143,
   "first_name" : "Laura",
@@ -2285,7 +2427,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 144,
   "first_name" : "Deborah",
@@ -2298,10 +2441,11 @@ var email_data = [{
   "content" : "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
   "datetime" : "2016-08-12 04:00 AM",
   "folder" : [
-    "Drafts"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 145,
   "first_name" : "Virginia",
@@ -2314,10 +2458,11 @@ var email_data = [{
   "content" : "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
   "datetime" : "2016-04-23 04:48 PM",
   "folder" : [
-    "Sent"
+    "Deleted"
   ],
   "read" : true,
-  "deleted" : true
+  "deleted" : true,
+  "flagged" : false
 }, {
   "id" : 146,
   "first_name" : "William",
@@ -2333,7 +2478,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 147,
   "first_name" : "Sandra",
@@ -2349,7 +2495,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 148,
   "first_name" : "Gerald",
@@ -2365,7 +2512,8 @@ var email_data = [{
     "Sent"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 149,
   "first_name" : "George",
@@ -2381,7 +2529,8 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }, {
   "id" : 150,
   "first_name" : "Matthew",
@@ -2397,5 +2546,6 @@ var email_data = [{
     "Drafts"
   ],
   "read" : true,
-  "deleted" : false
+  "deleted" : false,
+  "flagged" : false
 }]
