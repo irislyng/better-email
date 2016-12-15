@@ -4,3 +4,12 @@ function loadTestData() {
 }
 
 loadTestData();
+
+
+
+function addBccCc() {
+	email_data.forEach(function(element) {
+		element["cc"] = "";
+		element["bcc"] = ""
+	});
+}

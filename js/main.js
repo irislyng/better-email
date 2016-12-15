@@ -158,7 +158,37 @@ function reply(replyAll=false) {
 		composeState = "Reply-All";
 	}
 	showCompose(composeState);
+	formatReply(email, replyAll);
 }
+
+function formatReply(email, replyAll) {
+	var temail = document.getElementById("compose-to");
+	var subject = document.getElementById("compose-subject");
+	var cc = document.getElementById("compose-cc");
+	var bcc = document.getElementById("compose-bcc");
+	var content = document.getElementById("compose-content");
+
+	if(replyAll) {
+		cc.value = email.cc;
+		bcc.value = email.bcc;
+	}
+
+	temail.value = email.from;
+	subject.value = "RE: " + email.subject;
+
+	var prevDate = new Date(email.datetime);
+	content.value = "\r\r\r----------------\r" 
+		+ "On " 
+		+ prevDate 
+		+ " " 
+		+ email.first_name_from + " " + email.last_name_from + "<" + email.from + "> wrote:"
+		+ "\r----------------"
+		+  "\r\r\r" 
+		+ email.content;
+	// console.log()
+
+}
+
 
 function getCurrentEmail(id) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
