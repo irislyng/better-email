@@ -211,6 +211,42 @@ function loadEmail(id) {
 	content.innerHTML = email.content;
 }
 
+
+function forward() {
+	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
+	var email = getEmail(email_id);
+	var composeState = "Forward";
+	showCompose(composeState);
+	formatForward(email);
+}
+
+
+function formatForward(email) {
+	var subject = document.getElementById("compose-subject");
+	var content = document.getElementById("compose-content");
+
+	subject.value = email.subject;
+
+	var prevDate = new Date(email.datetime);
+	content.value = "\r\r\r----------------\r" 
+		+ "FORWARDED MESSAGE\r" 
+		+ "From: " + email.first_name_from + " " + email.last_name_from + "<" + email.from +">" +"\r"
+		+ "Date: " + prevDate + "\r"
+		+ "Subject: " + email.subject + "\r"
+		+ "To: " + email.to
+		+ "\r----------------"
+		+  "\r\r\r" 
+		+ email.content;
+	// console.log()
+
+}
+
+
+
+
+
+
+
 // functions for reply, reply-all, forward buttons 
 function reply(replyAll=false) {
 	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
@@ -220,7 +256,7 @@ function reply(replyAll=false) {
 		composeState = "Reply-All";
 	}
 	showCompose(composeState);
-	formatReply(email, replyAll);
+	formatReply(email, replyAll, false);
 }
 
 function formatReply(email, replyAll) {
