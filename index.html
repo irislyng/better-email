@@ -159,6 +159,9 @@
           <div class="compose-section">
             <textarea id="compose-content" class="compose-textarea" placeholder="Compose Email"></textarea>
           </div>
+          <div id="compose-error" class="compose-error hidden">
+            <span id="compose-error-value"></span>
+          </div>
           <div class="compose-buttons right">
           <button class="button-compose-save-draft" onclick="store(false)">Save Draft</button>
           <button class="button-compose-send" onclick="store(true)">Send</button>

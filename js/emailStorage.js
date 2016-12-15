@@ -1,5 +1,13 @@
 // isSent is a boolean to say whether sent or if in drafts
 function store(isSent){
+	var error = document.getElementById("compose-error");
+	error.classList.add("hidden");
+
+	if (!document.getElementById("compose-to").value) {
+		error.classList.remove("hidden");
+		document.getElementById('compose-error-value').innerHTML = "Error: Please enter a keyword for sender."
+		return;
+	}
 	var notificationValue = null;
 
 	var email = {

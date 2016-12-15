@@ -17,6 +17,9 @@ function hideCompose() {
     var compose = document.getElementById('content-panel-compose');
     compose.classList.add("hidden");
 
+    var error = document.getElementById('compose-error');
+    error.classList.add("hidden");
+
     document.getElementById('compose-to').value = "";
     document.getElementById('compose-cc').value = "";
     document.getElementById('compose-bcc').value = "";
