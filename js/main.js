@@ -399,10 +399,10 @@ function createFilter() {
 		let div = document.createElement('div');
 		div.classList.add('folder-panel-list-item');
 		div.id = "filter-" + filter.name;
+		div.setAttribute("onclick", "setCurrentFilter('" + filter.name + "')");
 		let span = document.createElement('span');
 		span.classList.add("folder-panel-list-item-nav");
 		span.innerHTML = filter.name;
-		span.setAttribute("onclick", "setCurrentFilter('" + filter.name + "')");
 		let remove = document.createElement('span');
 		remove.classList.add("right");
 		remove.setAttribute("onclick", "removeFilter('" + filter.name + "')");

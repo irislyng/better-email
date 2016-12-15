@@ -228,12 +228,10 @@ div.folder-panel-list-items {
 
 div.folder-panel-list-item {
     padding: 2px 0px;
-}
-
-span.folder-panel-list-item-nav {
     cursor:pointer;
 }
-span.folder-panel-list-item-nav:hover {
+
+div.folder-panel-list-item:hover {
     color: #ffffff;
 }
 
