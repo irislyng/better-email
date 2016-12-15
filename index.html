@@ -11,6 +11,9 @@
 
     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body onload="init()">
     <div id="modal-create-filter" class="modal-container hidden">
@@ -46,7 +49,7 @@
     <div class="container flex">
       <div id="folder-panel" class="col-2">
         <div class="folder-panel-icons">
-          <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left"></i>
+          <i class="fa fa-lg fa-pencil-square-o folder-panel-icon left" onclick="showCompose()"></i>
           <i class="fa fa-lg fa-plus folder-panel-icon"></i>
           <i class="fa fa-lg fa-envelope-open-o folder-panel-icon"></i>
           <i class="fa fa-lg fa-envelope-o folder-panel-icon"></i>
@@ -56,31 +59,27 @@
           <div class="folder-panel-list-title">Folders</div>
           <div class="folder-panel-list-items">
             <div class="folder-panel-list-item">
-              Inbox
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('I')">Inbox</span>
               <span class="right">100</span>
             </div>
             <div class="folder-panel-list-item">
-              Drafts
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Drafts')">Drafts</span>
               <span class="right">2</span>
             </div>
             <div class="folder-panel-list-item">
-              Flagged
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Flagged')">Flagged</span>
               <span class="right">6</span>
             </div>
             <div class="folder-panel-list-item">
-              Deleted
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Deleted')">Deleted</span>
               <span class="right">10</span>
             </div>
             <div class="folder-panel-list-item">
-              Flagged
-              <span class="right">6</span>
-            </div>
-            <div class="folder-panel-list-item">
-              Spam
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Spam')">Spam</span>
               <span class="right">30</span>
             </div>
             <div class="folder-panel-list-item">
-              Sent
+              <span class="folder-panel-list-item-nav" onclick="setCurrentFolder('Sent')">Sent</span>
             </div>
           </div>
         </div>
@@ -100,18 +99,9 @@
           Sort By <i class="fa fa-lg fa-angle-down"></i>
         </div>
         <div id="email-list" class="messages-panel-list">
-          <!-- <div id="email-preview" class="message-preview">
-            <span class="message-preview-date">Dec 12 12:09 AM</span>
-            <span class="message-preview-name">Test Name</span>
-            <span class="message-preview-subject">Subject</span>
-            <span class="message-preview-content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </span>
-          </div> -->
-
         </div>
       </div>
-      <div id="content-panel" class="col-6 content-panel">
+      <div id="content-panel" class="col-6">
         <div class="content-panel-message">
           <div class="content-message-header">
               <div class="content-message-subject left truncate">Subject</div>
@@ -133,43 +123,42 @@
             <div class="content-message-content"></div>
           </div>
         </div>
-        <div class="content-panel-compose hidden">
-          <div class="compose-message-header">
-            <div class="compose-title left">Compose Email</div>
-            <span class="compose-close right"><i class="fa fa-lg fa-times"></i></span>
-          </div>
-          <form>
-            <div class="compose-section">
-              <label class="compose-label">To: </label>
-              <input id="compose-to" class="compose-input" type="text">
-            </div>
-            <div class="compose-section">
-              <label class="compose-label">CC: </label>
-              <input id="compose-cc" class="compose-input" type="text">
-            </div>
-            <div class="compose-section">
-              <label class="compose-label">BCC: </label>
-              <input id="compose-bcc" class="compose-input" type="text">
-            </div>
-            <div class="compose-section">
-              <label class="compose-label">Subject: </label>
-              <input id="compose-subject" class="compose-input" type="text">
-            </div>
-            <div class="compose-section">
-              <textarea id="compose-content" class="compose-textarea" placeholder="Compose Email"></textarea>
-            </div>
-            <div class="compose-buttons right">
-            <button class="button-compose-save-draft">Save Draft</button>
-            <button class="button-compose-send">Send</button>
-            </div>
-          </form>
-        </div>
       </div>
+      <div id="content-panel-compose" class="content-panel col-6 hidden">
+        <div class="compose-message-header">
+          <div class="compose-title left">Compose Email</div>
+          <span class="compose-close right" onclick="hideCompose()"><i class="fa fa-lg fa-times"></i></span>
+        </div>
+          <div class="compose-section">
+            <label class="compose-label">To: </label>
+            <input id="compose-to" class="compose-input" type="text">
+          </div>
+          <div class="compose-section">
+            <label class="compose-label">CC: </label>
+            <input id="compose-cc" class="compose-input" type="text">
+          </div>
+          <div class="compose-section">
+            <label class="compose-label">BCC: </label>
+            <input id="compose-bcc" class="compose-input" type="text">
+          </div>
+          <div class="compose-section">
+            <label class="compose-label">Subject: </label>
+            <input id="compose-subject" class="compose-input" type="text">
+          </div>
+          <div class="compose-section">
+            <textarea id="compose-content" class="compose-textarea" placeholder="Compose Email"></textarea>
+          </div>
+          <div class="compose-buttons right">
+          <button class="button-compose-save-draft" onclick="store(false)">Save Draft</button>
+          <button class="button-compose-send" onclick="store(true)">Send</button>
+          </div>
+        </div>
     </div>
-
-
     <script type="text/javascript" src="emails.json"></script>
+
+    <script type="text/javascript" src="js/iconActions.js"></script>
     <script type="text/javascript" src="js/load_data.js"></script>
+    <script type="text/javascript" src="js/emailStorage.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
   </body>

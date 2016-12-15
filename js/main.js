@@ -1,56 +1,77 @@
+var currentFolder = "I";
+
 function init() {
 	loadEmailList();
-	loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id);
+	loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id) // TODO: change email displayed
+}
+
+function setCurrentFolder(folder) {
+	currentFolder = folder;
+	loadEmailList();
 }
 
 function loadEmailList() {
 	let parent = document.getElementById("email-list");
+	var content = getFolderContent();
+
+	parent.innerHTML = content.innerHTML;
+}
+
+function getFolderContent() {
+	let newContent = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	for (var i = 0; i < emails.length; i++) {
-		let email = document.createElement("div");
-		let date = document.createElement("span");
-		let name = document.createElement("span");
-		let subject = document.createElement("span");
-		let content = document.createElement("span");
+		if (emails[i].folder.indexOf(currentFolder) > -1) {
+			let email = document.createElement("div");
+			let date = document.createElement("span");
+			let name = document.createElement("span");
+			let subject = document.createElement("span");
+			let content = document.createElement("span");
 
-		date.innerHTML = emails[i].datetime;
-		name.innerHTML = emails[i].first_name_from + " " + emails[i].last_name_from;
-		subject.innerHTML = emails[i].subject;
-		content.innerHTML = emails[i].content;
+			let strong = document.createElement("strong");
+			let checkbox = document.createElement("span");
+			let input = document.createElement("input");
+			checkbox.className = "input-group-addon";
+			input.setAttribute("type", "checkbox")
+			input.setAttribute("aria-label", "...")
+			checkbox.appendChild(input);
+			strong.appendChild(checkbox);
 
-		email.className = "message-preview";
-		email.setAttribute("onclick", "loadEmail(" + emails[i].id + ")");
-		date.className = "message-preview-date";
-		name.className = "message-preview-name";
-		subject.className = "message-preview-subject";
-		content.className = "message-preview-content";
 
-		email.appendChild(date);
-		email.appendChild(name);
-		email.appendChild(subject);
-		email.appendChild(content);
+			date.innerHTML = emails[i].datetime;
+			name.innerHTML = emails[i].first_name_from + " " + emails[i].last_name_from;
+			subject.innerHTML = emails[i].subject;
+			content.innerHTML = emails[i].content;
 
-		if (!emails[i].read) {
-			email.style.fontWeight = "bold";
+			email.className = "message-preview";
+			email.setAttribute("onclick", "loadEmail(" + emails[i].id + ")");
+			date.className = "message-preview-date";
+			name.className = "message-preview-name";
+			subject.className = "message-preview-subject";
+			content.className = "message-preview-content";
+
+			email.appendChild(strong);
+			email.appendChild(date);
+			email.appendChild(name);
+			email.appendChild(subject);
+			email.appendChild(content);
+
+			newContent.appendChild(email);
 		}
-
-		parent.appendChild(email);
 	}
+
+	return newContent;
 }
 
 function loadEmail(id) {
-	// let emails = JSON.parse(localStorage.getItem("email_data"));
-	// let email;
-	// for (var i = 0; i < emails.length; i++) {
-	// 	if (emails[i].id == id) {
-	// 		email = emails[i];
-	// 		break;
-	// 	}
-	// }
-
-	var email = getCurrentEmail(id);
-	console.log(email);
-	if (!email.read) markAsRead(id);
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	let email;
+	for (var i = 0; i < emails.length; i++) {
+		if (emails[i].id == id) {
+			email = emails[i];
+			break;
+		}
+	}
 
 	let subject = document.querySelector("#content-panel .content-message-subject");
 	let name = document.querySelector("#content-panel .content-message-sender");
@@ -65,13 +86,6 @@ function loadEmail(id) {
 	date.innerHTML = email.datetime;
 	temail.innerHTML = "To: " + email.to;
 	content.innerHTML = email.content;
-}
-
-function markAsRead(id) {
-	var email = getCurrentEmail(id);
-	console.log(email);
-	email.read = true;
-	updateCurrentEmail(id, email);
 }
 
 function composeEmail() {
@@ -94,26 +108,6 @@ function composeEmail() {
 
 	emails.push(email);
 	localstorage.setItem("email_data", JSON.stringify(emails));
-}
 
-function getCurrentEmail(id) {
-	let emails = JSON.parse(localStorage.getItem("email_data"));
-	let email;
-	for (var i = 0; i < emails.length; i++) {
-		if (emails[i].id == id) {
-			email = emails[i];
-			break;
-		}
-	}
-
-	return email;
-}
-
-function updateCurrentEmail(id, email) {
-	let emails = JSON.parse(localStorage.getItem("email_data"));
-	var index = id - 1;
-	emails[index] = email;
-	localStorage.setItem("email_data", JSON.stringify(emails));
-
-	loadEmailList();
+	hideCompose();
 }
