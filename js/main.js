@@ -1,16 +1,30 @@
+var currentFolder = "Inbox";
+var currentFilter = null;
 var selectedEmails = [];
 var filters = [];
 
 function init() {
 	loadEmailList("Inbox", false);
-	loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id) // TODO: change email displayed
+	loadEmail(JSON.parse(localStorage.getItem("email_data"))[99].id) // TODO: change email displayed
+}
+
+function loadCurrentList() {
+	if (currentFolder) {
+		setCurrentFolder(currentFolder);
+	} else if (currentFilter) {
+		setCurrentFilter(currentFilter);
+	}
 }
 
 function setCurrentFolder(folder) {
+	currentFolder = folder;
+	currentFilter = null;
 	loadEmailList(folder, false);
 }
 
 function setCurrentFilter(filter) {
+	currentFolder = null;
+	currentFilter = filter;
 	loadEmailList(filter, true);
 }
 
@@ -139,6 +153,7 @@ function loadEmail(id) {
 	var email = getCurrentEmail(id);
 	// if (!email.read) markAsRead(id, email);
 	let flag = document.getElementById("content-message-flagged");
+	flag.setAttribute("onclick", "toggleFlagged(" + email.id + ")");
 	if (email.flagged) {
 		flag.classList.remove("fa-flag-o");
 		flag.classList.add("fa-flag");
@@ -173,6 +188,18 @@ function getCurrentEmail(id) {
 	}
 
 	return email;
+}
+
+function setCurrentEmail(id, email) {
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	var result = emails.filter(function(obj) {
+	    return obj.id === id; // Filter out the appropriate one
+	})[0];
+	var index = emails.indexOf(result);
+
+	emails[index] = email;
+	localStorage.setItem("email_data", JSON.stringify(emails));
+	loadCurrentList();
 }
 
 function createFilter() {

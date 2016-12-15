@@ -66,7 +66,7 @@ function store(isSent){
 	console.log(email);
 
 	localStorage.setItem("email_data", JSON.stringify(current));
-	loadEmailList("Inbox");
+	setCurrentFolder("Inbox");
 	showNotification(notificationValue);
 	hideCompose();
 }
