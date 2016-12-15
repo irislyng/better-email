@@ -1,39 +1,68 @@
+var currentFolder = "Inbox";
+var currentFilter = null;
+var currentSearch = null;
 var selectedEmails = [];
 var filters = [];
 
 function init() {
-	loadEmailList("Inbox", false);
-	loadEmail(JSON.parse(localStorage.getItem("email_data"))[0].id) // TODO: change email displayed
+	setCurrentFolder("Inbox");
+	loadEmail(JSON.parse(localStorage.getItem("email_data"))[99].id) // TODO: change email displayed
+}
+
+function loadCurrentList() {
+	if (currentFolder) {
+		setCurrentFolder(currentFolder);
+	} else if (currentFilter) {
+		setCurrentFilter(currentFilter);
+	} else if (currentSearch) {
+		setCurrentSearch();
+	}
 }
 
 function setCurrentFolder(folder) {
-	loadEmailList(folder, false);
+	currentFolder = folder;
+	currentFilter = null;
+	currentSearch = null;
+	loadEmailList(folder, false, false);
 }
 
 function setCurrentFilter(filter) {
-	loadEmailList(filter, true);
+	currentFolder = null;
+	currentFilter = filter;
+	currentSearch = null;
+	loadEmailList(filter, true, false);
 }
 
-function loadEmailList(name, isFilter) {
+function setCurrentSearch() {
+	let keyword = document.getElementById("search-bar-input").value;
+	currentFolder = null;
+	currentFilter = null;
+	currentSearch = keyword;
+	loadEmailList(keyword, false, true)
+}
+
+function loadEmailList(value, isFilter, isSearch) {
 	let parent = document.getElementById("email-list");
 
 	var content = null;
 
 	if (isFilter) {
-		content = getFilterContent(name);
+		content = getFilterContent(value);
+	} else if (isSearch) {
+		content = getSearchContent(value);
 	} else {
-		content = getFolderContent(name);
+		content = getFolderContent(value);
 	}
 
 	parent.innerHTML = content.innerHTML;
 }
 
-function getFolderContent(folder) {
+function getFolderContent(folderName) {
 	let content = document.createElement("div");
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
 	for (var i = 0; i < emails.length; i++) {
-		if (emails[i].folder.indexOf(folder) > -1) {
+		if (emails[i].folder.indexOf(folderName) > -1) {
 			var email = createEmailPreview(emails[i]);
 			content.appendChild(email);
 		}
@@ -55,7 +84,6 @@ function getFilterContent(filterName) {
 		for (var j = 0; j < filter.filterBy.length; j++) {
 			var filterBy = filter.filterBy[j];
 			var current = emails[i];
-			console.log(current)
 			var type = filterBy.type;
 			if (!current[type].includes(filterBy.keyword)) inFilter = false;
 		}
@@ -69,8 +97,34 @@ function getFilterContent(filterName) {
 	return content;
 }
 
+function getSearchContent(keyword) {
+	let content = document.createElement("div");
+
+	var keywords = keyword.split(" ");
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	emails.sort(function(a,b) {return (b.datetime > a.datetime) ? 1 : ((a.datetime > b.datetime) ? -1 : 0);} );
+
+	for (var i = 0; i < emails.length; i++) {
+		var inSearch = false;
+		for (var j = 0; j < keywords.length; j++) {
+			var word = keywords[j];
+			var email = JSON.stringify(emails[i]);
+			if (email.includes(word)) inSearch = true;
+		}
+
+		if (!inSearch) continue;
+
+		var email = createEmailPreview(emails[i]);
+		content.appendChild(email);
+	}
+
+	return content;
+
+}
+
 function createEmailPreview(email) {
 	let preview = document.createElement("div");
+	let container = document.createElement("div");
 	let date = document.createElement("span");
 	let name = document.createElement("span");
 	let subject = document.createElement("span");
@@ -89,18 +143,28 @@ function createEmailPreview(email) {
 	subject.innerHTML = email.subject;
 	content.innerHTML = email.content;
 
-	preview.className = "message-preview";
-	preview.setAttribute("onclick", "loadEmail(" + email.id + ")");
+	container.className = (email.read) ? "message-preview":"message-preview unread";
+	container.setAttribute("onclick", "loadEmail(" + email.id + ")");
 	date.className = "message-preview-date";
 	name.className = "message-preview-name";
 	subject.className = "message-preview-subject";
 	content.className = "message-preview-content";
 
+	container.appendChild(date);
+	container.appendChild(name);
+	container.appendChild(subject);
+
+	if (email.flagged) {
+		let flagged = document.createElement("span");
+		flagged.className = "message-preview-flagged";
+		flagged.innerHTML = "<i class=\"fa fa-flag message-preview-icon\"></i>"
+		container.appendChild(flagged);
+	}
+
+	container.appendChild(content);
+
 	preview.appendChild(checkbox);
-	preview.appendChild(date);
-	preview.appendChild(name);
-	preview.appendChild(subject);
-	preview.appendChild(content);
+	preview.appendChild(container);
 
 	return preview;
 }
@@ -114,22 +178,21 @@ function toggleCheckbox(id) {
 		selectedEmails.push(id);
 	}
 
-	if (selectedEmails.length > 0) {
-		document.getElementById("folder-panel-move").classList.remove("disabled");
-		document.getElementById("folder-panel-mark-unread").classList.remove("disabled");
-		document.getElementById("folder-panel-mark-read").classList.remove("disabled");
-		document.getElementById("folder-panel-delete").classList.remove("disabled");
-	} else {
-		document.getElementById("folder-panel-move").classList.add("disabled");
-		document.getElementById("folder-panel-mark-unread").classList.add("disabled");
-		document.getElementById("folder-panel-mark-read").classList.add("disabled");
-		document.getElementById("folder-panel-delete").classList.add("disabled");
-	}
+	toggleIcons();
 }
 
 function loadEmail(id) {
-	var email = getCurrentEmail(id);
-	// if (!email.read) markAsRead(id, email);
+	var email = getEmail(id);
+	if (!email.read) markAsRead(id, email);
+	let flag = document.getElementById("content-message-flagged");
+	flag.setAttribute("onclick", "toggleFlagged(" + email.id + ")");
+	if (email.flagged) {
+		flag.classList.remove("fa-flag-o");
+		flag.classList.add("fa-flag");
+	} else {
+		flag.classList.remove("fa-flag");
+		flag.classList.add("fa-flag-o");
+	}
 
 	let subject = document.querySelector("#content-panel .content-message-subject");
 	let name = document.querySelector("#content-panel .content-message-sender");
@@ -148,11 +211,10 @@ function loadEmail(id) {
 	content.innerHTML = email.content;
 }
 
-
 // functions for reply, reply-all, forward buttons 
 function reply(replyAll=false) {
 	var email_id = document.querySelector("#content-panel .content-message-subject").getAttribute("email_id");
-	var email = getCurrentEmail(email_id);
+	var email = getEmail(email_id);
 	var composeState = "Reply";
 	if(replyAll) {
 		composeState = "Reply-All";
@@ -190,7 +252,7 @@ function formatReply(email, replyAll) {
 }
 
 
-function getCurrentEmail(id) {
+function getEmail(id) {
 	let emails = JSON.parse(localStorage.getItem("email_data"));
 	let email;
 	for (var i = 0; i < emails.length; i++) {
@@ -201,6 +263,18 @@ function getCurrentEmail(id) {
 	}
 
 	return email;
+}
+
+function setEmail(id, email) {
+	let emails = JSON.parse(localStorage.getItem("email_data"));
+	var result = emails.filter(function(obj) {
+	    return obj.id === id; // Filter out the appropriate one
+	})[0];
+	var index = emails.indexOf(result);
+
+	emails[index] = email;
+	localStorage.setItem("email_data", JSON.stringify(emails));
+	loadCurrentList();
 }
 
 function createFilter() {
@@ -248,13 +322,49 @@ function createFilter() {
 	closeModal('modal-create-filter');
 }
 
-// function markAsRead(id, email) {
-// 	emails = JSON.parse(localStorage.getItem("email_data"));
-// 	var result = emails.filter(function(obj) {
-// 	    return obj.id === id; // Filter out the appropriate one
-// 	})[0];
-// 	var index = emails.indexOf(result);
+function markSelectedAsUnread() {
+	var emails = JSON.parse(localStorage.getItem("email_data"));
+	for (var i = 0; i < selectedEmails.length; i++) {
+		for (var j = 0; j < emails.length; j++) {
+			if(selectedEmails[i] === emails[j].id) {
+				emails[j].read = false;
+				break;
+			}
+		}
+	}
 
-// 	result.read = true;
-// 	loadEmailList();
-// }
+	localStorage.setItem("email_data", JSON.stringify(emails));
+	selectedEmails = [];
+	toggleIcons();
+	loadCurrentList();
+}
+
+function markSelectedAsRead() {
+	var emails = JSON.parse(localStorage.getItem("email_data"));
+	for (var i = 0; i < selectedEmails.length; i++) {
+		for (var j = 0; j < emails.length; j++) {
+			if(selectedEmails[i] === emails[j].id) {
+				emails[j].read = true;
+				break;
+			}
+		}
+	}
+
+	localStorage.setItem("email_data", JSON.stringify(emails));
+	selectedEmails = [];
+	toggleIcons();
+	loadCurrentList();
+}
+
+function markAsRead(id, email) {
+	var emails = JSON.parse(localStorage.getItem("email_data"));
+	var result = emails.filter(function(obj) {
+	    return obj.id === id; // Filter out the appropriate one
+	})[0];
+	var index = emails.indexOf(result);
+	emails[index].read = true;
+
+	localStorage.setItem("email_data", JSON.stringify(emails));
+
+	loadCurrentList();
+}

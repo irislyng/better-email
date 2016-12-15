@@ -8,7 +8,7 @@ body {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 .left {
@@ -58,6 +58,32 @@ input:focus {
 textarea:focus {
     resize: none;
     outline: none;
+}
+
+/* NOTIFICATION */
+
+div.notification {
+    z-index:2;
+    display: table;
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    background-color: #ff4081;
+    margin: 12px;
+    background-color: rgba(255,64,129, 0.7);
+    border-radius: 10px;
+    font-size: 14px;
+    transform: background-color 0.5s ease-in-out;
+}
+
+div.notification-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 500;
+    color: white;
 }
 
 /* MODALS */
@@ -207,7 +233,7 @@ div#messages-panel {
 }
 
 div.search-bar {
-    width: 100%;
+    width: 70%;
     height: 48px;
     display: inline-block;
 }
@@ -239,6 +265,17 @@ div.messages-panel-sort {
     text-align: right;
 }
 
+div.search-button {
+    width: 25%;
+    display: inline-block;
+    text-align: right;
+}
+
+div.search-button button {
+    width: 100%;
+    padding: 0px;
+}
+
 /* MESSAGES */
 
 div.messages-panel-list {
@@ -251,6 +288,7 @@ div.messages-panel-list {
 
 div.message-preview {
     overflow: hidden;
+    margin-top: -10px;
     padding: 10px;
     border-bottom: 1px solid #bdbdbd;
     height: 100px;
@@ -262,7 +300,9 @@ div.message-preview:hover {
 }
 
 span.message-preview-select {
-    float: right;
+    position: relative;
+    top: 15px;
+    right: -95%;
 }
 
 span.message-preview-date {
@@ -279,12 +319,19 @@ span.message-preview-name {
 }
 
 span.message-preview-subject {
-    display:block;
+    float: left;
     color: #212121;
     font-size: 16px;
 }
 
+span.message-preview-flagged {
+    float: right;
+    color: #ff4081;
+}
+
 span.message-preview-content {
+    display: block;
+    clear: both;
     color: #bdbdbd;
     font-size: 12px;
     font-weight: 300;
@@ -419,4 +466,8 @@ textarea.compose-textarea {
     font-size: 16px;
     color: #212121;
     border: none;
+}
+
+.unread {
+    font-weight: bold;
 }
